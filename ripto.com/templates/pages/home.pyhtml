@@ -1,0 +1,34 @@
+{% set canvas_menu = [
+    {
+        'title': _("Created"),
+        'name': 'mine',
+        'link': jinjer.url_for('home')
+    },
+    {
+        'title': _("Remembered"),
+        'name': 'remembered',
+        'link': jinjer.url_for('remembered')
+    }
+] %}
+
+<div id="home-container" class="content-container">
+    <h1 class="page-title">{{ _("Home") }}</h1>
+    <div class="home canvas">
+        {{ jinjer.element( 'menu', canvas_menu=canvas_menu, section=section ) }}
+        <div class="canvas-content">
+            {% if section == 'mine' %}
+            <div class="mine-container">
+                <ul class="memorial-list">
+                    {{ jinjer.element( 'results', results=results, paging=paging, hide_bubble=True, show_new_if_empty=True ) }}
+                </ul>
+            </div>
+            {% else %}
+            <div class="remembered-container">
+                <ul class="memorial-list">
+                    {{ jinjer.element( 'results', results=results, paging=paging, hide_bubble=True ) }}
+                </ul>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>

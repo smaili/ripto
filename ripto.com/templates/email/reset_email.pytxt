@@ -1,0 +1,18 @@
+RIPto
+
+-----------------------------------
+
+{{ header }}
+
+{{ _("Sorry to hear you were having trouble logging in.") }}
+
+{{ _("To reset your password, please follow this link:") }}
+
+{{ cta }}
+
+-----------------------------------
+
+{{ _("Please disregard this email if it was sent by mistake.") }}
+
+RIPto (c) 2013. San Francisco, CA.
+

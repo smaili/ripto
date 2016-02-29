@@ -1,0 +1,18 @@
+{% extends "layouts/base.pyhtml" %}
+
+
+
+{% set title = code %}
+
+
+
+{% block content %}
+<div id="page-outer" class="scroller">
+    <div id="page-container">
+        <div class="page-wrapper">
+        {% include "error/generic.pyhtml" %}
+        </div>
+    </div>
+    {{ jinjer.element( 'footer' ) }}
+</div>
+{% endblock %}

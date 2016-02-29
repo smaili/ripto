@@ -1,0 +1,161 @@
+{% set canvas_menu = [
+    {
+        'title': _("Log in"),
+        'name': 'login',
+        'link': jinjer.url_for( 'login', _next=next_url )
+    },
+    {
+        'title': _("Sign up"),
+        'name': 'signup',
+        'link': jinjer.url_for( 'signup', _next=next_url )
+    },
+    {
+        'title': _("Forgot"),
+        'name': 'forgot',
+        'link': jinjer.url_for( 'forgot', _next=next_url )
+    }
+] %}
+
+
+<div id="welcome-container" class="content-container">
+    <h1 class="page-title">{{ _("Welcome!") }}</h1>
+    <div class="welcome canvas">
+        {{ jinjer.element( 'menu', canvas_menu=canvas_menu, section=section ) }}
+        <div class="canvas-content">
+            {% if section == 'login' %}
+            <div class="login-container">
+                <form id="login-form" method="POST" action="{{ jinjer.url_for( 'login', _next=next_url ) }}">
+                    {% if invalid %}
+                    {{ jinjer.element( 'notice', notice_type='error', notice_msg=_("Incorrect username or password.") ) }}
+                    {% elif show_notice %}
+                    {{ jinjer.element( 'notice', notice_type='tip', notice_msg=_("You must be logged in to do that.") ) }}
+                    {% endif %}
+
+                    <fieldset class="textbox">
+                        <div class="prompt username">
+                            <div class="field-name">{{ _("Enter your username") }}</div>
+                            <div class="holding has-content" data-field="username">
+                                <input type="text" class="username-input" name="username" value="{{ username }}"{% if g.is_mobile %} autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"{% endif %} tabindex="{{ jinjer.tabindex() }}"></input>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="textbox">
+                        <div class="prompt password">
+                            <div class="field-name">{{ _("Enter your password") }}<a class="forgot" title="{{ _("Forgot my password") }}" href="{{ jinjer.url_for( 'forgot', _next=next_url ) }}">{{ _("Forgot?") }}</a></div>
+                            <div class="holding has-content" data-field="password">
+                                <input type="password" class="password-input" name="password" value="{{ password }}" tabindex="{{ jinjer.tabindex() }}"></input>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <button type="submit" class="submit black-submit" tabindex="{{ jinjer.tabindex() }}">{{ _("Log in") }}</button>
+                    <fieldset class="subchck">
+                        <label class="stay-in">
+                            <input type="checkbox" value="1" name="stay_in" checked="checked" tabindex="{{ jinjer.tabindex() }}">{{ _("Stay logged in") }}
+                        </label>
+                    </fieldset>
+                </form>
+            </div>
+            {% elif section == 'signup' %}
+            <div class="signup-container">
+                {# TODO - add captcha --> http://blog.bixly.com/post/4069885657/how-to-add-recaptcha-to-your-django-forms #}
+                <form id="signup-form" method="POST" action="{{ jinjer.url_for( 'signup', _next=next_url ) }}">
+                    {%
+                        set msgs = {
+                            'username': {
+                                'tip': _("Username can only contain letters, numbers and underscores."),
+                                'ok': _("Username looks great."),
+                                'checking': _("Checking..."),
+                                'invalid': _("Doesn't look like a valid username."),
+                                'blank': _("A username is required!"),
+                                'taken': _("This username is already registered.")
+                            },
+                            'password': {
+                                'tip': _("6 characters or more! Be tricky."),
+                                'perfect': _("Password is perfect!"),
+                                'ok': _("Password is okay."),
+                                'weak': _("Password could be more secure."),
+                                'tooweak': _("Password is not secure enough."),
+                                'invalid': _("Password must be at least 6 characters."),
+                                'blank': _("Password cannot be blank!")
+                            }
+                        }
+                    %}
+
+                    {% set fields_to_check = [ 'username', 'password' ] %}
+                    {% for field in fields_to_check %}
+                    {% if user.errors[field] and user.errors[field] != 'ok' %}
+                    {{ jinjer.element( 'notice', notice_type='error', notice_msg=msgs[ field ][ user.errors[field] ] ) }}
+                    {% endif %}
+                    {% endfor %}
+
+                    <fieldset class="textbox">
+                        <div class="prompt username">
+                             <div class="field-name">{{ _("Username") }}</div>
+                            <div class="holding has-content" data-field="username">
+                                <div class="sidetip">
+                                    <a class="tip" href="javascript:void(0)">?<span class="bubble">{{ msgs['username']['tip'] }}</span></a>
+                                    <a class="ok isaok hidden" href="javascript:void(0)">&#10003;<span class="bubble">{{ msgs['username']['ok'] }}</span></a>
+                                    <a class="checking hidden" href="javascript:void(0)">...<span class="bubble">{{ msgs['username']['checking'] }}</span></a>
+                                    <a class="invalid error hidden" href="javascript:void(0)">X<span class="bubble">{{ msgs['username']['invalid'] }}</span></a>
+                                    <a class="blank error hidden" href="javascript:void(0)">X<span class="bubble">{{ msgs['username']['blank'] }}</span></a>
+                                    <a class="taken error hidden" href="javascript:void(0)">X<span class="bubble">{{ msgs['username']['taken'] }}</span></a>
+                                </div>
+                                <input class="username-input" type="text"{% if g.is_mobile %} autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"{% endif %} value="{{ user.username }}" name="username" tabindex="{{ jinjer.tabindex() }}"></input>
+                            </div>
+                        </div>
+
+                        <div class="prompt password">
+                            <div class="field-name">{{ _("Password") }}</div>
+                            <div class="holding has-content" data-field="password">
+                                <div class="sidetip">
+                                    <a class="tip" href="javascript:void(0)">?<span class="bubble">{{ msgs['password']['tip'] }}</span></a>
+                                    <a class="perfect isaok hidden" href="javascript:void(0)">&#10003;<span class="bubble">{{ msgs['password']['perfect'] }}</span></a>
+                                    <a class="ok isaok hidden" href="javascript:void(0)">&#10003;<span class="bubble">{{ msgs['password']['ok'] }}</span></a>
+                                    <a class="weak isaok hidden" href="javascript:void(0)">&#10003;<span class="bubble">{{ msgs['password']['weak'] }}</span></a>
+                                    <a class="tooweak error hidden" href="javascript:void(0)">X<span class="bubble">{{ msgs['password']['tooweak'] }}</span></a>
+                                    <a class="invalid error hidden" href="javascript:void(0)">X<span class="bubble">{{ msgs['password']['invalid'] }}</span></a>
+                                    <a class="blank error hidden" href="javascript:void(0)">X<span class="bubble">{{ msgs['password']['blank'] }}</span></a>
+                                </div>
+                                <input type="password" value="{{ user.password }}" name="password" tabindex="{{ jinjer.tabindex() }}"></input>
+                            </div>
+                            <div class="score"><span><b class="fill"></b></span></div>
+                        </div>
+                    </fieldset>
+
+
+                    <div class="terms">
+                        <p>
+                            {{ _("By clicking the button below, you agree to our <a href=\"terms\" target=\"_blank\">Terms</a> and that you have read our <a href=\"privacy\" target=\"_blank\">Privacy Policy</a>.") }}
+                        </p>
+                    </div>
+
+                    <div class="submit-wrapper">
+                        <button type="submit" class="submit blue-submit" tabindex="{{ jinjer.tabindex() }}">{{ _("Create my account") }}</button>
+                    </div>
+                </form>
+            </div>
+            {% else %}
+            <div class="forgot-container">
+                <form id="forgot-form" method="POST" action="{{ jinjer.url_for('forgot') }}">
+                    {% if invalid %}
+                    {{ jinjer.element( 'notice', notice_type='error', notice_msg=_("Sorry, but we couldn't find that username or no email was registered to it.") ) }}
+                    {% endif %}
+
+                    <fieldset class="textbox">
+                        <div class="prompt username">
+                            <div class="field-name">{{ _("Enter your username") }}</div>
+                            <div class="holding has-content" data-field="username">
+                                <input type="text" class="username-input" name="username" value="{{ username }}"{% if g.is_mobile %} autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"{% endif %} tabindex="{{ jinjer.tabindex() }}"></input>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <button type="submit" class="submit black-submit" tabindex="{{ jinjer.tabindex() }}">{{ _("Submit") }}</button>
+                </form>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>

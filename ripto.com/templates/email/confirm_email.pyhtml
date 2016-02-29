@@ -1,0 +1,91 @@
+<table cellspacing="0" cellpadding="0" width="{{ width }}" style="{{ border_collapse }};">
+    <tbody>
+        <tr>
+            <td style="{{ default_text }};padding:0px;width:{{ width }};">
+                <table cellspacing="0" cellpadding="0" border="0" style="{{ border_collapse }};width:100%;">
+                    <tbody>
+                        <tr>
+                            <td style="{{ default_text }};padding:20px;background-color:#fff;{{ border_none }};">
+                                <table cellspacing="0" cellpadding="0" style="{{ border_collapse }};width:100%;">
+                                    <tbody>
+                                        <tr>
+                                            <td style="{{ default_text }};padding-bottom:5px;">
+                                                <span style="{{ header_text }}">Welcome to RIPto, {{ name }}!</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="{{ body_text }};padding-top:5px;">
+                                                <span style="color:#333333;">To complete the Sign Up process, please follow the button below. Once we have confirmed your email, your account will be activated and ready to use!</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="{{ default_text }};padding:0px;width:{{ width }};">
+                <table cellspacing="0" cellpadding="0" style="{{ border_collapse }};width:100%;" border="0">
+                    <tbody>
+                        <tr>
+                            <td style="{{ default_text }};padding:7px 20px;background-color:#f2f2f2;border-left:none;border-right:none;border-top:1px solid #ccc;border-bottom:1px solid #ccc;">
+                                <table cellspacing="0" cellpadding="0" style="">
+                                    <tbody>
+                                        <tr>
+                                            <td style="{{ default_text }};padding:7px 0px 6px;">
+                                                <table cellspacing="0" cellpadding="0" style="{{ border_collapse }};">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="border-width:1px;border-style:solid;border-color:#111111;background-color:#333333;">
+                                                                <table cellspacing="0" cellpadding="0" style="{{ border_collapse }};">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td style="{{ default_text }};padding:2px 6px 4px;border-top:1px solid #555555;">
+                                                                                <a href="{{ jinjer.url_for("confirmemail", e=email, c=code, _external=True) }}" style="color:#3b5998;text-decoration:none;">
+                                                                                    <span style="{{ button }};color:#FFFFFF;">Complete Sign Up</span>
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                            {# spacer -> <td style="{{ default_text }};padding:0px 5px;"></td>
+                                            secondary button -> <td style="{{ default_text }};padding:7px 0px 6px;">
+                                                <table cellspacing="0" cellpadding="0" style="{{ border_collapse }};">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="border-width: 1px;border-style: solid;border-color: #999 #999 #888;background-color: #eee;">
+                                                                <table cellspacing="0" cellpadding="0" style="{{ border_collapse }};">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td style="{{ default_text }};padding:2px 6px 4px;border-top:1px solid #fff;">
+                                                                                <a href="{{ jinjer.url_for("confirmemail", e=email, c=code, _external=True) }}" style="color:#3b5998;text-decoration:none;">
+                                                                                    <span style="{{ button }};color:#333333;">Privacy & Terms</span>
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>#}
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>

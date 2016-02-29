@@ -1,0 +1,11 @@
+<div class="footer">
+    <a class="footer-link" href="/about">{{ _("About") }}</a>
+    <a class="footer-link" href="/support">{{ _("Support") }}</a>
+    <a class="footer-link" href="/feedback">{{ _("Feedback") }}</a>
+    <a class="footer-link" href="/terms">{{ _("Terms") }}</a>
+    <a class="footer-link" href="/privacy">{{ _("Privacy") }}</a>
+    <br>
+    <span class="copyright">RIPto &#169; 2013</span>
+    <span class="vline">|</span>
+    <a class="footer-link glang" href="{{ jinjer.url_for('lang', _next=True) }}">{{ jinjer.decode( g.babler.get_name() ) }}</a>
+</div>

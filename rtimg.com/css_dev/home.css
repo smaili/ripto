@@ -1,0 +1,26 @@
+/*--------------------------------------------------
+
+home.css
+Used when viewing home
+
+-------------------------------------------------- */
+
+
+
+/* Container
+-------------------------------------------------- */
+.content-container {
+    font-size: 12px;
+    margin: 0 auto 10px;
+    position: relative;
+    width: 585px;
+}
+
+
+
+/* Memorials
+-------------------------------------------------- */
+.memorial-list .memorial img {
+    width: 65px;
+    height: 65px;
+}

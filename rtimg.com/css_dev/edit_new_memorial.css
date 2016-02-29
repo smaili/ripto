@@ -1,0 +1,241 @@
+/*--------------------------------------------------
+
+edit_new_memorial.css
+Common css for editing and creating memorials
+
+-------------------------------------------------- */
+
+
+
+/* Font
+-------------------------------------------------- */
+@font-face {
+    font-family: 'euphemia';
+    src: url('../font/euphemia.eot');
+    src: url('../font/euphemia.eot?#iefix') format('embedded-opentype'),
+         url('../font/euphemia.woff') format('woff'),
+         url('../font/euphemia.ttf') format('truetype'),
+         url('../font/euphemia.svg#euphemia') format('svg');
+}
+
+
+
+/* General
+-------------------------------------------------- */
+h4 {
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+}
+
+.calendar-preloader {
+	font-family: 'opensans';
+}
+
+.clear {
+    clear: both;
+}
+
+
+
+/* Form
+-------------------------------------------------- */
+form fieldset {
+    margin-bottom: 15px;
+}
+
+.text-input {
+    border: 1px solid #777;
+    display: block;
+}
+
+
+
+/* Sidetip
+-------------------------------------------------- */
+.photo .sidetip {
+    bottom: 2px;
+    left: 0;
+    right: 0;
+}
+
+.photo .notice-box {
+    font-size: 13px;
+    margin: 0 auto;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    width: 250px;
+}
+
+.details .sidetip {
+    top: 5px;
+    right: -20px;
+}
+
+
+
+/* Tomb
+-------------------------------------------------- */
+.tomb {
+    height: 300px;
+}
+
+
+
+/* Photo
+-------------------------------------------------- */
+.tomb .photo {
+    border-right: 1px solid #666;
+    float: left;
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+
+.photo .nophoto {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.nophoto input {
+    vertical-align: middle;
+    margin-right: 3px;
+    margin-top: -3px;
+}
+
+#select-container {
+    border: 3px dashed #fff;
+    height: 150px;
+    margin: 50px auto 10px;
+    position: relative;
+    text-align: center;
+    width: 200px;
+    overflow: hidden; /* so input doesn't leak out */
+}
+
+#select-container .file-input {
+    opacity: 0; -moz-opacity: 0; -khtml-opacity: 0; filter:alpha(opacity: 0); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    cursor: pointer;
+    font-size: 500px;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+#selected-container .selected-filename {
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 30px;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 90%;
+    text-align: center;
+}
+
+#select-container .img {
+    width: 100%;
+    height: 100%;
+}
+
+#select-container .img.hidden {
+    width: 0;
+    height: 0;
+}
+
+#select-container .img-selectphoto {
+    background-position: 0 -61px;
+}
+
+#selected-container h4 {
+    font-family: 'euphemia';
+    font-size: 116%;
+    margin-top: 5px;
+    text-align: center;
+}
+
+#selected-container .submit {
+    margin: 0 auto;
+    padding: 5px 10px;
+}
+
+
+
+/* Details
+-------------------------------------------------- */
+.tomb .details {
+    float: right;
+    width: 49%;
+}
+
+.details-container {
+    margin: 0 auto;
+    width: 210px;
+}
+
+.details-container .text-input {
+    width: 200px;
+    height: 20px;
+}
+
+.dates .text-input {
+    width: 80px;
+    vertical-align: top;
+}
+
+.dates .separator {
+    color: #000;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 7px 9px 0;
+}
+
+.dates .placeholding-input, .dates .separator {
+    display: inline-block;
+    /* fallback for IE not supporting inline-block */
+    zoom: 1;
+    *display: inline;
+}
+
+.details .cause-select {
+    font-size: 13px;
+    width: 210px;
+    height: 25px;
+}
+
+.epitaph .text-input {
+    height: 65px;
+}
+
+.epitaph .placeholder {
+    height: 65px;
+}
+
+.isburied .ftype-select {
+    float: left;
+    font-size: 13px;
+    margin: 2.5px 0 8px 0;
+    width: 50%;
+    height: 25px;
+}
+
+.details-container .dof {
+    float: right;
+    width: 43%;
+}
+
+.dof .text-input {
+    width: 80px;
+}
+
+
+
+/* Submit
+-------------------------------------------------- */
+.submit-wrapper {
+    margin-top: 20px;
+}

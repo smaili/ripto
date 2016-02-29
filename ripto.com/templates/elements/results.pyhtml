@@ -1,0 +1,31 @@
+{% if results|length == 0 %}
+
+<li class="no-memorials">
+    {% if show_new_if_empty %}
+    <a class="submit big black-submit" href="/~" tabindex="{{ jinjer.tabindex() }}">{{ _("New Memorial") }}</a>
+    {% else %}
+    <h2>{{ _("Sorry but we couldn't find any memorials.") }}</h2>
+    {% endif %}
+</li>
+{% else %}
+    {% if paging != False and results|length > config.RESULTS_COUNT %}
+    {% set can_show_more = True %}
+    {% set x = results.pop() %}
+    {% else %}
+    {% set can_show_more = False %}
+    {% endif %}
+
+    {% for memorial in results %}
+    <li data-mem-id="{{ memorial.url }}">
+        <a class="memorial canvas" href="{{ jinjer.memorial_url(memorial) }}">
+            <img src="{{ jinjer.static(memorial.media.filename, 'memorial') }}"></img>
+            {% if not hide_bubble %}<span class="bubble">{% autoescape true %}{{ memorial.name }}{% endautoescape %}<br>{{ memorial.dob.year }} - {{ memorial.dod.year }}</span>{% endif %}
+        </a>
+    </li>
+    {% endfor %}
+    {% if can_show_more %}
+    <li class="submit-wrapper">
+        <button type="submit" class="submit green-submit big alpha" tabindex="{{ jinjer.tabindex() }}">{{ _("Show more") }}</button>
+    </li>
+    {% endif %}
+{% endif %}

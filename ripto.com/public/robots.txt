@@ -1,0 +1,18 @@
+# robots.txt file for RIPto
+#
+# If you have any questions please contact our Support Team:
+# http://ripto.com/support
+
+User-Agent: *
+Disallow: /*.json
+Disallow: /post
+Disallow: /submit
+Disallow: /~*/edit
+Disallow: /~*/remember
+Disallow: /~*/share
+Disallow: /~*/flag
+Disallow: /~*/condolences
+Disallow: /~*/comment
+Disallow: /~*/like
+Disallow: /user/*
+Allow: /

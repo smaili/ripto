@@ -1,0 +1,108 @@
+{% extends "elements/modal/base.pyhtml" %}
+
+{% set modal_id = "share-memorial" %}
+{% set modal_title = _("Share") %}
+{% set canvas_menu = [
+    {
+        'title': _("Community"),
+        'name': 'share',
+        'section': None,
+        'link': 'javascript:void(0)'
+    },
+    {
+        'title': _("Email"),
+        'name': 'email',
+        'section': 'email',
+        'link': 'javascript:void(0)'
+    },
+    {
+        'title': _("HTML"),
+        'name': 'embed',
+        'section': 'embed',
+        'link': 'javascript:void(0)'
+    }
+] %}
+
+
+
+{% block content %}
+{% set memorial_url = jinjer.memorial_url(memorial, _external=True) %}
+<div class="share-container container">
+    <p class="share-inst">
+        {{ _("You can use the short link or share to a network below.") }}
+    </p>
+    <div class="share-options">
+        <form class="share-link">
+            <input type="text" class="no-focus"{% if not g.is_mobile %} readonly="true"{% endif %} value="{{ jinjer.memorial_url(memorial, _short=True) }}">
+            <i class="icon-link sprite"></i>
+        </form>
+        <ul class="share-btns">
+            {% set services = g.sharer.get_services() %}
+            {% for service in services %}
+            <li class="item-{{ service.name }}">
+                <a class="sprite" href="{{ g.sharer.memorial(service.name, memorial) }}" title="{{ _("Share to %(service)s", service=jinjer.decode( service.title )) }}" target="_blank"></a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+<div class="email-container container hidden">
+    <p class="share-inst">
+        {{ _("You can email this Memorial by filling out the form below.") }}
+    </p>
+    <form id="share-email-form" class="js-modal-form" action="{{ jinjer.memorial_url(memorial, action='share') }}" method="POST">
+        {% set notices = [ ["ok", ""], ["error", ""] ] %}
+        {% for n in notices %}
+        {{ jinjer.element( 'notice', notice_type=n[0], notice_hide=True, notice_msg=n[1] ) }}
+        {% endfor %}
+
+        <div class="prompt">
+            <div class="placeholding-input email">
+                <input type="text" id="share-email" class="text-input email-input" name="email" title="{{ _("Friend's email") }}" value="" tabindex="{{ jinjer.tabindex() }}"></input>
+                <label for="share-email" class="placeholder">{{ _("email@example.com, email@example.com, . . .") }}</label>
+            </div>
+        </div>
+        <div class="prompt">
+            <div class="placeholding-input message">
+                <textarea id="share-message" class="text-input message-input" name="message" title="{{ _("Message (optional)") }}" tabindex="{{ jinjer.tabindex() }}"></textarea>
+                <label for="share-message" class="placeholder">{{ _("Add a comment...") }}</label>
+            </div>
+        </div>
+        <div class="share-top-preview">
+            {% set mem_img = jinjer.static(memorial.media.filename, 'memorial') %}
+            {% set mem_title = memorial.name %}
+            <img class="share-preview-thumbnail" src="{{ mem_img }}" alt="{{ mem_title }}" title="{{ mem_title }}"></img>
+            {# need to wrap around <a /> to prevent ios from interpreting dates as a phone number #}
+            <div class="share-preview-title"><a href="javascript:;">{% autoescape true %}{{ mem_title }}{% endautoescape %}</a></div>
+            <p class="share-preview-summary">
+                {{ memorial.print_date('dob') }} - {{ memorial.print_date('dod') }}
+                <br>
+                {% if memorial.funeral_type == 1 %}
+                {{ _("Buried %(funeral_date)s", funeral_date=memorial.print_date('funeral_date')) }}
+                {% elif memorial.funeral_type == 2 %}
+                {{ _("Cremated %(funeral_date)s", funeral_date=memorial.print_date('funeral_date')) }}
+                {% else %}
+                {{ _("Funeral unknown") }}
+                {% endif %}
+                <br>
+                {% if memorial.funeral_type in [ 1, 2 ] %}
+                {% autoescape true %}{{ memorial.funeral_loc }}{% endautoescape %}
+                <br>
+                {% endif %}
+                <strong>{{ jinjer.memorial_url(memorial, _short=True) }}</strong>
+            </p>
+        </div>
+        <div class="submit-wrapper">
+            <button type="submit" class="submit black-submit" tabindex="{{ jinjer.tabindex() }}">{{ _("Send Email") }}</button>
+        </div>
+    </form>
+</div>
+<div class="embed-container container hidden">
+    <p class="share-inst">
+        {{ _("You can add this Memorial to your website by copying the code below.") }}
+    </p>
+    <form class="embed-code">
+        <textarea class="no-focus">&lt;iframe width="480" height="360" src="//ripto.com/~{{ memorial.url }}/embed" frameborder="0"&gt;&lt;/iframe&gt;</textarea>
+    </form>
+</div>
+{% endblock %}

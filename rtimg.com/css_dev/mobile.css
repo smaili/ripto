@@ -1,0 +1,307 @@
+/*--------------------------------------------------
+
+mobile.css
+Used for all devices
+
+-------------------------------------------------- */
+
+
+
+/* Default
+-------------------------------------------------- */
+.new-submit-wrapper {
+    right: 1%;
+    margin-top: 13px;
+}
+
+.scroller {
+    -webkit-overflow-scrolling: touch;
+}
+
+.rip-topbar-tm {
+    display: none;
+}
+
+#topbar-search-form {
+    margin-left: -20%;
+    width: 40%;
+}
+
+#topbar-search-form .search-input-container {
+    border-right: 0 none;
+}
+
+.login-submit-wrapper .red-submit {
+    margin-right: 10px;
+}
+
+#page-container {
+    padding: 0;
+}
+
+.page-title {
+    margin-top: 0;
+}
+
+.memorial-list .memorial {
+    width: 21%;
+    margin: .75% .75%;
+    padding: 1%;
+}
+
+.memorial-list .memorial:before {
+	content: "";
+	display: block;
+	padding-top: 100%;
+}
+
+.memorial-list .memorial img {
+	position: absolute;
+	top: 3%;
+	left: 3%;
+	bottom: 0;
+	right: 0;
+    width: 94%;
+    height: 94%;
+}
+
+.memorial-list .memorial:hover .bubble {
+    display: none;
+}
+
+.comments .cmsg {
+    -webkit-text-size-adjust: none;
+}
+
+
+
+/* Edit/New Memorial
+-------------------------------------------------- */
+.details .sidetip .bubble {
+    left: -10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+
+/* Memorial
+-------------------------------------------------- */
+#memorial-container .memorial.canvas {
+    margin-top: 30px;
+}
+
+
+
+
+/* Phones
+-------------------------------------------------- */
+@media only screen and (max-device-width: 640px) {
+
+    .page-title {
+        font-size: 20px;
+    }
+
+    .content-container {
+        width: 98%;
+    }
+
+    .submit {
+        font-size: 12px;
+        padding: 3px 15px;
+    }
+
+    .submit.big {
+        font-size: 14px;
+        padding: 5px 18px;
+    }
+
+}
+
+@media only screen and (max-device-width: 640px) and (orientation: portrait) {
+
+    /* nols == no landscape
+    @-webkit-keyframes nols {
+        to { opacity: 0; height: 0; }
+    }
+
+    @-webkit-keyframes nolsimg {
+        from { -webkit-transform: rotate(0deg); }
+        to { -webkit-transform: rotate(90deg); }
+    }
+
+    .global-notices .nols {
+        display: block;
+        overflow: hidden;
+        -webkit-animation: nols 500ms ease 5s forwards;
+    }
+
+    .global-notices .nols img {
+        float: right;
+        margin: 5px 5px 0 0;
+        width: 24px;
+        height: 24px;
+        -webkit-animation: nolsimg 500ms ease 2s forwards;
+    }*/
+
+    .notice-box {
+        padding-left: 0;
+        padding-right: 0;
+        width: 99%;
+    }
+
+    .notice-box span {
+        display: block;
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .modal {
+        top: 12%;
+        width: 100%;
+    }
+
+    .modal-content .canvas-content {
+        margin: 0;
+    }
+
+    #topbar-search-form {
+        display: none;
+    }
+
+    .new-submit-wrapper {
+        display: none;
+    }
+
+    .canvas-menu {
+        margin-left: 0;
+    }
+    
+    .canvas-menu a {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .content-container form {
+        width: 100%;
+    }
+
+    .content-container .text-input, .holding input {
+        width: 98%;
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+
+    #signup-form .submit {
+        width: 100%;
+    }
+
+    .lang .lang-content, .lang .locales-wrapper {
+        margin-left: 0; margin-right: 0;
+        padding-left: 0; padding-right: 0;
+    }
+
+    .locales a {
+        font-size: 10px;
+        padding-left: 10px;
+    }
+
+    .lang .cs-wrapper {
+        margin-left: 0;
+    }
+
+    #memorial-container .memorial.canvas {
+        height: 120px;
+        margin-top: -10px;
+    }
+
+    #memorial-container .memorial .photo {
+        width: 45%
+    }
+
+    #memorial-container .memorial .details {
+        width: 54%;
+    }
+
+    #details-container .name {
+        font-size: 11px;
+        margin-top: 0;
+    }
+
+    #details-container .dobd {
+        font-size: 9px;
+        line-height: 8px;
+    }
+
+    #details-container .epitaph {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    #details-container .fdate, #details-container .floc {
+        font-size: 8px;
+        margin-top: 0;
+    }
+
+    #details-container .floc {
+        line-height: 5px;
+    }
+
+    #details-container .group-top, #details-container .group-bottom {
+        padding-top: 5px;
+    }
+
+    #comment-memorial-form .comment-input {
+        width: 70%;
+    }
+
+    #reply-comment-form .comment-input, #edit-comment-form .comment-input {
+        width: 160px;
+    }
+
+    #share-memorial-dialog .share-options {
+        overflow: visible;
+        position: relative;
+    }
+
+    #share-memorial-dialog .share-link {
+        position: absolute;
+        bottom: -30px;
+    }
+
+    #share-memorial-dialog .share-btns {
+        float: none;
+        margin-left: 15%;
+        overflow: hidden;
+    }
+
+    #share-email-form .text-input {
+        width: 100%;
+    }
+
+    #share-email-form .message .text-input {
+        height: 40px;
+    }
+
+    #new-memorial-container .tomb {
+        height: auto;
+    }
+
+    #new-memorial-container .tomb .photo {
+        width: 100%;
+    }
+
+    #new-memorial-container .tomb .details {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+}
+
+
+/* Portrait + Landscape
+-------------------------------------------------- */
+/*
+@media screen and (max-device-width: 1024px) and (orientation: portrait) {}
+@media screen and (max-device-width: 1024px) and (orientation: landscape) {}
+*/

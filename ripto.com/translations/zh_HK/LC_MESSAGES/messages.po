@@ -1,0 +1,1587 @@
+# Chinese (Hong Kong SAR China) translations for PROJECT.
+# Copyright (C) 2013 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2013-11-06 04:01+0000\n"
+"PO-Revision-Date: 2013-09-13 21:34+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_HK <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.0\n"
+
+#: app.py:180 app.py:182 templates/elements/modal/lang.pyhtml:7
+#: templates/pages/lang.pyhtml:3
+msgid "Languages"
+msgstr "語言"
+
+#: app.py:192 app.py:202 templates/elements/topbar.pyhtml:37
+#: templates/pages/home.pyhtml:16
+msgid "Home"
+msgstr "主頁"
+
+#: app.py:223 templates/elements/topbar.pyhtml:52
+#: templates/pages/new_memorial.pyhtml:3
+msgid "New Memorial"
+msgstr "新紀念碑"
+
+#: app.py:274
+msgid "Invalid email address."
+msgstr "無效的電郵。"
+
+#: app.py:280
+msgid "Memorial was successfully shared."
+msgstr "紀念碑已成功共享。"
+
+#: app.py:396
+msgid "Share On WeChat"
+msgstr "轉貼到：WeChat"
+
+#: app.py:422 templates/elements/topbar.pyhtml:40
+#: templates/pages/settings.pyhtml:16
+msgid "Settings"
+msgstr "設定"
+
+#: app.py:447
+msgid "Your membership has been deactivated."
+msgstr "您的會籍已停用。"
+
+#: app.py:448
+msgid "You will now be logged out and taken back to the home page."
+msgstr "現在，您將登出，並返回到主頁。"
+
+#: app.py:450
+msgid "Deleted"
+msgstr "已被刪除"
+
+#: app.py:450
+msgid "Membership Canceled"
+msgstr "會籍被取消。"
+
+#: app.py:452 app.py:454 templates/pages/settings.pyhtml:8
+msgid "Membership"
+msgstr "會籍"
+
+#: app.py:495 app.py:746
+msgid "Thank you. Your report was successfully sent."
+msgstr "謝謝。您的舉報已成功發送。"
+
+#: app.py:497 app.py:748
+msgid "You can only flag each thing once."
+msgstr "你只能舉報一次每一件事情。"
+
+#: app.py:526
+msgid "Sign In"
+msgstr "登入"
+
+#: app.py:560
+msgid "Sign Up"
+msgstr "註冊"
+
+#: app.py:578
+msgid "An email has been sent containing a link to reset your password."
+msgstr "已發送電郵包含一個鏈接更改密碼。"
+
+#: app.py:579
+msgid ""
+"Be sure to also check your junk or spam folder or filter in case it does "
+"not appear in your inbox."
+msgstr "確保您檢查您的垃圾郵件文件夾，如果它不會出現在你的收件箱中。"
+
+#: app.py:581
+msgid "Sent!"
+msgstr "發送了！"
+
+#: app.py:584 templates/pages/welcome.pyhtml:13
+msgid "Forgot"
+msgstr "忘記"
+
+#: app.py:598 app.py:616
+msgid "Change Password"
+msgstr "更改密碼"
+
+#: app.py:611
+msgid "Your password was successfully changed."
+msgstr "您的密碼更改成功。"
+
+#: app.py:612
+msgid "Please wait while we log you in."
+msgstr "請稍候。"
+
+#: app.py:614
+msgid "Changed!"
+msgstr "改變了！"
+
+#: app.py:636 templates/elements/footer.pyhtml:2
+#: templates/pages/footer.pyhtml:3
+msgid "About"
+msgstr "關於"
+
+#: app.py:651
+msgid "Your message was sent successfully."
+msgstr "您的訊息已成功發送。"
+
+#: app.py:652 app.py:673
+msgid "You will now be taken back."
+msgstr "現在，您將回。"
+
+#: app.py:654 app.py:675
+msgid "Sent"
+msgstr "發送了"
+
+#: app.py:654
+msgid "Message Sent!"
+msgstr "訊息發送了！"
+
+#: app.py:657 templates/elements/footer.pyhtml:3
+#: templates/pages/footer.pyhtml:8
+msgid "Support"
+msgstr "支援"
+
+#: app.py:672
+msgid "Your feedback was sent successfully."
+msgstr "您的忠告已成功發送。"
+
+#: app.py:675
+msgid "Feedback Sent!"
+msgstr "忠告發送了！"
+
+#: app.py:678 templates/elements/footer.pyhtml:4
+#: templates/pages/footer.pyhtml:13 templates/pages/footer.pyhtml:130
+#: templates/pages/footer.pyhtml:131
+msgid "Feedback"
+msgstr "忠告"
+
+#: app.py:684 templates/elements/footer.pyhtml:5
+#: templates/pages/footer.pyhtml:18
+msgid "Terms"
+msgstr "條款"
+
+#: app.py:690 templates/elements/footer.pyhtml:6
+#: templates/pages/footer.pyhtml:23
+msgid "Privacy"
+msgstr "私隱"
+
+#: app.py:728 templates/pages/translate.pyhtml:3
+msgid "Translate"
+msgstr "翻译"
+
+#: lib/mailer.py:48
+msgid "Request for changing your password on RIPto"
+msgstr "在RIPto請求更改密碼"
+
+#: lib/mailer.py:61
+msgid "You have deactivated your RIPto account"
+msgstr "RIPto帳戶已停用"
+
+#: lib/mailer.py:73
+msgid "You have been banned from RIPto"
+msgstr "您已被禁止从RIPto"
+
+#: models/memorial.py:298
+msgid "Natural"
+msgstr "自然"
+
+#: models/memorial.py:299
+msgid "Accidental"
+msgstr "偶然"
+
+#: models/memorial.py:300
+msgid "Homicide"
+msgstr "杀人"
+
+#: models/memorial.py:301
+msgid "Suicide"
+msgstr "自杀"
+
+#: models/memorial.py:302
+msgid "War"
+msgstr "战争"
+
+#: templates/elements/edit_new_memorial.pyhtml:5
+msgid "You must include a valid photo or select the checkbox."
+msgstr "你必须选择一个有效照片，或者选择该复选框。"
+
+#: templates/elements/edit_new_memorial.pyhtml:7
+msgid "All fields are required."
+msgstr "所有需要。"
+
+#: templates/elements/edit_new_memorial.pyhtml:22
+msgid "I don't have their photo"
+msgstr "我没有他的照片"
+
+#: templates/elements/edit_new_memorial.pyhtml:24
+msgid "Choose photo"
+msgstr "設定相片"
+
+#: templates/elements/edit_new_memorial.pyhtml:25
+#: templates/elements/edit_new_memorial.pyhtml:30
+msgid "Change photo"
+msgstr "更改相片"
+
+#: templates/elements/edit_new_memorial.pyhtml:26
+msgid "No photo"
+msgstr "沒有相片"
+
+#: templates/elements/edit_new_memorial.pyhtml:27
+msgid "Click to select"
+msgstr "單擊設定"
+
+#: templates/elements/edit_new_memorial.pyhtml:31
+msgid "Select a photo"
+msgstr "設定相片"
+
+#: templates/elements/edit_new_memorial.pyhtml:34
+msgid "Save photo"
+msgstr "儲存相片"
+
+#: templates/elements/edit_new_memorial.pyhtml:43
+msgid "Photo saved."
+msgstr "相片儲存了｡"
+
+#: templates/elements/edit_new_memorial.pyhtml:47
+#, python-format
+msgid "Photo must be a %(exts)s, or %(ext_last)s."
+msgstr "相片必須是%(exts)s或%(ext_last)s。"
+
+#: templates/elements/edit_new_memorial.pyhtml:51
+msgid "A photo is required."
+msgstr "相片是必須的。"
+
+#: templates/elements/edit_new_memorial.pyhtml:55
+msgid ""
+"Please make sure photo is at least <strong>640x480</strong> and at most "
+"<strong>10MB</strong>."
+msgstr ""
+
+#: templates/elements/edit_new_memorial.pyhtml:64
+msgid "Name"
+msgstr "名"
+
+#: templates/elements/edit_new_memorial.pyhtml:66
+msgid "Person's name?"
+msgstr "他的名字吗？"
+
+#: templates/elements/edit_new_memorial.pyhtml:71
+#: templates/elements/edit_new_memorial.pyhtml:72
+msgid "Born"
+msgstr "出生的"
+
+#: templates/elements/edit_new_memorial.pyhtml:78
+#: templates/elements/edit_new_memorial.pyhtml:79
+msgid "Died"
+msgstr "去世了"
+
+#: templates/elements/edit_new_memorial.pyhtml:81
+msgid "Date born/died?"
+msgstr "出生日期/去世日期？"
+
+#: templates/elements/edit_new_memorial.pyhtml:86
+#: templates/elements/edit_new_memorial.pyhtml:93
+msgid "Cause of death?"
+msgstr "死因？"
+
+#: templates/elements/edit_new_memorial.pyhtml:98
+msgid "Epitaph"
+msgstr "墓誌銘"
+
+#: templates/elements/edit_new_memorial.pyhtml:100
+msgid "Short description?"
+msgstr "简要描述？"
+
+#: templates/elements/edit_new_memorial.pyhtml:105
+msgid "Buried"
+msgstr "葬"
+
+#: templates/elements/edit_new_memorial.pyhtml:106
+msgid "Cremated"
+msgstr "燒掉"
+
+#: templates/elements/edit_new_memorial.pyhtml:109
+msgid "Buried/Cremated"
+msgstr "葬/燒掉"
+
+#: templates/elements/edit_new_memorial.pyhtml:110
+msgid "When"
+msgstr "何時"
+
+#: templates/elements/edit_new_memorial.pyhtml:112
+msgid "Date buried/cremated?"
+msgstr "葬日期/燒掉日期？"
+
+#: templates/elements/edit_new_memorial.pyhtml:118
+msgid "Arlington National Cemetery"
+msgstr "香港墳場"
+
+#: templates/elements/edit_new_memorial.pyhtml:120
+msgid "Place buried/cremated?"
+msgstr "葬地方/燒掉地方？"
+
+#: templates/elements/results.pyhtml:2
+msgid "Sorry but we couldn't find any memorials."
+msgstr "很抱歉，没有紀念碑。"
+
+#: templates/elements/results.pyhtml:21
+msgid "Show more memorials"
+msgstr "显示更多紀念碑"
+
+#: templates/elements/topbar.pyhtml:5
+msgid ""
+"Looks like your JavaScript is disabled. We strongly recommend you to "
+"enable it for a better experience."
+msgstr "你的JavaScript被禁用。我们建议您启用它。"
+
+#: templates/elements/topbar.pyhtml:14 templates/elements/topbar.pyhtml:16
+msgid "Search"
+msgstr "搜尋"
+
+#: templates/elements/topbar.pyhtml:30 templates/pages/welcome.pyhtml:3
+#: templates/pages/welcome.pyhtml:61
+msgid "Log in"
+msgstr "登入"
+
+#: templates/elements/topbar.pyhtml:33 templates/pages/welcome.pyhtml:8
+msgid "Sign up"
+msgstr "註冊"
+
+#: templates/elements/topbar.pyhtml:43
+msgid "Log out"
+msgstr "登出"
+
+#: templates/elements/topbar.pyhtml:52
+msgid "Remember someone"
+msgstr "記住某人"
+
+#: templates/elements/modal/calendar.pyhtml:4
+msgid "Calendar"
+msgstr "日曆"
+
+#: templates/elements/modal/calendar.pyhtml:30
+msgid "January"
+msgstr "1 月"
+
+#: templates/elements/modal/calendar.pyhtml:30
+msgid "February"
+msgstr "二月"
+
+#: templates/elements/modal/calendar.pyhtml:30
+msgid "March"
+msgstr "3 月"
+
+#: templates/elements/modal/calendar.pyhtml:30
+msgid "April"
+msgstr "四月"
+
+#: templates/elements/modal/calendar.pyhtml:30
+#: templates/elements/modal/calendar.pyhtml:31
+msgid "May"
+msgstr "五月"
+
+#: templates/elements/modal/calendar.pyhtml:30
+msgid "June"
+msgstr "六月"
+
+#: templates/elements/modal/calendar.pyhtml:30
+msgid "July"
+msgstr "七月"
+
+#: templates/elements/modal/calendar.pyhtml:30
+msgid "August"
+msgstr "八月"
+
+#: templates/elements/modal/calendar.pyhtml:30
+#: templates/pages/footer.pyhtml:198 templates/pages/footer.pyhtml:331
+msgid "September"
+msgstr "9 月"
+
+#: templates/elements/modal/calendar.pyhtml:30
+msgid "October"
+msgstr "十月"
+
+#: templates/elements/modal/calendar.pyhtml:30
+msgid "November"
+msgstr "11 月"
+
+#: templates/elements/modal/calendar.pyhtml:30
+msgid "December"
+msgstr "12 月"
+
+#: templates/elements/modal/calendar.pyhtml:31
+msgid "Jan"
+msgstr "1 月"
+
+#: templates/elements/modal/calendar.pyhtml:31
+msgid "Feb"
+msgstr "二月"
+
+#: templates/elements/modal/calendar.pyhtml:31
+msgid "Mar"
+msgstr "3 月"
+
+#: templates/elements/modal/calendar.pyhtml:31
+msgid "Apr"
+msgstr "四月"
+
+#: templates/elements/modal/calendar.pyhtml:31
+msgid "Jun"
+msgstr "六月"
+
+#: templates/elements/modal/calendar.pyhtml:31
+msgid "Jul"
+msgstr "七月"
+
+#: templates/elements/modal/calendar.pyhtml:31
+msgid "Aug"
+msgstr "八月"
+
+#: templates/elements/modal/calendar.pyhtml:31
+msgid "Sep"
+msgstr "9 月"
+
+#: templates/elements/modal/calendar.pyhtml:31
+msgid "Oct"
+msgstr "十月"
+
+#: templates/elements/modal/calendar.pyhtml:31
+msgid "Nov"
+msgstr "11 月"
+
+#: templates/elements/modal/calendar.pyhtml:31
+msgid "Dec"
+msgstr "12 月"
+
+#: templates/elements/modal/calendar.pyhtml:32
+msgid "Sunday"
+msgstr "星期天"
+
+#: templates/elements/modal/calendar.pyhtml:32
+msgid "Monday"
+msgstr "星期一"
+
+#: templates/elements/modal/calendar.pyhtml:32
+msgid "Tuesday"
+msgstr "星期二"
+
+#: templates/elements/modal/calendar.pyhtml:32
+msgid "Wednesday"
+msgstr "星期三"
+
+#: templates/elements/modal/calendar.pyhtml:32
+msgid "Thursday"
+msgstr "星期四"
+
+#: templates/elements/modal/calendar.pyhtml:32
+msgid "Friday"
+msgstr "星期五"
+
+#: templates/elements/modal/calendar.pyhtml:32
+msgid "Saturday"
+msgstr "星期六"
+
+#: templates/elements/modal/calendar.pyhtml:57
+msgid "Select Date"
+msgstr "設定日期"
+
+#: templates/elements/modal/flag.pyhtml:4
+msgid "Notify"
+msgstr "通知"
+
+#: templates/elements/modal/flag.pyhtml:7 templates/pages/memorial.pyhtml:69
+#: templates/pages/user.pyhtml:13
+msgid "Report"
+msgstr "舉報"
+
+#: templates/elements/modal/flag.pyhtml:21 templates/pages/user.pyhtml:55
+msgid "Report for serious problems or moderator attention?"
+msgstr "舉報嚴重的問題或管理員的注意？"
+
+#: templates/elements/modal/flag.pyhtml:24 templates/pages/user.pyhtml:58
+msgid "Report Abuse"
+msgstr "舉報違規行為"
+
+#: templates/elements/modal/lang.pyhtml:4 templates/pages/lang.pyhtml:11
+#: templates/pages/translate.pyhtml:17
+msgid "International"
+msgstr "国际的"
+
+#: templates/elements/modal/share.pyhtml:4 templates/pages/memorial.pyhtml:71
+msgid "Share"
+msgstr "分享"
+
+#: templates/elements/modal/share.pyhtml:7
+msgid "Community"
+msgstr "社區"
+
+#: templates/elements/modal/share.pyhtml:13 templates/pages/footer.pyhtml:95
+msgid "Email"
+msgstr "電郵"
+
+#: templates/elements/modal/share.pyhtml:19
+msgid "HTML"
+msgstr "碼"
+
+#: templates/elements/modal/share.pyhtml:32
+msgid "You can use the short link or share to a network below."
+msgstr "您可以使用下面的链接或分享到网站。"
+
+#: templates/elements/modal/share.pyhtml:43
+#, python-format
+msgid "Share to %(service)s"
+msgstr "轉貼到：%(service)s"
+
+#: templates/elements/modal/share.pyhtml:51
+msgid "You can email this Memorial by filling out the form below."
+msgstr "填写下面的表格，您可以发送这个紀念碑。"
+
+#: templates/elements/modal/share.pyhtml:64
+#: templates/elements/modal/share.pyhtml:65
+msgid "Your name"
+msgstr "你的名"
+
+#: templates/elements/modal/share.pyhtml:70
+msgid "Friend's email"
+msgstr "朋友的電郵地址"
+
+#: templates/elements/modal/share.pyhtml:71
+msgid "email@example.com, email@example.com, . . ."
+msgstr "電郵, 電郵, . . ."
+
+#: templates/elements/modal/share.pyhtml:76
+msgid "Message (optional)"
+msgstr "訊息 (可選)"
+
+#: templates/elements/modal/share.pyhtml:77
+msgid "Add a comment..."
+msgstr "新增評論 ..."
+
+#: templates/elements/modal/share.pyhtml:90
+#: templates/email/share_email.pyhtml:61
+#, python-format
+msgid "Buried %(funeral_date)s"
+msgstr "葬了%(funeral_date)s"
+
+#: templates/elements/modal/share.pyhtml:92
+#: templates/email/share_email.pyhtml:63
+#, python-format
+msgid "Cremated %(funeral_date)s"
+msgstr "燒掉了%(funeral_date)s"
+
+#: templates/elements/modal/share.pyhtml:101
+msgid "Send Email"
+msgstr "發送電郵"
+
+#: templates/elements/modal/share.pyhtml:107
+msgid "You can add this Memorial to your website by copying the code below."
+msgstr "复制下面的代码，你可以嵌入到你的网站紀念碑。"
+
+#: templates/email/deactivate_email.pyhtml:7
+#, python-format
+msgid "Sorry to see you go %(name)s."
+msgstr "對不起，你離開%(name)s。"
+
+#: templates/email/deactivate_email.pyhtml:11
+#, python-format
+msgid ""
+"Unfortunately, once your account has been deactivated, it can no longer "
+"be activated. This means that username <strong>%(username)s</strong> is "
+"now available for somebody else to use."
+msgstr "不幸的是，您的帳戶已被停用後，它不能被激活了。這意味著，用戶名稱<strong>%(username)s</strong>是供別人使用。"
+
+#: templates/email/deactivate_email.pyhtml:16
+msgid ""
+"Thank you for taking the time to use RIPto. We hope during your "
+"membership, we were able to help you remember those important to you. If "
+"at any time you change your mind and would like to come back to RIPto, "
+"please follow the Changed My Mind button below."
+msgstr "感谢您使用RIPto。我们希望在您的会员，我们可以帮你还记得那些对你很重要。如果你改变了主意，想回来到RIPto，请使用「改变了我的心灵」按钮。"
+
+#: templates/email/deactivate_email.pyhtml:20
+msgid ""
+"We take great pride in making sure RIPto is easy to use and understand, "
+"but we know sometimes things just don't work or don't work well. That's "
+"why we always push our users to give us their feedback on how to improve "
+"RIPto. Though you are no longer a member, we still value your opinion and"
+" would love to hear your input. If there is anything you would like to "
+"share with us, please follow the Give Feedback button below."
+msgstr "我们感到非常自豪，在确保RIPto是易于使用和理解，但我们知道有时事情只是不工作或不能很好的工作。这就是为什么我们总是鼓励我们的用户给我们的忠告，关于如何提高RIPto的。虽然你不是一个成员了，我们仍然重视您的意见，很想听到你的输入。如果有什么你想告诉我们的，请使用「给忠告」按钮。"
+
+#: templates/email/deactivate_email.pyhtml:34
+msgid "Changed My Mind!"
+msgstr "改变了我的心灵！"
+
+#: templates/email/deactivate_email.pyhtml:48
+msgid "Give Feedback"
+msgstr "给忠告"
+
+#: templates/email/reset_email.pyhtml:7
+msgid "Sorry to hear you were having trouble logging in."
+msgstr "对不起，您无法登入。"
+
+#: templates/email/reset_email.pyhtml:11
+msgid ""
+"To reset your password, please follow the button below. You will be taken"
+" to a page that will ask you to enter your new password."
+msgstr "若要变更您的密码，请使用下面的按钮。您将被带到一个页面，要求你輸入新密码。"
+
+#: templates/email/reset_email.pyhtml:25
+msgid "Change My Password"
+msgstr "更改我的密碼"
+
+#: templates/email/share_email.pyhtml:11
+#, python-format
+msgid "Your friend %(name)s has shared a memorial with you:"
+msgstr "你的朋友%(name)s与你分享紀念碑："
+
+#: templates/email/share_email.pyhtml:105
+msgid "Visit Memorial"
+msgstr "访问紀念碑"
+
+#: templates/email/share_email.pyhtml:119
+msgid "Give Condolences"
+msgstr "给吊唁"
+
+#: templates/layouts/base.pyhtml:12
+msgid "A place to remember."
+msgstr "用于回忆的一个地方。"
+
+#: templates/layouts/email.pyhtml:146
+#, python-format
+msgid ""
+"This message was sent to <a href=\"mailto:%(email)s\" "
+"style=\"color:#222222;text-decoration:none;\">%(email)s</a>."
+msgstr ""
+"此訊息被发送到<a href=\"mailto:%(email)s\" style=\"color:#222222;text-"
+"decoration:none;\">%(email)s</a>。"
+
+#: templates/layouts/email.pyhtml:148
+#, python-format
+msgid ""
+"If this is a mistake, please let us know: <a href=\"%(report)s\" "
+"style=\"color:#3b5998;text-decoration:none;\">report</a>."
+msgstr ""
+"如果这是一个错误，请让我们知道：<a href=\"%(report)s\" style=\"color:#3b5998;text-"
+"decoration:none;\">舉報</a>。"
+
+#: templates/layouts/email.pyhtml:150
+msgid "Please disregard this email if it was sent by mistake."
+msgstr "请忽略此邮件，如果它被错误地发送。"
+
+#: templates/layouts/memorial.pyhtml:14
+#, python-format
+msgid "Memorial for %(name)s, %(dob)s - %(dod)s"
+msgstr "紀念碑对%(name)s, %(dob)s - %(dod)s"
+
+#: templates/pages/edit_memorial.pyhtml:3 templates/pages/memorial.pyhtml:67
+msgid "Edit"
+msgstr "編輯"
+
+#: templates/pages/edit_memorial.pyhtml:9 templates/pages/settings.pyhtml:59
+msgid "Cancel"
+msgstr "取消"
+
+#: templates/pages/edit_memorial.pyhtml:10
+msgid "Save Changes"
+msgstr "儲存更改"
+
+#: templates/pages/footer.pyhtml:31 templates/pages/translate.pyhtml:108
+msgid "Guide"
+msgstr "指南"
+
+#: templates/pages/footer.pyhtml:38
+msgid ""
+"Every day, we interact and surround ourselves with family, friends, "
+"colleagues, and many others that shape who we are today and what kind of "
+"memories we have."
+msgstr "每一天，我们互动，并围绕着自己与家人，朋友，同事，和其他许多人，塑造今天我们是谁和什么样的回忆，我们有。"
+
+#: templates/pages/footer.pyhtml:42
+msgid "Why RIPto"
+msgstr "为什么RIPto"
+
+#: templates/pages/footer.pyhtml:43
+msgid ""
+"Unfortunately, sometimes we lose those that are important in our lives, "
+"but it's important to remember that though they are no longer here, we "
+"shouldn't forget them and how they impacted us."
+msgstr "不幸的是，有时我们失去了那些在我们的生活中是很重要的，但重要的是要记住，虽然他们不在这里了，我们不应该忘记他们，他们是如何影响我们。"
+
+#: templates/pages/footer.pyhtml:47
+msgid ""
+"RIPto was created from the need for a place where you can easily go to "
+"remember and share your feelings about people that have passed away."
+msgstr "RIPto被创建为一个地方，你可以很容易地记住和已经去世的人分享你的感情。"
+
+#: templates/pages/footer.pyhtml:51
+msgid "Features"
+msgstr "特點"
+
+#: templates/pages/footer.pyhtml:52
+msgid ""
+"While we are always looking for ways to enhance the site to improve it in"
+" every way possible, we always like to remind ourselves what the core "
+"features are that define RIPto to help ensure we don't stray away from "
+"our original purpose:"
+msgstr "虽然我们一直在寻找各种方式来提升网站，以提高它在每一个可能的方式，我们总是喜欢提醒自己的核心功能是RIPto的定义，以帮助确保我们不偏离我们原来的目标："
+
+#: templates/pages/footer.pyhtml:57
+msgid "Create / View / Share - Memorials"
+msgstr "建立 / 查看 / 分享 - 紀念碑"
+
+#: templates/pages/footer.pyhtml:61
+msgid "Give condolences"
+msgstr "给吊唁"
+
+#: templates/pages/footer.pyhtml:65
+msgid "Learn about others who have passed away"
+msgstr "學習关于別人已經去世"
+
+#: templates/pages/footer.pyhtml:71
+msgid ""
+"Since RIPto is still relatively new, we hope that you can understand "
+"sometimes things don't work, or don't work well. Though we work hard to "
+"make sure RIPto's usability and your experience are exceptional, we know "
+"that it's impossible for us to always make it perfect."
+msgstr "由於RIPto是還是比較新的，我們希望你能理解，有時事情不工作，或不能很好的工作。雖然我們努力確保RIPto的可用性和你的經驗是個例外，我們知道這是不可能的，我們始終做到盡善盡美。"
+
+#: templates/pages/footer.pyhtml:75
+msgid ""
+"That is why we also depend on you, our users, to let us know any "
+"suggestions you might have on how to improve our site, whenever something"
+" breaks, doesn't function as expected, or is just a terrible user "
+"experience. Whatever it is, we want to hear from you, so please <a "
+"href=\"feedback\">visit our feedback page</a> and let us know!"
+msgstr ""
+"這就是為什麼我們還要靠你，我們的用戶，讓我們知道你可能對如何改善我們的網站，一些休息時，並不功能如預期的任何建議，或者僅僅是一個可怕的用戶體驗。不管是什麼，我們希望聽到您的聲音，請訪問我們的<a"
+" href=\"feedback\">忠告頁面</a>，並讓我們知道！"
+
+#: templates/pages/footer.pyhtml:83
+msgid "Invalid email address or message."
+msgstr "無效的電郵或訊息。"
+
+#: templates/pages/footer.pyhtml:89
+msgid ""
+"Please let us know what it is you need help with by filling out our form "
+"below and we will get back to you as soon as we can."
+msgstr "請讓我們知道什麼是你需要幫助填寫以下表格，我們會盡快給您答复。"
+
+#: templates/pages/footer.pyhtml:94
+msgid "Your email"
+msgstr "您的電郵"
+
+#: templates/pages/footer.pyhtml:100 templates/pages/footer.pyhtml:101
+msgid "Message"
+msgstr "訊息"
+
+#: templates/pages/footer.pyhtml:105
+msgid "Send Message"
+msgstr "發送訊息"
+
+#: templates/pages/footer.pyhtml:113
+msgid "Invalid email address or feedback."
+msgstr "無效的電郵或忠告。"
+
+#: templates/pages/footer.pyhtml:119
+msgid ""
+"Bugs? Errors? Suggestions? Whatever your feedback is, we would love to "
+"hear it, so please fill out the form below and let your voice be heard!"
+msgstr "缺陷？錯誤？連連呢？無論您的忠告，我們將非常樂意傾聽，所以請填寫下面的表格，讓我們聽到你的聲音！"
+
+#: templates/pages/footer.pyhtml:124
+msgid "Your email (optional)"
+msgstr "您的電郵 (可選)"
+
+#: templates/pages/footer.pyhtml:125 templates/pages/settings.pyhtml:30
+#: templates/pages/welcome.pyhtml:132
+msgid "Email (optional)"
+msgstr "電郵 (可選)"
+
+#: templates/pages/footer.pyhtml:135
+msgid "Send Feedback"
+msgstr "發送忠告"
+
+#: templates/pages/footer.pyhtml:143
+msgid ""
+"Please read these Terms of Service (\"Agreement\", \"Terms of Service\") "
+"carefully before using ripto.com (\"the Site\") operated by RIPto "
+"(\"us\", \"we\", or \"our\").\n"
+"                        This Agreement sets forth the legally binding "
+"terms and conditions for your use of the Site at ripto.com"
+msgstr "請仔細閱讀這些條款（「協議」，「條款」）由RIPto（「我們」，「我們」或「我們」）（以下簡稱「網站」），使用前ripto.com。本協議載明的具有法律約束力的條款，您使用本網站ripto.com"
+
+#: templates/pages/footer.pyhtml:148
+msgid ""
+"By accessing or using the Site in any manner, including, but not limited "
+"to, visiting or browsing the Site or contributing content or other "
+"materials\n"
+"                        to the Site, you agree to be bound by these Terms"
+" of Service. Capitalized terms are defined in this Agreement."
+msgstr "通過訪問或使用本網站的任何方式，包括但不限於，參觀或瀏覽本網站或網站貢獻內容或其他材料，您同意遵守這些條款。"
+
+#: templates/pages/footer.pyhtml:153
+msgid "Intellectual Property"
+msgstr "知識產權"
+
+#: templates/pages/footer.pyhtml:154
+msgid ""
+"The Site and its original content, features and functionality are owned "
+"by RIPto and are protected by international\n"
+"                        copyright, trademark, patent, trade secret and "
+"other intellectual property or proprietary rights laws."
+msgstr "該網站和其原始內容，特點和功能，所擁有的RIPto和國際版權，商標，專利，商業秘密和其他知識產權或專有權利的法律保護。"
+
+#: templates/pages/footer.pyhtml:159
+msgid "Termination"
+msgstr "終止"
+
+#: templates/pages/footer.pyhtml:160
+msgid ""
+"We may terminate your access to the Site, without cause or notice, which "
+"may result in the forfeiture and destruction of all information "
+"associated with you.\n"
+"                        All provisions of this Agreement that by their "
+"nature should survive termination shall survive termination, including, "
+"without limitation, ownership provisions,\n"
+"                        warranty disclaimers, indemnity, and limitations "
+"of liability."
+msgstr "我們可能會終止你的訪問網站，沒有事業或通知，這可能會導致與你相關的所有信息的沒收和銷毀。本協議的所有條款，其性質應終止後繼續生存終止，包括但不限於所有權的規定，免責聲明，賠償和責任限制。"
+
+#: templates/pages/footer.pyhtml:166
+msgid "Links To Other Sites"
+msgstr "與其他網站的連結"
+
+#: templates/pages/footer.pyhtml:167
+msgid ""
+"Our Site may contain links to third-party sites that are not owned or "
+"controlled by RIPto"
+msgstr "我們的網站可能包含鏈接到第三方網站不擁有或控制由RIPto"
+
+#: templates/pages/footer.pyhtml:171
+msgid ""
+"RIPto has no control over, and assumes no responsibility for, the "
+"content, privacy policies, or practices of any third party sites or "
+"services. We strongly\n"
+"                        advise you to read the terms and conditions and "
+"privacy policy of any third-party site that you visit."
+msgstr "RIPto有沒有控制權，並承擔任何責任，內容，私隱政策，或任何第三方網站或服務的做法。我們強烈建議您閱讀條款及您訪問的任何第三方網站的私隱政策。"
+
+#: templates/pages/footer.pyhtml:176
+msgid "Governing Law"
+msgstr "執政規律"
+
+#: templates/pages/footer.pyhtml:177
+msgid ""
+"This Agreement (and any further rules, policies, or guidelines "
+"incorporated by reference) shall be governed and construed in accordance "
+"with the laws of California,\n"
+"                        United States, without giving effect to any "
+"principles of conflicts of law."
+msgstr "該協議（及任何其他規則，政策，或通過引用併入指引）應按照加州，美國，法律管轄和解釋沒有給予任何法律衝突的原則。"
+
+#: templates/pages/footer.pyhtml:182
+msgid "Changes To This Agreement"
+msgstr "本協議的修改"
+
+#: templates/pages/footer.pyhtml:183
+msgid ""
+"We reserve the right, at our sole discretion, to modify or replace these "
+"Terms of Service by posting the updated terms on the Site. Your continued"
+" use of the Site\n"
+"                        after any such changes constitutes your "
+"acceptance of the new Terms of Service."
+msgstr "我們有權利，在任何時間，在網站上發布新的條款修改或替換這些條款。如果您繼續使用本網站的任何上述修訂後，意味著您接受新的條款。"
+
+#: templates/pages/footer.pyhtml:188
+msgid ""
+"Please review this Agreement periodically for changes. If you do not "
+"agree to any of this Agreement or any changes to this Agreement, do not "
+"use, access or continue\n"
+"                        to access the Site or discontinue any use of the "
+"Site immediately."
+msgstr "請定期查閱本協議更改。如果您不同意本協議或本協議的任何變更，不使用，訪問或繼續訪問本網站或立即停止任何使用本網站。"
+
+#: templates/pages/footer.pyhtml:193
+msgid "Contact Us"
+msgstr "聯繫我們"
+
+#: templates/pages/footer.pyhtml:194
+msgid "If you have any questions about this Agreement, please contact us."
+msgstr "如果您對本協議有任何疑問，請與我們聯繫。"
+
+#: templates/pages/footer.pyhtml:198 templates/pages/footer.pyhtml:331
+#, python-format
+msgid "Last Updated on %(month)s %(day)s, %(year)s."
+msgstr "上次修改%(month)s %(day)s, %(year)s。"
+
+#: templates/pages/footer.pyhtml:206
+msgid ""
+"This privacy policy (“<strong>Policy</strong>”) describes how RIPto and "
+"its related companies (“<strong>Company</strong>”) collect,\n"
+"                        use and share personal information of consumer "
+"users of this website, <a target=\"_blank\" "
+"href=\"http://ripto.com\">ripto.com</a>\n"
+"                        (the “Site”). This Policy also applies to any of "
+"our other websites that post this Policy. This Policy does not apply to "
+"websites\n"
+"                        that post different statements."
+msgstr ""
+"本私隱政策（「<strong>政策</strong>」），介紹了，RIPto及其關聯公司（「<strong>公司</strong>」）如何收集，使用和共享個人信息，本網站的消費用戶，<a"
+" target=\"_blank\" "
+"href=\"http://ripto.com\">ripto.com</a>（以下簡稱「網站」）。這個政策也適用於任何其他網站發布此政策。此政策並不適用於網站發表不同的報表。"
+
+#: templates/pages/footer.pyhtml:213
+msgid "WHAT WE COLLECT"
+msgstr "我們收集什麼"
+
+#: templates/pages/footer.pyhtml:214
+msgid "We get information about you in a range of ways."
+msgstr "我們得到了關於您的信息以不同的方式。"
+
+#: templates/pages/footer.pyhtml:218
+msgid "Information You Give Us."
+msgstr "你給我們的信息。"
+
+#: templates/pages/footer.pyhtml:219
+msgid ""
+"We collect your name, email address, username and other information you "
+"directly give us on our Site."
+msgstr "我們收集您的姓名，電郵地址，用戶名和其他信息，你直接給我們在我們的網站上。"
+
+#: templates/pages/footer.pyhtml:223
+msgid "Information We Get from Others."
+msgstr "我們從別人那裡得到的信息。"
+
+#: templates/pages/footer.pyhtml:224
+msgid ""
+"We may get information about you from other sources. We may add this to "
+"information we get from this Site."
+msgstr "我們可能會從其他來源獲得關於您的信息。我們可能會加入到我們從這個網站獲得的信息。"
+
+#: templates/pages/footer.pyhtml:228
+msgid "Information Automatically Collected."
+msgstr "自動收集的信息。"
+
+#: templates/pages/footer.pyhtml:229
+msgid "We automatically log information about you and your computer."
+msgstr "我們會自動記錄您和您的計算機的信息。"
+
+#: templates/pages/footer.pyhtml:233
+msgid "Cookies."
+msgstr "Cookies。"
+
+#: templates/pages/footer.pyhtml:233
+msgid ""
+"We may log information using \"cookies.\" Cookies are small data files "
+"stored on your hard drive by a website.\n"
+"                        Cookies help us make our Site and your visit "
+"better. We use cookies to see which parts of our Site people use and like"
+" and to count visits\n"
+"                        to our Site."
+msgstr "我們可能使用「cookies」信息記錄。cookies是小的數據文件存儲在您的硬盤驅動器​​上的一個網站。cookies幫助我們使我們的網站和您的光臨。我們使用cookies來看看哪些部分使用和喜歡我們的網站的人，並計算訪問我們的網站。"
+
+#: templates/pages/footer.pyhtml:239
+msgid "Web Beacons."
+msgstr "网络信标。"
+
+#: templates/pages/footer.pyhtml:239
+msgid ""
+"We may log information using digital images called Web beacons on our "
+"Site or in our emails. We use Web beacons\n"
+"                        to manage cookies, count visits, and to learn "
+"what marketing works and what does not. We also use Web Beacons to tell "
+"if you open or act\n"
+"                        on our emails."
+msgstr "我們可能記錄叫网络信标，在我們的網站，或在我們的電郵使用的數字圖像信息。我們使用的网络信标管理Cookie，算上訪問，並了解哪些營銷工作，什麼不。我們還使用网络信标來告訴你，如果打開或使用我們的電郵。"
+
+#: templates/pages/footer.pyhtml:245
+msgid "USE OF PERSONAL INFORMATION"
+msgstr "個人信息的使用"
+
+#: templates/pages/footer.pyhtml:246
+msgid "We use your personal information as follows:"
+msgstr "我們使用您的個人信息："
+
+#: templates/pages/footer.pyhtml:251
+msgid ""
+"We use your personal information to protect, investigate, and deter "
+"against fraudulent, unauthorized, or illegal activity."
+msgstr "我們使用您的個人信息，以防止，調查和阻止反對欺詐，未經授權，或非法活動。"
+
+#: templates/pages/footer.pyhtml:256
+msgid "SHARING OF PERSONAL INFORMATION"
+msgstr "共享個人信息"
+
+#: templates/pages/footer.pyhtml:257
+msgid "We may share personal information as follows:"
+msgstr "我們可以共享的個人信息："
+
+#: templates/pages/footer.pyhtml:262
+msgid ""
+"We may share personal information with your consent. For example, you may"
+" let us share personal information with others for\n"
+"                            their own marketing uses. Those uses will be "
+"subject to their privacy policies."
+msgstr "我們可以共享的個人信息，您的同意。例如，您可能讓我們自己的營銷用途與他人共享個人信息。這些用途將自己的私隱政策。"
+
+#: templates/pages/footer.pyhtml:266
+msgid ""
+"We may share personal information when we do a business deal, or "
+"negotiate a business deal, involving sale or transfer of all\n"
+"                            or a part of our business or assets. These "
+"deals can include any merger, financing, acquisition, or bankruptcy "
+"transaction or\n"
+"                            proceeding."
+msgstr "當我們做一筆生意，我們可以共享的個人信息，或談判一筆生意，涉及出售或轉讓全部或部分業務或資產。這些交易可以包括任何兼併，融資，收購，或破產事務或訴訟。"
+
+#: templates/pages/footer.pyhtml:271
+msgid ""
+"We may share personal information for legal, protection, and safety "
+"purposes."
+msgstr "我們可能分享個人信息的法律，保護和安全的目的。"
+
+#: templates/pages/footer.pyhtml:274
+msgid "We may share information to comply with laws."
+msgstr "遵守法律，我們可能會共享信息。"
+
+#: templates/pages/footer.pyhtml:277
+msgid "We may share information to respond to lawful requests and legal process."
+msgstr "我們可以共享信息，以回應合法的要求和法律的過程。"
+
+#: templates/pages/footer.pyhtml:280
+msgid ""
+"We may share information to protect the rights and property of RIPto, our"
+" agents, customers, and others. This includes\n"
+"                                    enforcing our agreements, policies, "
+"and terms of use."
+msgstr "我們可以共享信息，以保護RIPto上，我們的代理商，客戶，以及其他的權利和財產。這包括執行我們的協議，政策和條款。"
+
+#: templates/pages/footer.pyhtml:284
+msgid ""
+"We may share information in an emergency. This includes protecting the "
+"safety of our employees and agents, our customers,\n"
+"                                    or any person."
+msgstr "在緊急情況下，我們可能會共享信息。這包括保護我們的員工和代理人，我們的客戶，或任何人的安全。"
+
+#: templates/pages/footer.pyhtml:290
+msgid "We may share information with those who need it to do work for us."
+msgstr "我們與那些誰需要做的工作，我們可能會共享信息。"
+
+#: templates/pages/footer.pyhtml:295
+msgid ""
+"We may also share aggregated and/or anonymized data with others for their"
+" own uses."
+msgstr "我們也可以為自己的用途與他人分享聚合和/或匿名數據。"
+
+#: templates/pages/footer.pyhtml:299
+msgid "INFORMATION CHOICES AND CHANGES"
+msgstr "信息選項和一些修改"
+
+#: templates/pages/footer.pyhtml:300
+msgid ""
+"Our marketing emails tell you how to “opt-out”. If you opt out, we may "
+"still send you non-marketing emails. Non-marketing emails\n"
+"                        include emails about your accounts and our "
+"business dealings with you."
+msgstr "我們的營銷電郵告訴你如何「不參與」。如果你不參加，我們可能仍然發送其他類型的電郵。這些電郵可能對您的帳戶和我們的業務往來。"
+
+#: templates/pages/footer.pyhtml:305
+msgid ""
+"You may send requests about personal information to our Contact "
+"Information below. You can request to change contact choices,\n"
+"                        opt-out of our sharing with others, and update "
+"your personal information."
+msgstr "您可以發送有關個人信息的請求，下面我們的聯絡資料。您可以請求改變接觸的選擇，不參與我們與他人分享，並更新您的個人信息。"
+
+#: templates/pages/footer.pyhtml:310
+msgid ""
+"You can typically remove and reject cookies from our Site with your "
+"browser settings. Many browsers are set to accept cookies until\n"
+"                        you change your settings. If you remove or reject"
+" our cookies, it could affect how our Site works for you."
+msgstr "您通常可以移除並拒絕cookies從我們的網站與您的瀏覽器設置。許多瀏覽器設置為接受cookies，直到你改變你的設置。如果您刪除或拒絕我們的cookies，它可能會影響我們的網站為你的作品。"
+
+#: templates/pages/footer.pyhtml:315
+msgid "SECURITY OF YOUR PERSONAL INFORMATION"
+msgstr "您的個人信息安全"
+
+#: templates/pages/footer.pyhtml:316
+msgid ""
+"We take steps to help protect personal information. No company can fully "
+"prevent security risks, however. Mistakes may happen.\n"
+"                        Bad actors may defeat even the best safeguards."
+msgstr "我們採取步驟，以協助保護個人信息。沒有一家公司可以完全防止安全隱患，但是。誤區可能發生。詐騙者可能擊敗，即使是最好的保障。"
+
+#: templates/pages/footer.pyhtml:321
+msgid "CONTACT INFORMATION"
+msgstr "聯絡資料"
+
+#: templates/pages/footer.pyhtml:322
+msgid ""
+"We welcome your comments or questions about this Privacy Policy. You may "
+"also contact us at <a target=\"_blank\" "
+"href=\"http://ripto.com/support\">ripto.com/support</a>."
+msgstr ""
+"我們歡迎您的意見或對本私隱政策的問題。您也可以聯繫我們在<a target=\"_blank\" "
+"href=\"http://ripto.com/support\">ripto.com/support</a>。"
+
+#: templates/pages/footer.pyhtml:326
+msgid "CHANGES TO THIS PRIVACY POLICY"
+msgstr "私隱政策的修改"
+
+#: templates/pages/footer.pyhtml:327
+msgid ""
+"We may change this Privacy Policy. If we make any changes, we will change"
+" the Last Updated date below."
+msgstr "我們可能會更改本私隱政策。如果我們做任何改動，我們將改變上次修改日期。"
+
+#: templates/pages/home.pyhtml:3
+msgid "Created"
+msgstr "建立了"
+
+#: templates/pages/home.pyhtml:8
+msgid "Remembered"
+msgstr "怀念了"
+
+#: templates/pages/index.pyhtml:2 templates/pages/memorials.pyhtml:2
+msgid "visited"
+msgstr "参观了"
+
+#: templates/pages/index.pyhtml:3 templates/pages/memorials.pyhtml:3
+msgid "commented"
+msgstr "评论了"
+
+#: templates/pages/index.pyhtml:4 templates/pages/memorials.pyhtml:4
+msgid "remembered"
+msgstr "怀念了"
+
+#: templates/pages/index.pyhtml:8 templates/pages/memorials.pyhtml:8
+msgid "today"
+msgstr "今天"
+
+#: templates/pages/index.pyhtml:9 templates/pages/memorials.pyhtml:9
+msgid "yesterday"
+msgstr "昨天"
+
+#: templates/pages/index.pyhtml:10 templates/pages/memorials.pyhtml:10
+msgid "this week"
+msgstr "本星期"
+
+#: templates/pages/index.pyhtml:11 templates/pages/memorials.pyhtml:11
+msgid "this month"
+msgstr "这个月"
+
+#: templates/pages/index.pyhtml:12 templates/pages/memorials.pyhtml:12
+msgid "all time"
+msgstr "从一开始就"
+
+#: templates/pages/index.pyhtml:34 templates/pages/memorials.pyhtml:36
+#, python-format
+msgid "The most %(filters)s Memorials, created %(times)s"
+msgstr "%(filters)s人数最多的紀念碑，造就了%(times)s。"
+
+#: templates/pages/lang.pyhtml:17
+msgid "That language is not yet available."
+msgstr "語言是尚未公佈。"
+
+#: templates/pages/lang.pyhtml:51
+msgid "Coming soon!"
+msgstr "即將推出！"
+
+#: templates/pages/memorial.pyhtml:10
+#, python-format
+msgid ""
+"Memorial was successfully created.<br>Click <a class=\"js-modal-click\" "
+"href=\"%(link)s\" data-modal-for=\"share-memorial-dialog\">here</a> to "
+"share with your friends and family."
+msgstr ""
+"紀念碑已成功建立了。<br>點擊<a class=\"js-modal-click\" href=\"%(link)s\" data-modal-"
+"for=\"share-memorial-dialog\">這裡</a>與您的朋友和家人分享。"
+
+#: templates/pages/memorial.pyhtml:17
+msgid "Photo"
+msgstr "相片"
+
+#: templates/pages/memorial.pyhtml:23
+#, python-format
+msgid "Cause of death: %(cause)s"
+msgstr "死因：%(cause)s"
+
+#: templates/pages/memorial.pyhtml:43
+#, python-format
+msgid "Buried <strong>%(funeral_date)s</strong>"
+msgstr "葬了%(funeral_date)s"
+
+#: templates/pages/memorial.pyhtml:45
+#, python-format
+msgid "Cremated <strong>%(funeral_date)s</strong>"
+msgstr "燒掉了%(funeral_date)s"
+
+#: templates/pages/memorial.pyhtml:60
+#, python-format
+msgid "Visited %(name)s"
+msgstr "参观了%(name)s"
+
+#: templates/pages/memorial.pyhtml:64
+#, python-format
+msgid "Remembered %(name)s"
+msgstr "想起了%(name)s"
+
+#: templates/pages/memorial.pyhtml:79
+msgid "Condolences"
+msgstr "吊唁"
+
+#: templates/pages/memorial.pyhtml:91
+msgid "Your thoughts, feelings, praise..."
+msgstr "你的思想，感情，赞美。。。"
+
+#: templates/pages/memorial.pyhtml:93 templates/pages/memorial.pyhtml:139
+msgid "Post"
+msgstr "提交"
+
+#: templates/pages/memorial.pyhtml:109
+#, fuzzy, python-format
+msgid "Like (%(num)s)"
+msgstr "不喜歡（<span>%(num)s</span>）"
+
+#: templates/pages/memorial.pyhtml:110
+#, fuzzy, python-format
+msgid "Dislike (%(num)s)"
+msgstr "不喜歡（<span>%(num)s</span>）"
+
+#: templates/pages/memorial.pyhtml:111
+#, fuzzy, python-format
+msgid "Reply (%(num)s)"
+msgstr "回复（<span>%(num)s</span>）"
+
+#: templates/pages/memorial.pyhtml:137
+msgid "Your reply..."
+msgstr ""
+
+#: templates/pages/new_memorial.pyhtml:8
+msgid ""
+"<a href=\"/login\">Sign in</a> or <a href=\"/signup\">register</a> first "
+"if you want to change this later."
+msgstr "<a href=\"login\">登入</a>或<a href=\"signup\">這裡</a>首先，如果你想稍后编辑。"
+
+#: templates/pages/new_memorial.pyhtml:15
+msgid "Create Memorial"
+msgstr "建立紀念碑"
+
+#: templates/pages/reset.pyhtml:3
+msgid "Change my password"
+msgstr "更改我的密碼"
+
+#: templates/pages/reset.pyhtml:7
+msgid ""
+"Looks like we couldn't find that username or no email was registered to "
+"it."
+msgstr "我們無法找到該用戶名或註冊沒有電郵。"
+
+#: templates/pages/reset.pyhtml:16
+msgid "Enter your new password"
+msgstr "輸入你的新的密碼"
+
+#: templates/pages/reset.pyhtml:23 templates/pages/welcome.pyhtml:208
+msgid "Submit"
+msgstr "提交"
+
+#: templates/pages/results.pyhtml:6
+#, python-format
+msgid "Found %(total)s memorials"
+msgstr "%(total)s紀念碑"
+
+#: templates/pages/settings.pyhtml:3 templates/pages/user.pyhtml:3
+msgid "Profile"
+msgstr "人資料"
+
+#: templates/pages/settings.pyhtml:25
+msgid "My name"
+msgstr "我的名"
+
+#: templates/pages/settings.pyhtml:26 templates/pages/welcome.pyhtml:121
+msgid "Name (optional)"
+msgstr "名 (可選)"
+
+#: templates/pages/settings.pyhtml:29
+msgid "My email"
+msgstr "我的電郵"
+
+#: templates/pages/settings.pyhtml:35
+msgid "My username"
+msgstr "我的用戶名稱"
+
+#: templates/pages/settings.pyhtml:36 templates/pages/welcome.pyhtml:146
+msgid "Username"
+msgstr "用戶名稱"
+
+#: templates/pages/settings.pyhtml:39
+msgid "My new password"
+msgstr "我的新密码"
+
+#: templates/pages/settings.pyhtml:40
+msgid "New Password"
+msgstr "新的密碼"
+
+#: templates/pages/settings.pyhtml:44
+msgid "Save"
+msgstr "儲存"
+
+#: templates/pages/settings.pyhtml:55
+msgid "Are you sure you want to delete your account?"
+msgstr "Are you sure you want to delete your account？"
+
+#: templates/pages/settings.pyhtml:60 templates/pages/settings.pyhtml:72
+msgid "Delete My Account"
+msgstr "删除我的帐户"
+
+#: templates/pages/settings.pyhtml:65 templates/pages/user.pyhtml:32
+msgid "Member Since:"
+msgstr "注册日期："
+
+#: templates/pages/settings.pyhtml:68 templates/pages/user.pyhtml:35
+msgid "Memorials Created:"
+msgstr "建立了的紀念碑："
+
+#: templates/pages/translate.pyhtml:27
+msgid "Translations saved."
+msgstr "翻譯儲存了｡"
+
+#: templates/pages/translate.pyhtml:35
+#, python-format
+msgid ""
+"There are currently <strong>%(num_blanks)s blank</strong> and "
+"<strong>%(num_fuzzies)s fuzzy</strong> translations."
+msgstr "目前有<strong>%(num_blanks)s個空白</strong>，<strong>%(num_fuzzies)s個糢糊</strong>翻譯。"
+
+#: templates/pages/translate.pyhtml:60
+msgid "Save Translations"
+msgstr "儲存翻譯"
+
+#: templates/pages/translate.pyhtml:66
+msgid "This language is not yet available."
+msgstr "這種語言是尚未公佈。"
+
+#: templates/pages/translate.pyhtml:98
+msgid "If you would like to add a language, <a href=\"/support\">let us know</a>!"
+msgstr "如果你想添加的語言，<a href=\"/support\">讓我們知道</a>！"
+
+#: templates/pages/translate.pyhtml:117
+msgid ""
+"A variable, such as a person's name. You must include this in your "
+"translation, otherwise the data will not be shown to users."
+msgstr "一個變量，比如一個人的名字。您必須包括在你的翻譯，否則數據將不會顯示給用戶。"
+
+#: templates/pages/translate.pyhtml:120
+msgid ""
+"HTML element, such as a link. You must include this in your translation, "
+"however make sure you translate any text between the tags."
+msgstr "HTML元素，如連結。您必須包括在你的翻譯，但確保你翻譯任何文字標記之間的。"
+
+#: templates/pages/translate.pyhtml:123
+msgid ""
+"Whenever messages are added or updated, RIPto must check each message to "
+"make sure a translation was provided for it.  If it encounters any "
+"messages that do not yet have a translation, it will be marked as "
+"\"blank\". In order to ensure consistency throughout RIPto, we require a "
+"translation be provided for every message listed. All messages with "
+"\"blank\" translations will be highlighted in <span "
+"style=\"color:#c13\">red</span>."
+msgstr ""
+"每當訊息中添加或更新，RIPto的必須檢查每個訊息，以確保為它提供翻譯。如果遇到任何的文字還沒有翻譯，它會被標記為「空白」。為了確保整個RIPto上的一致性，我們需要列出每個訊息提供翻譯。將會以<span"
+" style=\"color:#c13\">紅色</span>突出顯示所有訊息「空白」的翻譯。"
+
+#: templates/pages/translate.pyhtml:126
+msgid ""
+"Whenever translations are added or updated, RIPto must check each "
+"translation and compare to its previous translation to make sure it "
+"correctly saves. Sometimes, it encounters a translation that it has "
+"difficulty processing, so it marks this translation as \"fuzzy\" and "
+"waits for your approval. If you see any translations marked as \"fuzzy\","
+" please review to make sure the translation is correct, and fix any "
+"mistakes you see. When ready, check the checkbox next to the translation "
+"and submit to RIPto so we know what the correct translation should be. "
+"All messages with \"fuzzy\" translations will be highlighted in <span "
+"style=\"color:#efc144\">yellow</span>."
+msgstr ""
+"每當翻譯是添加或更新，RIPto的必須檢查每一個翻譯，並比較其以前的翻譯，以確保它正確保存。有時，遇到翻譯，它有加工困難，所以它標誌著這個翻譯為「糢糊」，等待您的批准。如果你看到任何標記為「糢糊」的翻譯，請審查，以確保翻譯是正確的，並修復任何錯誤，你看。準備就緒後，選中複選框旁邊的翻譯，所以我們知道什麼是正確的翻譯應該是提交到RIPto。與「糢糊」的翻譯將所有訊息以<span"
+" style=\"color:#efc144\">黃色</span>突出顯示。"
+
+#: templates/pages/translate.pyhtml:129
+msgid "If you have any questions, please <a href=\"/support\">contact us</a>."
+msgstr "如果您有任何疑問，請<a href=\"/support\">與我們聯繫</a>。"
+
+#: templates/pages/user.pyhtml:8
+msgid "Memorials"
+msgstr "紀念碑"
+
+#: templates/pages/user.pyhtml:21
+msgid "User"
+msgstr "使用者:"
+
+#: templates/pages/user.pyhtml:29
+msgid "User:"
+msgstr "使用者:"
+
+#: templates/pages/wechat.pyhtml:13
+msgid "WeChat"
+msgstr "WeChat"
+
+#: templates/pages/wechat.pyhtml:20
+msgid ""
+"With WeChat, scan the QR Code to the right and you can share this "
+"memorial with your friends or WeChat circle of friends."
+msgstr "使用WeChat，掃描QR碼在這裡，您將能夠與您的WeChat朋友分享這個紀念碑。"
+
+#: templates/pages/wechat.pyhtml:22
+#, python-format
+msgid "[%(url_title)s]"
+msgstr "【%(url_title)s】"
+
+#: templates/pages/wechat.pyhtml:33
+msgid ""
+"How to use <i class=\"wechat-app sprite\"></i>WeChat QR Code: <a "
+"href=\"http://baike.baidu.com/view/7443374.htm\" target=\"_blank\">View "
+"Details</a>"
+msgstr ""
+"如何使用<i class=\"wechat-app sprite\"></i>WeChat的QR碼：<a "
+"href=\"http://baike.baidu.com/view/7443374.htm\" "
+"target=\"_blank\">查看詳情</a>"
+
+#: templates/pages/welcome.pyhtml:22
+msgid "Welcome!"
+msgstr "歡迎！"
+
+#: templates/pages/welcome.pyhtml:30
+msgid "Incorrect username or password."
+msgstr "用戶名或密碼有誤。"
+
+#: templates/pages/welcome.pyhtml:34
+msgid "You must be logged in to do that."
+msgstr "請首先登入。"
+
+#: templates/pages/welcome.pyhtml:45 templates/pages/welcome.pyhtml:201
+msgid "Enter your username"
+msgstr "輸入你的用戶名"
+
+#: templates/pages/welcome.pyhtml:54
+msgid "Enter your password"
+msgstr "輸入你的密碼"
+
+#: templates/pages/welcome.pyhtml:54
+msgid "Forgot my password"
+msgstr "忘記我的密碼"
+
+#: templates/pages/welcome.pyhtml:54
+msgid "Forgot?"
+msgstr "忘記？"
+
+#: templates/pages/welcome.pyhtml:64
+msgid "Remember me"
+msgstr "記住我"
+
+#: templates/pages/welcome.pyhtml:74
+msgid "Enter your first and last name."
+msgstr "請輸入你的姓名"
+
+#: templates/pages/welcome.pyhtml:75
+msgid "Name looks great."
+msgstr "名稱看起來很棒。"
+
+#: templates/pages/welcome.pyhtml:78
+msgid "What's your email address?"
+msgstr "電郵地址是什麼？"
+
+#: templates/pages/welcome.pyhtml:79
+msgid "Email looks great."
+msgstr "電郵看起來很棒。"
+
+#: templates/pages/welcome.pyhtml:80 templates/pages/welcome.pyhtml:87
+msgid "Checking..."
+msgstr "正在發送。。。"
+
+#: templates/pages/welcome.pyhtml:81
+msgid "Doesn't look like a valid email."
+msgstr "無效的電郵。"
+
+#: templates/pages/welcome.pyhtml:82
+msgid "This email is already registered."
+msgstr "此電郵已經註冊。"
+
+#: templates/pages/welcome.pyhtml:85
+msgid "Username can only contain letters, numbers and underscores."
+msgstr "只允許數字與字母。"
+
+#: templates/pages/welcome.pyhtml:86
+msgid "Username looks great."
+msgstr "用戶名稱看起來很棒。"
+
+#: templates/pages/welcome.pyhtml:88
+msgid "Doesn't look like a valid username."
+msgstr "無效的用戶名稱。"
+
+#: templates/pages/welcome.pyhtml:89
+msgid "A username is required!"
+msgstr "用戶名稱是必須的！"
+
+#: templates/pages/welcome.pyhtml:90
+msgid "This username is already registered."
+msgstr "此用戶名稱已經被使用。"
+
+#: templates/pages/welcome.pyhtml:93
+msgid "6 characters or more! Be tricky."
+msgstr "6個字元或更多！複雜些。"
+
+#: templates/pages/welcome.pyhtml:94
+msgid "Password is perfect!"
+msgstr "完美的密碼！"
+
+#: templates/pages/welcome.pyhtml:95
+msgid "Password is okay."
+msgstr "密碼看起來很棒。"
+
+#: templates/pages/welcome.pyhtml:96
+msgid "Password could be more secure."
+msgstr "密碼可以更安全。"
+
+#: templates/pages/welcome.pyhtml:97
+msgid "Password is not secure enough."
+msgstr "密碼不夠安全。"
+
+#: templates/pages/welcome.pyhtml:98
+msgid "Password must be at least 6 characters."
+msgstr "密碼須至少為6個字元。"
+
+#: templates/pages/welcome.pyhtml:99
+msgid "Password cannot be blank!"
+msgstr "密碼不能為空白！"
+
+#: templates/pages/welcome.pyhtml:161
+msgid "Password"
+msgstr "密碼"
+
+#: templates/pages/welcome.pyhtml:181
+msgid ""
+"By clicking the button below, you agree to our <a href=\"terms\" "
+"target=\"_blank\">Terms</a> and that you have read our <a "
+"href=\"privacy\" target=\"_blank\">Privacy Policy</a>."
+msgstr ""
+"一旦點擊註冊，即表示你同意本網站的<a href=\"terms\" target=\"_blank\">條款</a>，而且你也詳讀了我們的<a "
+"href=\"privacy\" target=\"_blank\">私隱政策</a>。"
+
+#: templates/pages/welcome.pyhtml:186
+msgid "Create my account"
+msgstr "建立我的帳戶"
+
+#: templates/pages/welcome.pyhtml:194
+msgid ""
+"Sorry, but we couldn't find that username or no email was registered to "
+"it."
+msgstr "我們無法找到該用戶名或註冊沒有電郵。"
+

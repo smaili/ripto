@@ -1,0 +1,58 @@
+{% extends "layouts/email.pyhtml" %}
+
+
+
+{% block content %}
+<p style="margin:15px 0px">
+    {{ _("Sorry to see you go %(name)s.", name=(name or username)) }}
+</p>
+
+<p style="margin:15px 0px">
+    {{ _("Unfortunately, once your account has been deactivated, it can no longer be activated. This means that username <strong>%(username)s</strong> is now available for somebody else to use.", username=username) }}
+    
+</p>
+
+<p style="margin:15px 0px">
+    {{ _("Thank you for taking the time to use RIPto. We hope during your membership, we were able to help you remember those important to you. If at any time you change your mind and would like to come back to RIPto, please follow the Changed My Mind button below.") }}
+</p>
+
+<p style="margin:15px 0px">
+    {{ _("We take great pride in making sure RIPto is easy to use and understand, but we know sometimes things just don't work or don't work well. That's why we always push our users to give us their feedback on how to improve RIPto. Though you are no longer a member, we still value your opinion and would love to hear your input. If there is anything you would like to share with us, please follow the Give Feedback button below.") }}
+</p>
+
+<br>
+
+<table cellspacing="0" cellpadding="0">
+    <tbody>
+        <tr>
+            <td style="border-width:1px;border-style:solid;border-color:#111111;background-color:#333333">
+                <table cellspacing="0" cellpadding="0">
+                    <tbody>
+                        <tr>
+                            <td style="font-size:11px;font-family:'lucida grande',tahoma,verdana,arial,sans-serif;padding:8px 20px;border-top:1px solid #555555">
+                                <a href="{{ jinjer.url_for("signup", _external=True) }}" style="color:#3b5998;text-decoration:none">
+                                    <span style="font-size:14px;font-family:'lucida grande',tahoma,verdana,arial,sans-serif;font-weight:bold;white-space:nowrap;color:#ffffff">{{ _("Changed My Mind!") }}</span>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+            <td style="{{ default_text }};padding:0px 10px;"></td>
+            <td style="border-width:1px;border-style:solid;border-color:#057ed0;background-color:#019ad2">
+                <table cellspacing="0" cellpadding="0">
+                    <tbody>
+                        <tr>
+                            <td style="font-size:11px;font-family:'lucida grande',tahoma,verdana,arial,sans-serif;padding:8px 20px;border-top:1px solid #05aed0">
+                                <a href="{{ jinjer.url_for("feedback", _external=True) }}" style="color:#3b5998;text-decoration:none">
+                                    <span style="font-size:14px;font-family:'lucida grande',tahoma,verdana,arial,sans-serif;font-weight:bold;white-space:nowrap;color:#ffffff">{{ _("Give Feedback") }}</span>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+{% endblock %}

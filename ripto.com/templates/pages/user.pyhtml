@@ -1,0 +1,65 @@
+{% set canvas_menu = [
+    {
+        'title': _("Profile"),
+        'name': 'profile',
+        'link': jinjer.url_for('user', username=user.username)
+    },
+    {
+        'title': _("Memorials"),
+        'name': 'memorials',
+        'link': jinjer.url_for('user', username=user.username, action='memorials')
+    },
+    {
+        'title': _("Report"),
+        'name': 'report',
+        'link': jinjer.url_for('user', username=user.username, action='report')
+    }
+] %}
+
+<div id="user-container" class="content-container">
+    <h1 class="page-title">{{ _("User") }}</h1>
+    <div class="user canvas">
+        {{ jinjer.element( 'menu', canvas_menu=canvas_menu, section=section ) }}
+        <div class="canvas-content">
+            {% if not section %}
+            <div class="profile-container">
+                <div class="profile-stats">
+                    <p>
+                        <span>{{ _("User:") }}</span> <strong>{% autoescape true %}{{ user.name or user.username }}{% endautoescape %}</strong>
+                    </p>
+                    <p>
+                        <span>{{ _("Member Since:") }}</span> <strong>{{ user.created.year }}</strong>
+                    </p>
+                    <p>
+                        <span>{{ _("Memorials Created:") }}</span> <strong>{{ user.get_memorial_count() }}</strong>
+                    </p>
+                </div>
+            </div>
+            {% elif section == 'memorials' %}
+            <div class="memorials-container">
+                <ul class="memorial-list">
+                    {{ jinjer.element( 'results', results=results, paging=paging ) }}
+                </ul>
+            </div>
+            {% else %}
+            <div class="report-container">
+                <form id="flag-form" action="{{ jinjer.url_for('user_report', username=user.username) }}" method="POST">
+                    <input type="hidden" name="flag" value="u{{ user.username }}"></input>
+                    {% if report_message %}
+                    <p>
+                        {{ report_message }}
+                    <p>
+                    {% else %}
+                    <p>
+                        {{ _("Report for serious problems or moderator attention?") }}
+                    </p>
+                    <div class="submit-wrapper">
+                        <button type="submit" class="submit black-submit" tabindex="{{ jinjer.tabindex() }}">{{ _("Report Abuse") }}</button>
+                    </div>
+                    {% endif %}
+                </form>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>

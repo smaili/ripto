@@ -1,0 +1,174 @@
+{% set login_url = jinjer.url_for('login', _next=True) %}
+{% set register_url = jinjer.url_for('signup', _next=True) %}
+
+
+<div id="memorial-container" class="content-container">
+
+    {% if memorial.is_new %}
+    {{ jinjer.element( 'notice', notice_type='ok', notice_msg=_("Memorial was successfully created.<br>Click <a class=\"js-modal-click\" href=\"%(link)s\" data-modal-for=\"share-memorial-dialog\">here</a> to share with your friends and family.", link=jinjer.memorial_url(memorial, 'share')) ) }}
+    {% endif %}
+
+    {% if posted %}
+    {% if posted == 1 %}
+    {% set msg = _("Your condolences were successfully posted.") %}
+    {% else %}
+    {% set msg = _("Your reply was successfully posted.") %}
+    {% endif %}
+    {{ jinjer.element( 'notice', notice_type='ok', notice_msg=msg ) }}
+    {% endif %}
+
+    {% if updated_comment %}
+    {{ jinjer.element( 'notice', notice_type='ok', notice_msg=_("Your condolences were successfully updated.") ) }}
+    {% endif %}
+
+    {% if comment and comment.errors['text'] != 'ok' %}
+    {{ jinjer.element( 'notice', notice_type='error', notice_msg=_("Invalid message. Please try again.") ) }}
+    {% endif %}
+
+    <div class="memorial canvas">
+
+        <div class="photo">
+            <img alt="{{ _("Photo") }}" src="{{ jinjer.static( memorial.media.filename, 'memorial' ) }}">
+        </div>
+
+        <div class="details">
+            <div id="details-container">
+
+                <a class="ribbon-{{ memorial.cause }} sprite" href="javascript:void(0)"><span class="bubble">{{ _("Cause of death: %(cause)s", cause=memorial.cause_types()[memorial.cause]) }}</span></a>
+
+                <div class="group-top">
+                    <p class="name">
+                        {% autoescape true %}{{ memorial.name.upper() }}{% endautoescape %}
+                    </p>
+                    <p class="dobd">
+                        {{ memorial.print_date('dob') }} <span>&#8212;</span> {{ memorial.print_date('dod') }}
+                    </p>
+                </div>
+
+                <table class="group-middle">
+                    <tr>
+                        <td class="epitaph">{% autoescape true %}{{ memorial.epitaph }}{% endautoescape %}</td>
+                    </tr>
+                </table>
+
+                <div class="group-bottom last">
+                    <p class="fdate">
+                        {% if memorial.funeral_type == 1 %}
+                        {{ _("Buried <strong>%(funeral_date)s</strong>", funeral_date=memorial.print_date('funeral_date')) }}
+                        {% elif memorial.funeral_type == 2 %}
+                        {{ _("Cremated <strong>%(funeral_date)s</strong>", funeral_date=memorial.print_date('funeral_date')) }}
+                        {% else %}
+                        {{ _("Funeral <strong>unknown</strong>") }}
+                        {% endif %}
+                    </p>
+                    {% if memorial.funeral_type in [ 1, 2 ] %}
+                    <p class="floc">
+                        {% autoescape true %}{{ memorial.funeral_loc }}{% endautoescape %}
+                    </p>
+                    {% endif %}
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="mbar">
+        <span class="visited">
+            <i class="icon-visit sprite"></i>
+            <span class="visit-count" title="{{ _("Visited %(name)s", name=memorial.name) }}">{{ jinjer.format_num( memorial.views ) }}</span>
+        </span>
+        <span class="remembered{% if tracker.has_remembered(memorial) %} has{% endif %}">
+            <a class="icon-remember sprite" href="{{ jinjer.memorial_url( memorial, 'remember' ) }}"></a>
+            <span class="remember-count" title="{{ _("Remembered %(name)s", name=memorial.name) }}">{{ jinjer.format_num( memorial.remembers ) }}</span>
+        </span>
+        {% if not g.user.is_anonymous() and memorial.user_id == g.user.id %}
+        <a class="mem-icon icon-edit sprite" href="{{ jinjer.memorial_url( memorial, 'edit' ) }}" title="{{ _("Edit") }}"></a>
+        {% else %}
+        <a class="mem-icon icon-report sprite js-modal-click" href="{{ jinjer.memorial_url( memorial, 'flag' ) }}" title="{{ _("Report") }}" data-modal-for="flag-dialog" data-flag-for="m{{ memorial.url }}"></a>
+        {% endif %}
+        <a class="mem-icon icon-share sprite js-modal-click" href="{{ jinjer.memorial_url( memorial, 'share' ) }}" title="{{ _("Share") }}" data-modal-for="share-memorial-dialog"></a>
+    </div>
+
+
+
+    <div class="condolences canvas">
+        {% set canvas_menu = [
+            {
+                'title': _("Condolences") + ' (' ~ memorial.condolence_count() ~ ')',
+                'name': 'condolences',
+                'link': jinjer.memorial_url( memorial, 'condolences' )
+            }
+        ] %}
+        {{ jinjer.element( 'menu', canvas_menu=canvas_menu, section='condolences' ) }}
+
+        <div class="canvas-content">
+            <div class="comments-container">
+                <form id="comment-memorial-form" action="{{ jinjer.memorial_url( memorial, 'comment' ) }}" method="POST">
+                    <div class="placeholding-input">
+                        <textarea id="memorial-comment" class="text-input comment-input" name="comment" tabindex="{{ jinjer.tabindex() }}">{% if comment and not comment.parent %}{{ comment.text }}{% endif %}</textarea>
+                        <label for="memorial-comment" class="placeholder">{{ _("Your thoughts, feelings, praise...") }}</label>
+                    </div>
+                    <button type="submit" class="submit black-submit" tabindex="{{ jinjer.tabindex() }}">{{ _("Post") }}</button>
+                </form>
+                <ul class="comments">
+                    {# TODO - add pagination once comments become too many for initial load #}
+                    {% for comment in comments %}
+                    <li class="comment" data-id="{{ comment.id }}">
+                        {% set commenter = comment.get_user() %}
+                        <p class="cmsg">
+                            <span class="qmark">&#x201c;</span><span class="ctext"> {% autoescape true %}{{ comment.text }}{% endautoescape %} </span>{# need the space after the text otherwise the meta won't line break correctly #}
+                            <span class="cmeta">
+                                <span class="chyph">&#8212;</span>
+                                <a class="cposter" href="{{ jinjer.url_for('user', username=commenter.username) }}">{% autoescape true %}{{ commenter.username }}{% endautoescape %}</a>
+                                <span class="cdate">{{ jinjer.human_time( comment.created ) }}</span>
+                            </span>
+                        </p>
+                        <div class="cbar">
+                            {% if not g.user.is_anonymous() and comment.user_id == g.user.id %}
+                            <a href="{{ jinjer.memorial_url( memorial, 'comment/edit' ) }}" class="submit green-submit alpha did" tabindex="{{ jinjer.tabindex() }}"><span>{{ _("Edit") }}</span></a>
+                            {% else %}
+                            <a href="{{ jinjer.memorial_url( memorial, 'like' ) }}" class="submit green-submit alpha{% if tracker.has_liked(comment) %} did{% endif %}" title="{{ _("Like (%(num)s)", num=comment.likes) }}" tabindex="{{ jinjer.tabindex() }}"><i class="sprite"></i><span>{{ comment.likes }}</span></a>
+                            <a href="{{ jinjer.memorial_url( memorial, 'like' ) }}" class="submit red-submit alpha{% if tracker.has_disliked(comment) %} did{% endif %}" title="{{ _("Dislike (%(num)s)", num=comment.dislikes) }}" tabindex="{{ jinjer.tabindex() }}"><i class="sprite"></i><span>{{ comment.dislikes }}</span></a>
+                            {% endif %}
+                            <a href="javascript:void(0)" class="submit blue-submit alpha" title="{{ _("Reply (%(num)s)", num=comment.replies|length) }}" tabindex="{{ jinjer.tabindex() }}"><i class="sprite"></i><span>{{ comment.replies|length }}</span></a>
+                        </div>
+                        <div class="reply-container">
+                            <ul class="replies">
+                            {% for reply in comment.replies %}
+                            <li class="reply{% if loop.last %} last{% endif %}">
+                                {% set replier = reply.get_user() %}
+                                <p class="rmsg">
+                                    <span class="rtext"> {% autoescape true %}{{ reply.text }}{% endautoescape %} </span>{# need the space after the text otherwise the meta won't line break correctly #}
+                                    <span class="rmeta">
+                                        <span class="rhyph">-</span>
+                                        <a class="rposter" href="{{ jinjer.url_for('user', username=replier.username) }}">{% autoescape true %}{{ replier.username }}{% endautoescape %}</a>
+                                        <span class="rdate">{{ jinjer.human_time( reply.created ) }}</span>
+                                    </span>
+                                </p>
+                            </li>
+                            {% endfor %}
+                            </ul>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <form id="reply-comment-form" class="hidden" action="{{ jinjer.memorial_url( memorial, 'comment' ) }}" method="POST">
+                    <input type="hidden" name="p" value=""></input>
+                    <div class="placeholding-input">
+                        <textarea id="reply-comment" class="text-input comment-input" name="comment" tabindex="{{ jinjer.tabindex() }}">{% if comment and comment.parent %}{{ comment.text }}{% endif %}</textarea>
+                        <label for="reply-comment" class="placeholder">{{ _("Your reply...") }}</label>
+                    </div>
+                    <button type="submit" class="submit black-submit" tabindex="{{ jinjer.tabindex() }}">{{ _("Post") }}</button>
+                </form>
+                <form id="edit-comment-form" class="hidden" action="{{ jinjer.memorial_url( memorial, 'comment' ) }}" method="POST">
+                    <input type="hidden" name="e" value=""></input>
+                    <div class="placeholding-input">
+                        <textarea id="edit-comment" class="text-input comment-input" name="comment" tabindex="{{ jinjer.tabindex() }}"></textarea>
+                    </div>
+                    <button type="submit" class="submit black-submit" tabindex="{{ jinjer.tabindex() }}">{{ _("Save") }}</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>

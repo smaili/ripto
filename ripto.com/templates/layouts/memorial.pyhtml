@@ -1,0 +1,48 @@
+{% extends "layouts/base.pyhtml" %}
+
+
+
+{# Meta #}
+{% set meta_desc = memorial.epitaph %}
+{% set meta_words = ', '.join( [ memorial.name ] + memorial.name.split(' ') + [ "RIP " + memorial.name, memorial.epitaph ] ) %}
+{% set meta_url = jinjer.memorial_url(memorial, _external=True) %}
+{% set meta_img = jinjer.static( memorial.media.filename, 'memorial' ) %}
+
+{% block meta %}
+{# Facebook #}
+<meta property="og:site_name" content="RIPto"></meta>
+<meta property="og:url" content="{{ meta_url }}"></meta>
+<meta property="og:title" content="~ {{ title }} ~"></meta>
+<meta property="og:description" content="{{ meta_desc }}"></meta>
+{# TODO - add multiple og:image tags (one for each media) #}
+<meta property="og:image" content="{{ meta_img }}"></meta>
+<meta property="og:image:width" content="350"></meta>
+<meta property="og:image:height" content="250"></meta>
+<link rel="image_src" href="{{ meta_img }}"></link>
+
+{# Twitter #}
+{#<meta name="twitter:creator" content="@R1Pto"></meta>#}
+{#<meta name="twitter:site" content="@R1Pto"></meta>#}
+<meta name="twitter:card" content="summary"></meta>
+<meta name="twitter:title" content="~ {{ title }} ~"></meta>
+<meta name="twitter:description" content="{{ meta_desc }}"></meta>
+<meta name="twitter:image:src" content="{{ meta_img }}"></meta>
+{# TODO - add multiple twitter:image tags (one for each media) #}
+{#<meta name="twitter:card" content="gallery"></meta>#}
+{#<meta name="twitter:image0" content="{{ meta_img }}"></meta>#}
+
+{% endblock %}
+
+
+
+{# Content #}
+{% block content %}
+<div id="page-outer" class="scroller">
+    <div id="page-container">
+        <div class="page-wrapper">
+        {% include "pages/" + page + ".pyhtml" %}
+        </div>
+    </div>
+    {{ jinjer.element( 'footer' ) }}
+</div>
+{% endblock %}

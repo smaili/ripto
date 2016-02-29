@@ -1,0 +1,51 @@
+/*--------------------------------------------------
+
+edit_memorial.css
+Used when editing memorials
+
+-------------------------------------------------- */
+
+
+
+/* Container
+-------------------------------------------------- */
+.content-container {
+    margin: 0 auto 10px;
+    position: relative;
+    width: 585px;
+}
+
+
+
+/* Canvas
+-------------------------------------------------- */
+.canvas {
+    width: 100%;
+}
+
+
+
+/* Form
+-------------------------------------------------- */
+#edit-memorial-form {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+
+/* Submit
+-------------------------------------------------- */
+.edit-submit-wrapper {
+    margin: 20px auto 0;
+    overflow: hidden;
+    width: 50%;
+}
+
+.edit-submit-wrapper a {
+    float: left;
+}
+
+.edit-submit-wrapper button {
+    float: right;
+}

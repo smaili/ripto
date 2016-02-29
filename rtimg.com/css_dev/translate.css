@@ -1,0 +1,260 @@
+/*--------------------------------------------------
+
+translate.css
+Used when translating languages
+
+-------------------------------------------------- */
+
+
+
+/* General
+-------------------------------------------------- */
+table, tr, td {
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+/* Container
+-------------------------------------------------- */
+.content-container {
+    font-size: 12px;
+    margin: 0 auto 10px;
+    position: relative;
+    width: 585px;
+}
+
+.lang .notice-box {
+    margin-top: 0;
+}
+
+
+
+/* Canvas
+-------------------------------------------------- */
+.canvas {
+    margin-top: 25px;
+    width: 100%;
+}
+
+.canvas .canvas-content {
+    padding: 10px;
+}
+
+
+
+/* Locales
+-------------------------------------------------- */
+.lang .locales-wrapper {
+    overflow: hidden;
+    padding: 0 10px;
+}
+
+.locales-wrapper .locales {
+    table-layout: fixed;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.locales td {
+    text-align: left;
+    vertical-align: top;
+}
+
+.locales .lc {
+    padding-right: 5px;
+}
+
+.locales .mc {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.locales .rc {
+    padding-left: 5px;
+}
+
+.locales div {
+    padding: 3px 0 2px 7px;
+    white-space: nowrap;
+}
+
+.locales a {
+    color: #333;
+    display: inline-block;
+    font-size: 12px;
+    padding: 5px 0;
+}
+
+.locales a:hover {
+    text-decoration: underline;
+}
+
+.locales a.selected {
+    color: #000;
+    font-weight: bold;
+}
+
+.add-lang {
+    margin: 5px 0 -15px;
+    text-align: center;
+}
+
+.add-lang, .add-lang a {
+    color: #333;
+}
+
+.add-lang a {
+    text-decoration: underline;
+}
+
+
+/* Coming Soon
+-------------------------------------------------- */
+.lang .cs-wrapper {
+    margin: 15px 0 -20px -15px;
+}
+
+.lang .cs-star {
+    color: #c10;
+    font-size: 13px;
+}
+
+.lang .cs {
+    color: #333;
+    margin-left: 2px;
+    font-style: italic;
+}
+
+.lang .locales .cs-star {
+    margin-left: 3px;
+}
+
+
+
+
+/* Form
+-------------------------------------------------- */
+#translate-form .quick-links {
+    margin-bottom: 25px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #555;
+    overflow: hidden;
+    width: 475px;
+}
+
+.quick-links a {
+    float: left;
+    font-size: 14px;
+    margin: 0 10px 5px 0;
+}
+
+.quick-links a:hover {
+    text-decoration: underline;
+}
+
+#translate-form .scroller {
+    height: 350px;
+    margin-right: -10px;
+    padding-right: 40px;
+}
+
+#translate-form .prompt {
+    margin-top: 0;
+    margin-bottom: 40px;
+    width: 485px;
+}
+
+#translate-form .field-name {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+#translate-form .blank {
+    color: #c13;
+}
+
+#translate-form .fuzzy {
+    color: #efc144;
+}
+
+#translate-form .fuzzy input {
+    margin-left: 10px;
+    margin-right: 8px;
+}
+
+#translate-form .fuzzy label {
+    color:#000;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.holding {
+    position: relative;
+    overflow: visible;
+    margin-bottom: 15px;
+}
+
+.message-input {
+    height: 20px;
+}
+
+.message-textarea {
+    height: 100px;
+}
+
+.message-input, .message-textarea {
+    padding: 4px;
+    background-color: #fff;
+    border: 1px solid #777;
+    border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;
+    width: 467px;
+}
+
+.message-input:focus, .message-textarea:focus {
+    /*outline-color: #aaa;*/
+    outline: none;
+    border-color: #000;
+}
+
+
+
+/* Guide
+-------------------------------------------------- */
+.guide .canvas-content {
+    margin: 0 20px;
+    padding: 0 10px;
+}
+
+.guide .guide-wrapper {
+    overflow: hidden;
+    padding: 0 10px;
+}
+
+.guide-wrapper p, .guide-wrapper a {
+    color: #333;
+}
+
+.guide-wrapper a {
+    text-decoration: underline;
+}
+
+.guide-wrapper .qs {
+    margin: 20px 0 10px;
+    text-align: center;
+}
+
+
+
+/* Submit
+-------------------------------------------------- */
+.submit-wrapper {
+    margin-top: 35px;
+}

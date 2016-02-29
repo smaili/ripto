@@ -1,0 +1,370 @@
+{# Set some global css (DRY) #}
+{% set bgcolor = "#042458" %}
+{% set width = 600 %}
+{# FB template --> 14r.ca/mail/14r.ca/r/new/1350849597.H778871P19473.max.max4ulive.com,S=6492, ndtvportal.blogspot.com/2012/10/you-now-have-timeline-new-kind-of.html #}
+{# TODO - insert <span /> tags within all anchors to ensure link color is not overriden by email clients #}
+{# TODO - check to see if browsers show security warnings when the img points to non-https+non-ripto urls.  if so, then need to use ripto.com for email images #}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+    <head>
+        <title>{{ title or "RIPto" }}</title>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8"></meta>
+        <style type="text/css">
+            a,a:link,a:visited,a:active { color: #08C; text-decoration:none }
+            a:hover { text-decoration:underline }
+            a.span { color: inherit !important; text-decoration: inherit !important } 
+            body { width:100% !important }
+            @media only screen and (max-device-width:768px) {
+                #rip-top,#rip-footer { -webkit-text-size-adjust:120% }
+                #rip-top a,#rip-footer a,#rip-content a,a { color:inherit }
+            }
+            @media
+            only screen and (min-device-width: 481px) and (min-device-pixel-ratio : 2),
+            only screen and (min-device-width: 481px) and (-webkit-min-device-pixel-ratio : 2) {
+                img { visibility:hidden; }
+                *[class=top] { background:url('http://rtimg.com/img/email/top_2x.gif') no-repeat 0 0; -webkit-background-size: 700px 4px; }
+                *[class=headershadow] { background:url('http://rtimg.com/img/email/header_shadow_2x.jpg') no-repeat 0 0; -webkit-background-size: 698px 34px; }
+                *[class=bottom] { background:url('http://rtimg.com/img/email/bottom_2x.gif') no-repeat 0 0; -webkit-background-size: 700px 7px; }
+            }
+        </style>
+        <!--[if gte mso 9]>
+            <style type="text/css">
+                table,td,div,p {font-family:Lucida Sans,Lucida Sans Unicode,Lucida Grande,Arial,Helvetica,Verdana,sans-serif !important;line-height:normal !important}
+            </style>
+        <![endif]-->
+        <!--[if lte mso 7]>
+            <style type="text/css">
+                table,td,div,p {font-family:Lucida Grande,Lucida Sans,Lucida Sans Unicode,Arial,Helvetica,Verdana,sans-serif !important;line-height:normal}
+            </style>
+        <![endif]-->
+    </head>
+
+    {# campaignmonitor.com/blog/post/3170/adding-background-images-to-your-email-in-two-simple-steps/ #}
+    <body background="{{ jinjer.static('tile.png', 'img', _scheme='http') }}" bgcolor="{{ bgcolor }}" style="min-width:100%;margin:0;padding:0">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" background="{{ jinjer.static('tile.png', 'img', _scheme='http') }}" bgcolor="{{ bgcolor }}">
+            <tr>
+                <td width="100%" style="padding:0;background-color:#000000" bgcolor="#000000">
+                    <table width="{{ width + 100 }}" border="0" cellspacing="0" cellpadding="0" align="center">
+                        <tr>
+                            <td valign="bottom" align="left">
+                                <a href="{{ jinjer.url_for('index', _external=True) }}">
+                                    <img style="padding:10px 15px 0 5px" src="{{ jinjer.static('rip-logo.png', 'img/email', _scheme='http') }}" alt="RIPto" width="90" height="50" border="0">
+                                </a>
+                            </td>
+                            <td valign="top" align="right">
+                                <img style="padding:0 20px 0 0" src="{{ jinjer.static('rip-moon.png', 'img/email', _scheme='http') }}" alt="Moon" width="43" height="47" border="0">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td width="100%" style="padding:40px 0 0 0;">
+                    <table width="{{ width }}" border="0" cellspacing="0" cellpadding="0" align="center">
+                        <tr>
+                            <td align="center">
+                                <table width="{{ width }}" border="0" cellspacing="0" cellpadding="0" align="center" style="margin:0 auto" id="rip-content">
+                                    <tr>
+                                        <td width="{{ width }}">
+                                            <table width="{{ width }}" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+                                                <tr>
+                                                    <td width="{{ width }}" height="4" valign="bottom" colspan="3" class="top">
+                                                        <img src="{{ jinjer.static('top.gif', 'img/email', _scheme='http') }}" alt="" width="{{ width }}" height="4" border="0" style="display:block;margin:0">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="1" height="30" bgcolor="#dadada" style="background-color:#dadada"></td>
+                                                    <td width="{{ width - 2 }}"></td>
+                                                    <td width="1" bgcolor="#dadada" style="background-color:#dadada"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="1" height="55" bgcolor="#dadada" style="background-color:#dadada"></td>
+                                                    <td width="{{ width - 2 }}" align="left">
+                                                        <table>
+                                                            <tr>
+                                                                <td valign="top">
+                                                                    <div style="margin:5px 50px 0px 44px;font-family: Myriad Pro, Lucida Grande, Helvetica, Geneva, Arial, Verdana, sans-serif;color:#000000;font-size:30px;line-height:1.3em">{{ header }}<br></div>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td width="1" bgcolor="#dadada" style="background-color:#dadada"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="1" height="30" bgcolor="#dadada" style="background-color:#dadada"></td>
+                                                    <td width="{{ width - 2 }}"></td>
+                                                    <td width="1" bgcolor="#dadada" style="background-color:#dadada"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="1" height="34" bgcolor="#dadada" style="background-color:#dadada"></td>
+                                                    <td width="{{ width - 2 }}" class="headershadow">
+                                                        <img src="{{ jinjer.static('header_shadow.jpg', 'img/email', _scheme='http') }}" width="{{ width - 2 }}" height="34" alt="headershadow ">
+                                                    </td>
+                                                    <td width="1" bgcolor="#dadada" style="background-color:#dadada"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="1" height="96" bgcolor="#dadada" style="background-color:#dadada"></td>
+                                                    <td width="{{ width - 2 }}" align="center">
+                                                        <table width="{{ width - 2 }}" border="0" cellspacing="0" cellpadding="0">
+                                                            <tr>
+                                                                <td width="44"></td>
+                                                                <td width="{{ width - 44 - 44 - 2 }}" align="left">
+                                                                    <!--BEGIN BODY-->
+                                                                    <div style="margin:10px 15px 0px 2px;font-family: Lucida Grande, Arial, Helvetica, Geneva, Verdana, sans-serif;color:#000000;font-size:14px;line-height:1.5em">
+                                                                        {% block content %}
+                                                                        {% endblock %}
+                                                                    </div>
+                                                                </td>
+                                                                <td width="44"></td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td width="1" bgcolor="#dadada" style="background-color:#dadada"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="1" height="40" bgcolor="#dadada" style="background-color:#dadada"></td>
+                                                    <td width="{{ width - 2 }}"></td>
+                                                    <td width="1" bgcolor="#dadada" style="background-color:#dadada"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="{{ width }}" height="7" valign="top" colspan="3" class="bottom">
+                                                        <img src="{{ jinjer.static('bottom.gif', 'img/email', _scheme='http') }}" alt="" width="{{ width }}" height="7" border="0" style="display:block;margin:0">
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!--BEGIN LEGAL FOOTER-->
+                                <table width="{{ width }}" border="0" cellspacing="0" cellpadding="0" align="center" id="rip-footer" style="margin:0 auto">
+                                    <tr>
+                                        <td style="padding:20px 20px 10px 20px">
+                                            <!--NOTICE DESCRIPTION-->
+                                            <div style="font-family:Geneva,Verdana,Arial,Helvetica,sans-serif;font-size:10px;line-height:1.4em;color:#444444">
+                                                {{ _("This message was sent to <a href=\"mailto:%(email)s\" style=\"color:#222222;text-decoration:none;\">%(email)s</a>.", email=email) }}
+                                                {% if report %}
+                                                {{ _("If this is a mistake, please let us know: <a href=\"%(report)s\" style=\"color:#3b5998;text-decoration:none;\">report</a>.", report=report) }}
+                                                {% else %}
+                                                {{ _("Please disregard this email if it was sent by mistake.") }}
+                                                {% endif %}
+                                                <br>
+                                                RIPto &#169; 2013. San Francisco, CA.
+                                                <BR><BR><BR><BR><BR><BR><BR>
+                                                {#
+                                                TM and copyright © 2013 Apple Inc. 1 Infinite Loop, MS 96-DM, Cupertino, CA 95014.<br>
+                                                <a href="http://www.apple.com/legal/" style="color:#888888;text-decoration:underline">All Rights Reserved</a> / 
+                                                <a href="http://www.apple.com/privacy/" style="color:#888888;text-decoration:underline"><span>Privacy Policy</span></a> / 
+                                                <a href="https://appleid.apple.com" style="color:#888888;text-decoration:underline">My Apple ID</a>
+                                                #}
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="{{ jinjer.static('spacer.gif', 'img/email', _scheme='http') }}" alt="" width="1" height="1">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        {# tracking
+        <span style="width:{{ width }}"><img src="http://www.facebook.com/email_open_log_pic.php?c=1522079223&amp;mid=6e66892G5af3e30dfc29G0G186" style="border:0;width:1px;height:1px"></span>
+        <img src="http://metrics.apple.com/b/ss/appleuscdmclickmap/1/H.4-pdv-2/111428?[AQB]&pageName=P0014290-195573&r=D%3DReferer&v1=D%3DUser-Agent&v9=D%3DpageName&[AQE]" width="1" height="1" alt="">
+        <img src="http://ripto.com/track?c=1522079223" width="1" height="1" alt="">
+        #}
+    </body>
+</html>
+{#
+
+ORIGINAL
+
+{% set bgcolor = "#042458" %}
+{% set width = 700 %}
+{ #
+    FB template --> 14r.ca/mail/14r.ca/r/new/1350849597.H778871P19473.max.max4ulive.com,S=6492, ndtvportal.blogspot.com/2012/10/you-now-have-timeline-new-kind-of.html
+# }
+{ # TODO - insert <span /> tags within all anchors to ensure link color is not overriden by email clients # }
+{ # TODO - check to see if browsers show security warnings when the img points to non-https+non-ripto urls.  if so, then need to use ripto.com for email images # }
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+    <head>
+        <title>{{ title or "RIPto" }}</title>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8"></meta>
+        <style type="text/css">
+            a,a:link,a:visited,a:active { color: #08C; text-decoration:none }
+            a:hover { text-decoration:underline }
+            a.span { color: inherit !important; text-decoration: inherit !important } 
+            body { width:100% !important }
+            @media only screen and (max-device-width:768px) {
+                #rip-top,#rip-footer { -webkit-text-size-adjust:120% }
+                #rip-top a,#rip-footer a,#rip-content a,a { color:inherit }
+            }
+            @media
+            only screen and (min-device-width: 481px) and (min-device-pixel-ratio : 2),
+            only screen and (min-device-width: 481px) and (-webkit-min-device-pixel-ratio : 2) {
+                img { visibility:hidden; }
+                *[class=logo] { background:url('http://rtimg.com/img/email/rip_logo_email@2x.png') no-repeat 10% 0; -webkit-background-size: 96px 66px; }
+                *[class=top] { background:url('http://rtimg.com/img/email/top_2x.gif') no-repeat 0 0; -webkit-background-size: 700px 4px; }
+                *[class=headershadow] { background:url('http://rtimg.com/img/email/header_shadow_2x.jpg') no-repeat 0 0; -webkit-background-size: 698px 34px; }
+                *[class=bottom] { background:url('http://rtimg.com/img/email/bottom_2x.gif') no-repeat 0 0; -webkit-background-size: 700px 7px; }
+            }
+        </style>
+        <!--[if gte mso 9]>
+            <style type="text/css">
+                table,td,div,p {font-family:Lucida Sans,Lucida Sans Unicode,Lucida Grande,Arial,Helvetica,Verdana,sans-serif !important;line-height:normal !important}
+            </style>
+        <![endif]-->
+        <!--[if lte mso 7]>
+            <style type="text/css">
+                table,td,div,p {font-family:Lucida Grande,Lucida Sans,Lucida Sans Unicode,Arial,Helvetica,Verdana,sans-serif !important;line-height:normal}
+            </style>
+        <![endif]-->
+    </head>
+
+    <body bgcolor="{{ bgcolor }}" style="margin:0;padding:0">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="{{ bgcolor }}">
+            <tr>
+                <td width="100%" style="padding:0 20px 40px 20px; background-color:{{ bgcolor }}" bgcolor="{{ bgcolor }}">
+                    <table width="{{ width + 223 + 114 }}" border="0" cellspacing="0" cellpadding="0" align="center">
+                        <tr>
+                            <td valign="top" align="left">
+                                <img src="http://rtimg.com/img/email/moon.png" alt="Moon" width="223" height="374" border="0">
+                            </td>
+                            <td align="center" style="padding-top:20px">
+
+                                <table width="{{ width }}" border="0" cellspacing="0" cellpadding="0" align="center" id="rip-top" style="margin:0 auto">
+                                    <tr>
+                                        <td align="left" style="padding:7px 19px">
+                                            <div style="font-family: Lucida Grande, Arial, Helvetica, Geneva, Verdana, sans-serif; color:#666666; font-size:10px; line-height:1em"><BR></div>
+                                        </td>
+                                        <td align="right"class="logo">
+                                            <div style="margin:0px 0px 12px 15px;">
+                                                <img src="{{ jinjer.static('rip_logo_email_temp_2x.png', 'img/email', _scheme='http') }}" alt="RIPto" width="96" height="66" border="0">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table width="{{ width }}" border="0" cellspacing="0" cellpadding="0" align="center" style="margin:0 auto" id="rip-content">
+                                    <tr>
+                                        <td width="{{ width }}">
+                                            <table width="{{ width }}" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+                                                <tr>
+                                                    <td width="{{ width }}" height="4" valign="bottom" colspan="3" class="top">
+                                                        <img src="{{ static('top.gif', 'img/email', _scheme='http') }}" alt="" width="{{ width }}" height="4" border="0" style="display:block; margin:0">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="1" height="30" bgcolor="#dadada" style="background-color:#dadada"></td>
+                                                    <td width="{{ width - 2 }}"></td>
+                                                    <td width="1" bgcolor="#dadada" style="background-color:#dadada"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="1" height="55" bgcolor="#dadada" style="background-color:#dadada"></td>
+                                                    <td width="{{ width - 2 }}" align="left">
+                                                        <table>
+                                                            <tr>
+                                                                <td valign="top">
+                                                                    <div style="margin:5px 50px 0px 44px; font-family: Myriad Pro, Lucida Grande, Helvetica, Geneva, Arial, Verdana, sans-serif; color:#000000;font-size:30px;line-height:1.3em; ">{{ header }}<br></div>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td width="1" bgcolor="#dadada" style="background-color:#dadada"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="1" height="30" bgcolor="#dadada" style="background-color:#dadada"></td>
+                                                    <td width="{{ width - 2 }}"></td>
+                                                    <td width="1" bgcolor="#dadada" style="background-color:#dadada"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="1" height="34" bgcolor="#dadada" style="background-color:#dadada"></td>
+                                                    <td width="{{ width - 2 }}" class="headershadow">
+                                                        <img src="{{ jinjer.static('header_shadow.jpg', 'img/email', _scheme='http') }}" width="{{ width - 2 }}" height="34" alt="headershadow ">
+                                                    </td>
+                                                    <td width="1" bgcolor="#dadada" style="background-color:#dadada"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="1" height="96" bgcolor="#dadada" style="background-color:#dadada"></td>
+                                                    <td width="{{ width - 2 }}" align="center">
+                                                        <table width="{{ width - 2 }}" border="0" cellspacing="0" cellpadding="0">
+                                                            <tr>
+                                                                <td width="44"></td>
+                                                                <td width="{{ width - 44 - 44 - 2 }}" align="left">
+                                                                    <!--BEGIN BODY-->
+                                                                    <div style="margin:10px 15px 0px 2px; font-family: Lucida Grande, Arial, Helvetica, Geneva, Verdana, sans-serif; color:#000000;font-size:14px;line-height:1.5em; ">
+                                                                        {% block content %}
+                                                                        {% endblock %}
+                                                                    </div>
+                                                                </td>
+                                                                <td width="44"></td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td width="1" bgcolor="#dadada" style="background-color:#dadada"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="1" height="40" bgcolor="#dadada" style="background-color:#dadada"></td>
+                                                    <td width="{{ width - 2 }}"></td>
+                                                    <td width="1" bgcolor="#dadada" style="background-color:#dadada"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="{{ width }}" height="7" valign="top" colspan="3" class="bottom">
+                                                        <img src="{{ jinjer.static('bottom.gif', 'img/email', _scheme='http') }}" alt="" width="{{ width }}" height="7" border="0" style="display:block; margin:0">
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!--BEGIN LEGAL FOOTER-->
+                                <table width="{{ width }}" border="0" cellspacing="0" cellpadding="0" align="center" id="rip-footer" style="margin:0 auto">
+                                    <tr>
+                                        <td style="padding:20px 20px 10px 20px">
+                                            <!--NOTICE DESCRIPTION-->
+                                            <div style="font-family:Geneva,Verdana,Arial,Helvetica,sans-serif; font-size:10px; line-height:1.4em; color:#888888">
+                                                This message was sent to <a href="mailto:{{ email }}" style="color:#555555;text-decoration:none;">{{ email }}</a>. 
+                                                {% if report %}
+                                                If this is a mistake, please let us know: <a href="{{ report }}" style="color:#3b5998;text-decoration:none;">report</a>. 
+                                                {% else %}
+                                                Please disregard this email if it was sent by mistake. 
+                                                {% endif %}
+                                                <br>
+                                                RIPto &#169; 2013. San Francisco, CA.
+                                                <BR><BR><BR><BR><BR><BR><BR>
+                                                { #
+                                                TM and copyright © 2013 Apple Inc. 1 Infinite Loop, MS 96-DM, Cupertino, CA 95014.<br>
+                                                <a href="http://www.apple.com/legal/" style="color:#888888; text-decoration:underline">All Rights Reserved</a> / 
+                                                <a href="http://www.apple.com/privacy/" style="color:#888888; text-decoration:underline"><span>Privacy Policy</span></a> / 
+                                                <a href="https://appleid.apple.com" style="color:#888888; text-decoration:underline">My Apple ID</a>
+                                                # }
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="{{ jinjer.static('spacer.gif', 'img/email', _scheme='http') }}" alt="" width="1" height="1">
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </td>
+                            <td align="right">
+                                <img src="http://rtimg.com/img/email/star.png" alt="Star" width="114" height="114" border="0">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        { # tracking
+        <span style="width:{{ width }};"><img src="http://www.facebook.com/email_open_log_pic.php?c=1522079223&amp;mid=6e66892G5af3e30dfc29G0G186" style="border:0;width:1px;height:1px;"></span>
+        <img src="http://metrics.apple.com/b/ss/appleuscdmclickmap/1/H.4-pdv-2/111428?[AQB]&pageName=P0014290-195573&r=D%3DReferer&v1=D%3DUser-Agent&v9=D%3DpageName&[AQE]" width="1" height="1" alt="">
+        <img src="http://ripto.com/track?c=1522079223" width="1" height="1" alt="">
+        # }
+    </body>
+</html>
+#}

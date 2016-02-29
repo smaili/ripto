@@ -1,0 +1,332 @@
+{% set canvas_menu = [
+    {
+        'title': _("About"),
+        'name': 'about',
+        'link': jinjer.url_for('about')
+    },
+    {
+        'title': _("Support"),
+        'name': 'support',
+        'link': jinjer.url_for('support')
+    },
+    {
+        'title': _("Feedback"),
+        'name': 'feedback',
+        'link': jinjer.url_for('feedback')
+    },
+    {
+        'title': _("Terms"),
+        'name': 'terms',
+        'link': jinjer.url_for('terms')
+    },
+    {
+        'title': _("Privacy"),
+        'name': 'privacy',
+        'link': jinjer.url_for('privacy')
+    }
+] %}
+
+<div id="footer-container" class="content-container">
+    <h1 class="page-title">{{ _("Guide") }}</h1>
+    <div class="footer-pages canvas">
+        {{ jinjer.element( 'menu', canvas_menu=canvas_menu, section=section ) }}
+        <div class="canvas-content">
+            {% if section == 'about' %}
+            <div class="about-container">
+                <p class="first">
+                    {{ _("Every day, we interact and surround ourselves with family, friends, colleagues, and many others that shape who we are today and what kind of memories we have.") }}
+                </p>
+
+                <p class="small-gap">
+                    <strong>{{_("Why RIPto") }}</strong><br />
+                    {{ _("Unfortunately, sometimes we lose those that are important in our lives, but it's important to remember that though they are no longer here, we shouldn't forget them and how they impacted us.") }}
+                </p>
+
+                <p>
+                    {{ _("RIPto was created from the need for a place where you can easily go to remember and share your feelings about people that have passed away.") }}
+                </p>
+
+                <p class="small-gap">
+                    <strong>{{_("Features") }}</strong><br />
+                    {{ _("While we are always looking for ways to enhance the site to improve it in every way possible, we always like to remind ourselves what the core features are that define RIPto to help ensure we don't stray away from our original purpose:") }}
+                </p>
+
+                <ul>
+                    <li>
+                        {{ _("Create / View / Share - Memorials") }}
+                    </li>
+
+                    <li>
+                        {{ _("Give condolences") }}
+                    </li>
+
+                    <li>
+                        {{ _("Learn about others who have passed away") }}
+                    </li>
+                </ul>
+
+                <p class="small-gap">
+                    <strong>beta</strong><br />
+                    {{ _("Since RIPto is still relatively new, we hope that you can understand sometimes things don't work, or don't work well. Though we work hard to make sure RIPto's usability and your experience are exceptional, we know that it's impossible for us to always make it perfect.") }}
+                </p>
+
+                <p class="small-gap">
+                    {{ _("That is why we also depend on you, our users, to let us know any suggestions you might have on how to improve our site, whenever something breaks, doesn't function as expected, or is just a terrible user experience. Whatever it is, we want to hear from you, so please <a href=\"feedback\">visit our feedback page</a> and let us know!") }}
+                </p>
+
+            </div>
+            {% elif section == 'support' %}
+            <div class="support-container">
+                <form id="support-form" action="support" method="POST">
+                    {% if invalid %}
+                    {{ jinjer.element( 'notice', notice_type='error', notice_msg=_("Invalid email address or message.") ) }}
+                    {% endif %}
+
+                    <p>
+                        {{_("Please let us know what it is you need help with by filling out our form below and we will get back to you as soon as we can.") }}
+                    </p>
+
+                    <div class="prompt">
+                        <div class="placeholding-input email">
+                            <input type="text" id="support-email" class="text-input email-input" name="email" title="{{ _("Your email") }}"{% if g.is_mobile %} autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"{% endif %} value="{{ email }}" tabindex="{{ jinjer.tabindex() }}"></input>
+                            <label for="support-email" class="placeholder">{{ _("Email") }}</label>
+                        </div>
+                    </div>
+                    <div class="prompt">
+                        <div class="placeholding-input message">
+                            <textarea id="support-message" class="text-input message-input" name="message" title="{{ _("Message") }}" tabindex="{{ jinjer.tabindex() }}">{{ message }}</textarea>
+                            <label for="support-message" class="placeholder">{{ _("Message") }}</label>
+                        </div>
+                    </div>
+                    <div class="submit-wrapper">
+                        <button type="submit" class="submit black-submit" tabindex="{{ jinjer.tabindex() }}">{{ _("Send Message") }}</button>
+                    </div>
+                </form>
+            </div>
+            {% elif section == 'feedback' %}
+            <div class="feedback-container">
+                <form id="feedback-form" action="feedback" method="POST">
+                    {% if invalid %}
+                    {{ jinjer.element( 'notice', notice_type='error', notice_msg=_("Invalid email address or feedback.") ) }}
+                    {% endif %}
+
+                    <p>
+                        {{_("Bugs? Errors? Suggestions? Whatever your feedback is, we would love to hear it, so please fill out the form below and let your voice be heard!") }}
+                    </p>
+
+                    <div class="prompt">
+                        <div class="placeholding-input email">
+                            <input type="text" id="feedback-email" class="text-input email-input" name="email" title="{{ _("Your email (optional)") }}"{% if g.is_mobile %} autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"{% endif %} value="{{ email }}" tabindex="{{ jinjer.tabindex() }}"></input>
+                            <label for="feedback-email" class="placeholder">{{ _("Email (optional)") }}</label>
+                        </div>
+                    </div>
+                    <div class="prompt">
+                        <div class="placeholding-input feedback">
+                            <textarea id="feedback-feedback" class="text-input feedback-input" name="feedback" title="{{ _("Feedback") }}" tabindex="{{ jinjer.tabindex() }}">{{ feedback }}</textarea>
+                            <label for="feedback-feedback" class="placeholder">{{ _("Feedback") }}</label>
+                        </div>
+                    </div>
+                    <div class="submit-wrapper">
+                        <button type="submit" class="submit black-submit" tabindex="{{ jinjer.tabindex() }}">{{ _("Send Feedback") }}</button>
+                    </div>
+                </form>
+            </div>
+            {% elif section == 'terms' %}
+            <div class="terms-container">
+                {# http://termsfeed.com/terms-service/generator #}
+                <p class="first">
+                    {{_("Please read these Terms of Service (\"Agreement\", \"Terms of Service\") carefully before using ripto.com (\"the Site\") operated by RIPto (\"us\", \"we\", or \"our\").
+                    This Agreement sets forth the legally binding terms and conditions for your use of the Site at ripto.com") }}.
+                </p>
+
+                <p>
+                    {{_("By accessing or using the Site in any manner, including, but not limited to, visiting or browsing the Site or contributing content or other materials
+                    to the Site, you agree to be bound by these Terms of Service. Capitalized terms are defined in this Agreement.") }}
+                </p>
+
+                <p>
+                    <strong>{{_("Intellectual Property") }}</strong><br />
+                    {{_("The Site and its original content, features and functionality are owned by RIPto and are protected by international
+                    copyright, trademark, patent, trade secret and other intellectual property or proprietary rights laws.") }}
+                </p>
+
+                <p>
+                    <strong>{{_("Termination") }}</strong><br />
+                    {{_("We may terminate your access to the Site, without cause or notice, which may result in the forfeiture and destruction of all information associated with you.
+                    All provisions of this Agreement that by their nature should survive termination shall survive termination, including, without limitation, ownership provisions,
+                    warranty disclaimers, indemnity, and limitations of liability.") }}
+                </p>
+
+                <p>
+                    <strong>{{_("Links To Other Sites") }}</strong><br />
+                    {{_("Our Site may contain links to third-party sites that are not owned or controlled by RIPto") }}.
+                </p>
+
+                <p>
+                    {{_("RIPto has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party sites or services. We strongly
+                    advise you to read the terms and conditions and privacy policy of any third-party site that you visit.") }}
+                </p>
+
+                <p>
+                    <strong>{{_("Governing Law") }}</strong><br />
+                    {{_("This Agreement (and any further rules, policies, or guidelines incorporated by reference) shall be governed and construed in accordance with the laws of California,
+                    United States, without giving effect to any principles of conflicts of law.") }}
+                </p>
+
+                <p>
+                    <strong>{{_("Changes To This Agreement") }}</strong><br />
+                    {{_("We reserve the right, at our sole discretion, to modify or replace these Terms of Service by posting the updated terms on the Site. Your continued use of the Site
+                    after any such changes constitutes your acceptance of the new Terms of Service.") }}
+                </p>
+
+                <p>
+                    {{_("Please review this Agreement periodically for changes. If you do not agree to any of this Agreement or any changes to this Agreement, do not use, access or continue
+                    to access the Site or discontinue any use of the Site immediately.") }}
+                </p>
+
+                <p>
+                    <strong>{{_("Contact Us") }}</strong><br />
+                    {{_("If you have any questions about this Agreement, please contact us.") }}
+                </p>
+
+                <p class="no-gap">
+                    {{_("Last Updated on %(month)s %(day)s, %(year)s.", month=_("September"), day=20, year=2013) }}
+                </p>
+
+            </div>
+            {% elif section == 'privacy' %}
+            <div class="privacy-container">
+                {# http://www.iubenda.com #}
+                <p class="first">
+                    {{_("This privacy policy (“<strong>Policy</strong>”) describes how RIPto and its related companies (“<strong>Company</strong>”) collect,
+                    use and share personal information of consumer users of this website, ripto.com (the “Site”). This Policy also applies to any of our 
+                    other websites that post this Policy. This Policy does not apply to websites that post different statements.") }}
+                </p>
+                
+                <p>
+                    <strong>{{_("WHAT WE COLLECT") }}</strong><br />
+                    {{_("We get information about you in a range of ways.") }}
+                </p>
+
+                <p>
+                    <strong>{{_("Information You Give Us.") }}</strong><br />
+                    {{_("We collect your name, email address, username and other information you directly give us on our Site.") }}
+                </p>
+
+                <p>
+                    <strong>{{_("Information We Get from Others.") }}</strong><br />
+                    {{_("We may get information about you from other sources. We may add this to information we get from this Site.") }}
+                </p>
+
+                <p class="small-gap">
+                    <strong>{{_("Information Automatically Collected.") }}</strong><br />
+                    {{_("We automatically log information about you and your computer.") }}
+                </p>
+
+                <p class="tab small-gap">
+                    <strong>{{_("Cookies.") }}</strong> {{_("We may log information using \"cookies.\" Cookies are small data files stored on your hard drive by a website.
+                    Cookies help us make our Site and your visit better. We use cookies to see which parts of our Site people use and like and to count visits
+                    to our Site.") }}
+                </p>
+
+                <p class="tab">
+                    <strong>{{_("Web Beacons.") }}</strong> {{_("We may log information using digital images called Web beacons on our Site or in our emails. We use Web beacons
+                    to manage cookies, count visits, and to learn what marketing works and what does not. We also use Web Beacons to tell if you open or act
+                    on our emails.") }}
+                </p>
+
+                <p class="no-gap">
+                    <strong>{{_("USE OF PERSONAL INFORMATION") }}</strong><br />
+                    {{_("We use your personal information as follows:") }}
+                </p>
+
+                <ul>
+                    <li>
+                        {{_("We use your personal information to protect, investigate, and deter against fraudulent, unauthorized, or illegal activity.") }}
+                    </li>
+                </ul>
+
+                <p class="no-gap">
+                    <strong>{{_("SHARING OF PERSONAL INFORMATION") }}</strong><br />
+                    {{_("We may share personal information as follows:") }}
+                </p>
+
+                <ul class="no-gap">
+                    <li>
+                        {{_("We may share personal information with your consent. For example, you may let us share personal information with others for
+                        their own marketing uses. Those uses will be subject to their privacy policies.") }}
+                    </li>
+                    <li>
+                        {{_("We may share personal information when we do a business deal, or negotiate a business deal, involving sale or transfer of all
+                        or a part of our business or assets. These deals can include any merger, financing, acquisition, or bankruptcy transaction or
+                        proceeding.") }}
+                    </li>
+                    <li>
+                        {{_("We may share personal information for legal, protection, and safety purposes.") }}
+                        <ul class="no-gap">
+                            <li>
+                                {{_("We may share information to comply with laws.") }}
+                            </li>
+                            <li>
+                                {{_("We may share information to respond to lawful requests and legal process.") }}
+                            </li>
+                            <li>
+                                {{_("We may share information to protect the rights and property of RIPto, our agents, customers, and others. This includes
+                                enforcing our agreements, policies, and terms of use.") }}
+                            </li>
+                            <li>
+                                {{_("We may share information in an emergency. This includes protecting the safety of our employees and agents, our customers,
+                                or any person.") }}
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        {{_("We may share information with those who need it to do work for us.") }}
+                    </li>
+                </ul>
+
+                <p>
+                    {{_("We may also share aggregated and/or anonymized data with others for their own uses.") }}
+                </p>
+
+                <p>
+                    <strong>{{_("INFORMATION CHOICES AND CHANGES") }}</strong><br />
+                    {{_("Our marketing emails tell you how to “opt-out”. If you opt out, we may still send you non-marketing emails. Non-marketing emails
+                    include emails about your accounts and our business dealings with you.") }}
+                </p>
+
+                <p>
+                    {{_("You may send requests about personal information to our Contact Information below. You can request to change contact choices,
+                    opt-out of our sharing with others, and update your personal information.") }}
+                </p>
+
+                <p>
+                    {{_("You can typically remove and reject cookies from our Site with your browser settings. Many browsers are set to accept cookies until
+                    you change your settings. If you remove or reject our cookies, it could affect how our Site works for you.") }}
+                </p>
+
+                <p>
+                    <strong>{{_("SECURITY OF YOUR PERSONAL INFORMATION") }}</strong><br />
+                    {{_("We take steps to help protect personal information. No company can fully prevent security risks, however. Mistakes may happen.
+                    Bad actors may defeat even the best safeguards.") }}
+                </p>
+
+                <p>
+                    <strong>{{_("CONTACT INFORMATION") }}</strong><br />
+                    {{_("We welcome your comments or questions about this Privacy Policy. You may also contact us at ripto.com/support.") }}
+                </p>
+
+                <p>
+                    <strong>{{_("CHANGES TO THIS PRIVACY POLICY") }}</strong><br />
+                    {{_("We may change this Privacy Policy. If we make any changes, we will change the Last Updated date below.") }}
+                </p>
+
+                <p class="no-gap">
+                    {{_("Last Updated on %(month)s %(day)s, %(year)s.", month=_("September"), day=22, year=2013) }}
+                </p>
+
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>

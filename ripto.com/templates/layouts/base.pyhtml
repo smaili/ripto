@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="{{ g.babler.get_html_lang() }}">
+  <head>
+
+    <meta charset="utf-8"></meta>
+
+    {# TODO - http://stackoverflow.com/questions/8698441/changing-the-direction-of-html-title-tag-to-right-to-left #}
+    <title>~ {{ title or "RIPto" }} ~</title>
+
+    {# Meta #}
+    <meta name="copyright" content="2013 RIPto"></meta>
+    <meta name="title" content="~ {{ title or "RIPto" }} ~"></meta>
+    {% if meta_desc != False %}<meta name="description" content="{{ meta_desc or _("Remember, share, and give condolences to the ones you care about most.") }}"></meta>{% endif %}
+    {% if meta_words != False %}<meta name="keywords" content="{{ meta_words or _("RIPto, RIP, RIP to, rest in peace, passed away, passed, away, died, dead, gone, memorial, honor, respect, remember, give condolences, condolences") }}"></meta>{% endif %}
+    {% block meta %}
+    {% endblock %}
+
+    {#
+    TODO - figure out a cross-crawler way of geo-targeting domains
+    {% for l in config.LANGUAGES %}
+    <link rel="alternate" hreflang="{{ l[0].replace('_','-') }}" href="http://{{ l[0].replace('_','-') }}.ripto.com/">
+    {% endfor %}
+    #}
+
+    {# CSS #}
+    {% set css_dir = 'css' if config.APP_MODE == config.APP_MODES.PRODUCTION else 'css_' + config.APP_MODE %}
+    {% for a_css in css %}
+    <link href="{{ jinjer.static( ( a_css + ('.css' if g.babler.get_dir() == "ltr" else '.rtl.css') ), css_dir ) }}" rel="stylesheet"></link>
+    {% endfor %}
+
+    <link rel="shortcut icon" href="http://ripto.com/favicon.ico"></link>
+
+    {# http://blog.cloudfour.com/seven-things-i-learned-while-making-an-ipad-web-app-2/ #}
+    {# TODO - add a popup telling user they can add rip to their homescreen #}
+    {% if g.is_mobile %}
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"></meta>
+    <meta name="apple-mobile-web-app-capable" content="yes"></meta>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"></meta>
+    {% endif %}
+
+  </head>
+
+  <body dir="{{ g.babler.get_dir() }}" class="tile">
+
+    {% block doc %}
+    <div id="doc">
+        {{ jinjer.element( 'topbar', page=page, query=query ) }}
+
+        {% block content %}
+        {% endblock %}
+    </div>
+    {% endblock %}
+
+
+    {# Modals #}
+    {% if modals %}
+    <div class="modal-overlay hidden"></div>
+    {% for modal in modals %}
+    {{ jinjer.element( 'modal/' + modal, memorial=memorial ) }}
+    {% endfor %}
+    {% endif %}
+
+
+    {# Preloaders #}
+    {% for preloader in preloaders %}
+    <i class="{{ preloader }}-preloader"></i>
+    {% endfor %}
+
+
+    {# JS #}
+    {% set js_dir = 'js' if config.APP_MODE == config.APP_MODES.PRODUCTION else 'js_' + config.APP_MODE %}
+    {% for a_js in js %}
+    <script type="text/javascript" src="{{  jinjer.static( ( a_js + '.js' ), js_dir ) }}"></script>
+    {% endfor %}
+
+
+
+  </body>
+
+</html>

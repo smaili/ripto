@@ -1,0 +1,72 @@
+/*--------------------------------------------------
+
+reset.css
+Used when user is resetting their password
+
+-------------------------------------------------- */
+
+
+
+/* Container
+-------------------------------------------------- */
+.content-container {
+    margin: 0 auto 10px;
+    position: relative;
+    width: 400px;
+}
+
+
+/* Canvas
+-------------------------------------------------- */
+#reset-container.canvas {
+    margin-top: 10px;
+}
+
+
+/* Wrapper
+-------------------------------------------------- */
+.content-container h1 {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1;
+    padding: 40px 0 20px 0;
+    clear: both;
+}
+
+
+
+/* Form
+-------------------------------------------------- */
+#reset-form {
+    padding: 10px 0;
+}
+
+#reset-form .textbox {
+    margin-bottom: 15px;
+}
+
+#reset-form .field-name {
+    font-size: 13px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.holding {
+    position: relative;
+    overflow: visible;
+    margin-bottom: 15px;
+}
+
+.holding .password-input {
+    display: inline-block;
+    height: 20px;
+    padding: 4px;
+    background-color: #fff;
+    border: 1px solid #777;
+    border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;
+    width: 382px;
+}
+
+.holding .password-input:focus {
+    outline-color: #aaa;
+}

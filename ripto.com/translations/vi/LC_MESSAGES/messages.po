@@ -1,0 +1,1771 @@
+# Vietnamese translations for PROJECT.
+# Copyright (C) 2013 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2013-11-06 04:01+0000\n"
+"PO-Revision-Date: 2013-09-19 17:14+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: vi <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.0\n"
+
+#: app.py:180 app.py:182 templates/elements/modal/lang.pyhtml:7
+#: templates/pages/lang.pyhtml:3
+msgid "Languages"
+msgstr "Ngôn ngữ"
+
+#: app.py:192 app.py:202 templates/elements/topbar.pyhtml:37
+#: templates/pages/home.pyhtml:16
+msgid "Home"
+msgstr "Trang Chủ"
+
+#: app.py:223 templates/elements/topbar.pyhtml:52
+#: templates/pages/new_memorial.pyhtml:3
+msgid "New Memorial"
+msgstr "Truy điệu mới"
+
+#: app.py:274
+msgid "Invalid email address."
+msgstr "Email là không hợp lệ."
+
+#: app.py:280
+msgid "Memorial was successfully shared."
+msgstr "Truy điệu đã được chia sẻ thành công."
+
+#: app.py:396
+msgid "Share On WeChat"
+msgstr "Chia sẻ với WeChat"
+
+#: app.py:422 templates/elements/topbar.pyhtml:40
+#: templates/pages/settings.pyhtml:16
+msgid "Settings"
+msgstr "Thiết lập"
+
+#: app.py:447
+msgid "Your membership has been deactivated."
+msgstr "Hội viên của bạn đã bị ngừng hoạt động."
+
+#: app.py:448
+msgid "You will now be logged out and taken back to the home page."
+msgstr "Bây giờ bạn sẽ trở về Trang Chủ."
+
+#: app.py:450
+msgid "Deleted"
+msgstr "Xóa"
+
+#: app.py:450
+msgid "Membership Canceled"
+msgstr "Hội viên hủy bỏ."
+
+#: app.py:452 app.py:454 templates/pages/settings.pyhtml:8
+msgid "Membership"
+msgstr "Hội viên"
+
+#: app.py:495 app.py:746
+msgid "Thank you. Your report was successfully sent."
+msgstr "Cảm ơn bạn. Báo cáo của bạn đã được gửi thành công."
+
+#: app.py:497 app.py:748
+msgid "You can only flag each thing once."
+msgstr "Bạn chỉ có thể báo cáo từng điều một lần."
+
+#: app.py:526
+msgid "Sign In"
+msgstr "Đăng nhập"
+
+#: app.py:560
+msgid "Sign Up"
+msgstr "Đăng Ký"
+
+#: app.py:578
+msgid "An email has been sent containing a link to reset your password."
+msgstr ""
+"Một email đã được gửi đi có chứa một liên kết để thay đổi mật khẩu của "
+"bạn."
+
+#: app.py:579
+msgid ""
+"Be sure to also check your junk or spam folder or filter in case it does "
+"not appear in your inbox."
+msgstr ""
+"Hãy chắc chắn rằng bạn kiểm tra thư mục rác của bạn nếu nó không xuất "
+"hiện trong hộp thư của bạn."
+
+#: app.py:581
+msgid "Sent!"
+msgstr "Đã được gửi!"
+
+#: app.py:584 templates/pages/welcome.pyhtml:13
+msgid "Forgot"
+msgstr "Quên"
+
+#: app.py:598 app.py:616
+msgid "Change Password"
+msgstr "Thay đổi mật khẩu"
+
+#: app.py:611
+msgid "Your password was successfully changed."
+msgstr "Mật khẩu của bạn đã được thay đổi thành công."
+
+#: app.py:612
+msgid "Please wait while we log you in."
+msgstr "Xin vui lòng chờ trong khi chúng tôi kết nối bạn."
+
+#: app.py:614
+msgid "Changed!"
+msgstr "Đã được thay đổi!"
+
+#: app.py:636 templates/elements/footer.pyhtml:2
+#: templates/pages/footer.pyhtml:3
+msgid "About"
+msgstr "Giới thiệu"
+
+#: app.py:651
+msgid "Your message was sent successfully."
+msgstr "Tin nhắn đã được gửi thành công."
+
+#: app.py:652 app.py:673
+msgid "You will now be taken back."
+msgstr "Bạn sẽ quay trở lại ngay bây giờ."
+
+#: app.py:654 app.py:675
+msgid "Sent"
+msgstr "Đã được gửi"
+
+#: app.py:654
+msgid "Message Sent!"
+msgstr "Tin nhắn đã được gửi đi!"
+
+#: app.py:657 templates/elements/footer.pyhtml:3
+#: templates/pages/footer.pyhtml:8
+msgid "Support"
+msgstr "Hỗ trợ"
+
+#: app.py:672
+msgid "Your feedback was sent successfully."
+msgstr "Thông tin phản hồi của bạn đã được gửi thành công."
+
+#: app.py:675
+msgid "Feedback Sent!"
+msgstr "Phản hồi đã được gửi đi!"
+
+#: app.py:678 templates/elements/footer.pyhtml:4
+#: templates/pages/footer.pyhtml:13 templates/pages/footer.pyhtml:130
+#: templates/pages/footer.pyhtml:131
+msgid "Feedback"
+msgstr "Phản hồi"
+
+#: app.py:684 templates/elements/footer.pyhtml:5
+#: templates/pages/footer.pyhtml:18
+msgid "Terms"
+msgstr "Điều khoản"
+
+#: app.py:690 templates/elements/footer.pyhtml:6
+#: templates/pages/footer.pyhtml:23
+msgid "Privacy"
+msgstr "Bảo mật"
+
+#: app.py:728 templates/pages/translate.pyhtml:3
+msgid "Translate"
+msgstr "Dịch"
+
+#: lib/mailer.py:48
+msgid "Request for changing your password on RIPto"
+msgstr "Yêu cầu thay đổi mật khẩu của bạn trên RIPto"
+
+#: lib/mailer.py:61
+msgid "You have deactivated your RIPto account"
+msgstr "Bạn đã vô hiệu hóa tài khoản RIPto của bạn"
+
+#: lib/mailer.py:73
+msgid "You have been banned from RIPto"
+msgstr "Bạn đã bị cấm từ RIPto"
+
+#: models/memorial.py:298
+msgid "Natural"
+msgstr "Tự nhiên"
+
+#: models/memorial.py:299
+msgid "Accidental"
+msgstr "Tình cờ"
+
+#: models/memorial.py:300
+msgid "Homicide"
+msgstr "Giết người"
+
+#: models/memorial.py:301
+msgid "Suicide"
+msgstr "Tự tử"
+
+#: models/memorial.py:302
+msgid "War"
+msgstr "Chiến tranh"
+
+#: templates/elements/edit_new_memorial.pyhtml:5
+msgid "You must include a valid photo or select the checkbox."
+msgstr "Bạn phải chọn một bức ảnh hợp lệ hoặc chọn hộp kiểm."
+
+#: templates/elements/edit_new_memorial.pyhtml:7
+msgid "All fields are required."
+msgstr "Tất cả được yêu cầu."
+
+#: templates/elements/edit_new_memorial.pyhtml:22
+msgid "I don't have their photo"
+msgstr "Tôi không có hình ảnh của mình"
+
+#: templates/elements/edit_new_memorial.pyhtml:24
+msgid "Choose photo"
+msgstr "Chọn hình ảnh"
+
+#: templates/elements/edit_new_memorial.pyhtml:25
+#: templates/elements/edit_new_memorial.pyhtml:30
+msgid "Change photo"
+msgstr "Thay đổi hình ảnh"
+
+#: templates/elements/edit_new_memorial.pyhtml:26
+msgid "No photo"
+msgstr "Không ảnh"
+
+#: templates/elements/edit_new_memorial.pyhtml:27
+msgid "Click to select"
+msgstr "Nhấn vào đây để chọn"
+
+#: templates/elements/edit_new_memorial.pyhtml:31
+msgid "Select a photo"
+msgstr "Chọn một bức ảnh"
+
+#: templates/elements/edit_new_memorial.pyhtml:34
+msgid "Save photo"
+msgstr "Lưu ảnh"
+
+#: templates/elements/edit_new_memorial.pyhtml:43
+msgid "Photo saved."
+msgstr "Hình ảnh lưu."
+
+#: templates/elements/edit_new_memorial.pyhtml:47
+#, python-format
+msgid "Photo must be a %(exts)s, or %(ext_last)s."
+msgstr "Hình ảnh phải là %(exts)s, hoặc %(ext_last)s."
+
+#: templates/elements/edit_new_memorial.pyhtml:51
+msgid "A photo is required."
+msgstr "Một bức ảnh được yêu cầu."
+
+#: templates/elements/edit_new_memorial.pyhtml:55
+msgid ""
+"Please make sure photo is at least <strong>640x480</strong> and at most "
+"<strong>10MB</strong>."
+msgstr ""
+
+#: templates/elements/edit_new_memorial.pyhtml:64
+msgid "Name"
+msgstr "Tên"
+
+#: templates/elements/edit_new_memorial.pyhtml:66
+msgid "Person's name?"
+msgstr "Tên của mình?"
+
+#: templates/elements/edit_new_memorial.pyhtml:71
+#: templates/elements/edit_new_memorial.pyhtml:72
+msgid "Born"
+msgstr "Sinh"
+
+#: templates/elements/edit_new_memorial.pyhtml:78
+#: templates/elements/edit_new_memorial.pyhtml:79
+msgid "Died"
+msgstr "Qua đời"
+
+#: templates/elements/edit_new_memorial.pyhtml:81
+msgid "Date born/died?"
+msgstr "Ngày sinh/qua đời?"
+
+#: templates/elements/edit_new_memorial.pyhtml:86
+#: templates/elements/edit_new_memorial.pyhtml:93
+msgid "Cause of death?"
+msgstr "Nguyên nhân của cái chết?"
+
+#: templates/elements/edit_new_memorial.pyhtml:98
+msgid "Epitaph"
+msgstr "Văn bia"
+
+#: templates/elements/edit_new_memorial.pyhtml:100
+msgid "Short description?"
+msgstr "Mô tả ngắn?"
+
+#: templates/elements/edit_new_memorial.pyhtml:105
+msgid "Buried"
+msgstr "Chôn cất"
+
+#: templates/elements/edit_new_memorial.pyhtml:106
+msgid "Cremated"
+msgstr "Hỏa táng"
+
+#: templates/elements/edit_new_memorial.pyhtml:109
+msgid "Buried/Cremated"
+msgstr "Chôn cất/Hỏa táng"
+
+#: templates/elements/edit_new_memorial.pyhtml:110
+msgid "When"
+msgstr "Khi"
+
+#: templates/elements/edit_new_memorial.pyhtml:112
+msgid "Date buried/cremated?"
+msgstr "Ngày chôn cất/hỏa táng?"
+
+#: templates/elements/edit_new_memorial.pyhtml:118
+msgid "Arlington National Cemetery"
+msgstr "Nghĩa trang Mai Dịch"
+
+#: templates/elements/edit_new_memorial.pyhtml:120
+msgid "Place buried/cremated?"
+msgstr "Nơi chôn cất/hỏa táng?"
+
+#: templates/elements/results.pyhtml:2
+msgid "Sorry but we couldn't find any memorials."
+msgstr "Xin lỗi, không có truy điệu."
+
+#: templates/elements/results.pyhtml:21
+msgid "Show more memorials"
+msgstr "Hơn truy điệu"
+
+#: templates/elements/topbar.pyhtml:5
+msgid ""
+"Looks like your JavaScript is disabled. We strongly recommend you to "
+"enable it for a better experience."
+msgstr "JavaScript bị vô hiệu hóa. Chúng tôi khuyên bạn để kích hoạt nó."
+
+#: templates/elements/topbar.pyhtml:14 templates/elements/topbar.pyhtml:16
+msgid "Search"
+msgstr "Tìm kiếm"
+
+#: templates/elements/topbar.pyhtml:30 templates/pages/welcome.pyhtml:3
+#: templates/pages/welcome.pyhtml:61
+msgid "Log in"
+msgstr "Đăng nhập"
+
+#: templates/elements/topbar.pyhtml:33 templates/pages/welcome.pyhtml:8
+msgid "Sign up"
+msgstr "Đăng ký"
+
+#: templates/elements/topbar.pyhtml:43
+msgid "Log out"
+msgstr "Đăng xuất"
+
+#: templates/elements/topbar.pyhtml:52
+msgid "Remember someone"
+msgstr "Nhớ một ai đó"
+
+#: templates/elements/modal/calendar.pyhtml:4
+msgid "Calendar"
+msgstr "Lịch"
+
+#: templates/elements/modal/calendar.pyhtml:30
+msgid "January"
+msgstr "T1"
+
+#: templates/elements/modal/calendar.pyhtml:30
+msgid "February"
+msgstr "T2"
+
+#: templates/elements/modal/calendar.pyhtml:30
+msgid "March"
+msgstr "T3"
+
+#: templates/elements/modal/calendar.pyhtml:30
+msgid "April"
+msgstr "T4"
+
+#: templates/elements/modal/calendar.pyhtml:30
+#: templates/elements/modal/calendar.pyhtml:31
+msgid "May"
+msgstr "T5"
+
+#: templates/elements/modal/calendar.pyhtml:30
+msgid "June"
+msgstr "T6"
+
+#: templates/elements/modal/calendar.pyhtml:30
+msgid "July"
+msgstr "T7"
+
+#: templates/elements/modal/calendar.pyhtml:30
+msgid "August"
+msgstr "T8"
+
+#: templates/elements/modal/calendar.pyhtml:30
+#: templates/pages/footer.pyhtml:198 templates/pages/footer.pyhtml:331
+msgid "September"
+msgstr "T9"
+
+#: templates/elements/modal/calendar.pyhtml:30
+msgid "October"
+msgstr "T10"
+
+#: templates/elements/modal/calendar.pyhtml:30
+msgid "November"
+msgstr "T11"
+
+#: templates/elements/modal/calendar.pyhtml:30
+msgid "December"
+msgstr "T12"
+
+#: templates/elements/modal/calendar.pyhtml:31
+msgid "Jan"
+msgstr "T1"
+
+#: templates/elements/modal/calendar.pyhtml:31
+msgid "Feb"
+msgstr "T2"
+
+#: templates/elements/modal/calendar.pyhtml:31
+msgid "Mar"
+msgstr "T3"
+
+#: templates/elements/modal/calendar.pyhtml:31
+msgid "Apr"
+msgstr "T4"
+
+#: templates/elements/modal/calendar.pyhtml:31
+msgid "Jun"
+msgstr "T6"
+
+#: templates/elements/modal/calendar.pyhtml:31
+msgid "Jul"
+msgstr "T7"
+
+#: templates/elements/modal/calendar.pyhtml:31
+msgid "Aug"
+msgstr "T8"
+
+#: templates/elements/modal/calendar.pyhtml:31
+msgid "Sep"
+msgstr "T9"
+
+#: templates/elements/modal/calendar.pyhtml:31
+msgid "Oct"
+msgstr "T10"
+
+#: templates/elements/modal/calendar.pyhtml:31
+msgid "Nov"
+msgstr "T11"
+
+#: templates/elements/modal/calendar.pyhtml:31
+msgid "Dec"
+msgstr "T12"
+
+#: templates/elements/modal/calendar.pyhtml:32
+msgid "Sunday"
+msgstr "Chủ nhật"
+
+#: templates/elements/modal/calendar.pyhtml:32
+msgid "Monday"
+msgstr "Thứ hai"
+
+#: templates/elements/modal/calendar.pyhtml:32
+msgid "Tuesday"
+msgstr "Thứ ba"
+
+#: templates/elements/modal/calendar.pyhtml:32
+msgid "Wednesday"
+msgstr "Thứ tư"
+
+#: templates/elements/modal/calendar.pyhtml:32
+msgid "Thursday"
+msgstr "Thứ năm"
+
+#: templates/elements/modal/calendar.pyhtml:32
+msgid "Friday"
+msgstr "Thứ sáu"
+
+#: templates/elements/modal/calendar.pyhtml:32
+msgid "Saturday"
+msgstr "Thứ bảy"
+
+#: templates/elements/modal/calendar.pyhtml:57
+msgid "Select Date"
+msgstr "Chọn ngày"
+
+#: templates/elements/modal/flag.pyhtml:4
+msgid "Notify"
+msgstr "Thông báo"
+
+#: templates/elements/modal/flag.pyhtml:7 templates/pages/memorial.pyhtml:69
+#: templates/pages/user.pyhtml:13
+msgid "Report"
+msgstr "Báo cáo"
+
+#: templates/elements/modal/flag.pyhtml:21 templates/pages/user.pyhtml:55
+msgid "Report for serious problems or moderator attention?"
+msgstr "Báo cáo về những vấn đề nghiêm trọng hoặc sự chú ý của quản trị viên?"
+
+#: templates/elements/modal/flag.pyhtml:24 templates/pages/user.pyhtml:58
+msgid "Report Abuse"
+msgstr "Báo cáo "
+
+#: templates/elements/modal/lang.pyhtml:4 templates/pages/lang.pyhtml:11
+#: templates/pages/translate.pyhtml:17
+msgid "International"
+msgstr "Quốc tế"
+
+#: templates/elements/modal/share.pyhtml:4 templates/pages/memorial.pyhtml:71
+msgid "Share"
+msgstr "Chia sẻ"
+
+#: templates/elements/modal/share.pyhtml:7
+msgid "Community"
+msgstr "Cộng đồng"
+
+#: templates/elements/modal/share.pyhtml:13 templates/pages/footer.pyhtml:95
+msgid "Email"
+msgstr "Email"
+
+#: templates/elements/modal/share.pyhtml:19
+msgid "HTML"
+msgstr "Mã"
+
+#: templates/elements/modal/share.pyhtml:32
+msgid "You can use the short link or share to a network below."
+msgstr "Bạn có thể sử dụng liên kết dưới đây hoặc chia sẻ với một trang web."
+
+#: templates/elements/modal/share.pyhtml:43
+#, python-format
+msgid "Share to %(service)s"
+msgstr "Chia sẻ với %(service)s"
+
+#: templates/elements/modal/share.pyhtml:51
+msgid "You can email this Memorial by filling out the form below."
+msgstr "Bạn có thể gửi cho truy điệu này bằng cách điền vào mẫu dưới đây."
+
+#: templates/elements/modal/share.pyhtml:64
+#: templates/elements/modal/share.pyhtml:65
+msgid "Your name"
+msgstr "Tên của bạn"
+
+#: templates/elements/modal/share.pyhtml:70
+msgid "Friend's email"
+msgstr "Email của người bạn"
+
+#: templates/elements/modal/share.pyhtml:71
+msgid "email@example.com, email@example.com, . . ."
+msgstr "Email 1, Email 2, . . ."
+
+#: templates/elements/modal/share.pyhtml:76
+msgid "Message (optional)"
+msgstr "Tin nhắn (tùy chọn)"
+
+#: templates/elements/modal/share.pyhtml:77
+msgid "Add a comment..."
+msgstr "Thêm một nhận xét..."
+
+#: templates/elements/modal/share.pyhtml:90
+#: templates/email/share_email.pyhtml:61
+#, python-format
+msgid "Buried %(funeral_date)s"
+msgstr "Chôn %(funeral_date)s"
+
+#: templates/elements/modal/share.pyhtml:92
+#: templates/email/share_email.pyhtml:63
+#, python-format
+msgid "Cremated %(funeral_date)s"
+msgstr "Hỏa táng %(funeral_date)s"
+
+#: templates/elements/modal/share.pyhtml:101
+msgid "Send Email"
+msgstr "Gửi email"
+
+#: templates/elements/modal/share.pyhtml:107
+msgid "You can add this Memorial to your website by copying the code below."
+msgstr ""
+"Bạn có thể thêm truy điệu này vào website của bạn bằng cách sao chép mã "
+"dưới đây."
+
+#: templates/email/deactivate_email.pyhtml:7
+#, python-format
+msgid "Sorry to see you go %(name)s."
+msgstr "Xin lỗi bạn đang để lại %(name)s."
+
+#: templates/email/deactivate_email.pyhtml:11
+#, python-format
+msgid ""
+"Unfortunately, once your account has been deactivated, it can no longer "
+"be activated. This means that username <strong>%(username)s</strong> is "
+"now available for somebody else to use."
+msgstr ""
+"Thật không may, sau khi tài khoản của bạn đã được kích hoạt, nó có thể "
+"không được kích hoạt nữa. Điều này có nghĩa rằng tên người dùng "
+"<strong>%(username)s</strong> là bây giờ đã có người khác sử dụng."
+
+#: templates/email/deactivate_email.pyhtml:16
+msgid ""
+"Thank you for taking the time to use RIPto. We hope during your "
+"membership, we were able to help you remember those important to you. If "
+"at any time you change your mind and would like to come back to RIPto, "
+"please follow the Changed My Mind button below."
+msgstr ""
+"Cảm ơn bạn đã sử dụng RIPto. Chúng tôi hy vọng trong thời gian thành viên"
+" của bạn, chúng tôi có thể giúp bạn nhớ những người quan trọng với bạn. "
+"Nếu bạn thay đổi tâm trí của bạn và muốn quay trở lại RIPto, hãy sử dụng "
+"nút Thay đổi tâm trí của tôi."
+
+#: templates/email/deactivate_email.pyhtml:20
+msgid ""
+"We take great pride in making sure RIPto is easy to use and understand, "
+"but we know sometimes things just don't work or don't work well. That's "
+"why we always push our users to give us their feedback on how to improve "
+"RIPto. Though you are no longer a member, we still value your opinion and"
+" would love to hear your input. If there is anything you would like to "
+"share with us, please follow the Give Feedback button below."
+msgstr ""
+"Chúng tôi tự hào lớn trong việc bảo đảm RIPto là dễ sử dụng và hiểu, "
+"nhưng chúng tôi biết đôi khi điều này chỉ cần không làm việc hoặc không "
+"làm việc tốt. Đó là lý do tại sao chúng tôi luôn luôn khuyến khích người "
+"dùng của chúng tôi để cung cấp cho chúng tôi thông tin phản hồi của họ về"
+" cách cải thiện RIPto. Mặc dù bạn không phải là một thành viên nữa, chúng"
+" tôi vẫn đánh giá cao ý kiến ​​của bạn và rất thích nghe đầu vào của bạn."
+" Nếu có bất cứ điều gì bạn muốn nói với chúng tôi, xin vui lòng sử dụng "
+"nút Tặng phản hồi."
+
+#: templates/email/deactivate_email.pyhtml:34
+msgid "Changed My Mind!"
+msgstr "Thay đổi tâm trí của tôi!"
+
+#: templates/email/deactivate_email.pyhtml:48
+msgid "Give Feedback"
+msgstr "Tặng phản hồi"
+
+#: templates/email/reset_email.pyhtml:7
+msgid "Sorry to hear you were having trouble logging in."
+msgstr "Xin lỗi bạn không thể đăng nhập."
+
+#: templates/email/reset_email.pyhtml:11
+msgid ""
+"To reset your password, please follow the button below. You will be taken"
+" to a page that will ask you to enter your new password."
+msgstr ""
+"Để thay đổi mật khẩu của bạn, hãy làm theo các nút bên dưới. Bạn sẽ được "
+"đưa đến một trang đó sẽ yêu cầu bạn nhập mật khẩu mới của bạn."
+
+#: templates/email/reset_email.pyhtml:25
+msgid "Change My Password"
+msgstr "Thay đổi mật khẩu của tôi"
+
+#: templates/email/share_email.pyhtml:11
+#, python-format
+msgid "Your friend %(name)s has shared a memorial with you:"
+msgstr "Bạn của bạn %(name)s đã chia sẻ một truy điệu với bạn:"
+
+#: templates/email/share_email.pyhtml:105
+msgid "Visit Memorial"
+msgstr "Thăm truy điệu"
+
+#: templates/email/share_email.pyhtml:119
+msgid "Give Condolences"
+msgstr "Tặng lời chia buồn"
+
+#: templates/layouts/base.pyhtml:12
+msgid "A place to remember."
+msgstr "Một nơi để nhớ."
+
+#: templates/layouts/email.pyhtml:146
+#, python-format
+msgid ""
+"This message was sent to <a href=\"mailto:%(email)s\" "
+"style=\"color:#222222;text-decoration:none;\">%(email)s</a>."
+msgstr ""
+"Thông báo này đã được gửi đến <a href=\"mailto:%(email)s\" "
+"style=\"color:#222222;text-decoration:none;\">%(email)s</a>."
+
+#: templates/layouts/email.pyhtml:148
+#, python-format
+msgid ""
+"If this is a mistake, please let us know: <a href=\"%(report)s\" "
+"style=\"color:#3b5998;text-decoration:none;\">report</a>."
+msgstr ""
+"Nếu điều này là một sai lầm, xin vui lòng cho chúng tôi biết: <a "
+"href=\"%(report)s\" style=\"color:#3b5998;text-decoration:none;\">báo "
+"cáo</a>."
+
+#: templates/layouts/email.pyhtml:150
+msgid "Please disregard this email if it was sent by mistake."
+msgstr "Xin vui lòng bỏ qua email này nếu nó được gửi bởi sai lầm."
+
+#: templates/layouts/memorial.pyhtml:14
+#, python-format
+msgid "Memorial for %(name)s, %(dob)s - %(dod)s"
+msgstr "Truy điệu cho %(name)s, %(dob)s - %(dod)s"
+
+#: templates/pages/edit_memorial.pyhtml:3 templates/pages/memorial.pyhtml:67
+msgid "Edit"
+msgstr "Chỉnh sửa"
+
+#: templates/pages/edit_memorial.pyhtml:9 templates/pages/settings.pyhtml:59
+msgid "Cancel"
+msgstr "Hủy bỏ"
+
+#: templates/pages/edit_memorial.pyhtml:10
+msgid "Save Changes"
+msgstr "Lưu các thay đổi"
+
+#: templates/pages/footer.pyhtml:31 templates/pages/translate.pyhtml:108
+msgid "Guide"
+msgstr "Hướng dẫn"
+
+#: templates/pages/footer.pyhtml:38
+msgid ""
+"Every day, we interact and surround ourselves with family, friends, "
+"colleagues, and many others that shape who we are today and what kind of "
+"memories we have."
+msgstr ""
+"Mỗi ngày, chúng ta tương tác và bao quanh bản thân chúng tôi với gia "
+"đình, bạn bè, đồng nghiệp, và nhiều người khác đã định hình chúng tôi là "
+"ai ngày hôm nay và những loại ký ức chúng ta có."
+
+#: templates/pages/footer.pyhtml:42
+msgid "Why RIPto"
+msgstr "Tại sao RIPto"
+
+#: templates/pages/footer.pyhtml:43
+msgid ""
+"Unfortunately, sometimes we lose those that are important in our lives, "
+"but it's important to remember that though they are no longer here, we "
+"shouldn't forget them and how they impacted us."
+msgstr ""
+"Thật không may, đôi khi chúng ta mất đi những người rất quan trọng trong "
+"cuộc sống của chúng tôi, nhưng điều quan trọng là phải nhớ rằng mặc dù họ"
+" không ở đây nữa, chúng ta không nên quên họ và cách họ bị ảnh hưởng "
+"chúng tôi."
+
+#: templates/pages/footer.pyhtml:47
+msgid ""
+"RIPto was created from the need for a place where you can easily go to "
+"remember and share your feelings about people that have passed away."
+msgstr ""
+"RIPto đã được tạo ra như là một nơi để bạn có thể nhớ và chia sẻ cảm xúc "
+"của bạn về những người đã qua đời."
+
+#: templates/pages/footer.pyhtml:51
+msgid "Features"
+msgstr "Nổi bật"
+
+#: templates/pages/footer.pyhtml:52
+msgid ""
+"While we are always looking for ways to enhance the site to improve it in"
+" every way possible, we always like to remind ourselves what the core "
+"features are that define RIPto to help ensure we don't stray away from "
+"our original purpose:"
+msgstr ""
+"Trong khi chúng tôi luôn tìm cách để tăng cường các trang web để cải "
+"thiện nó bằng mọi cách có thể, chúng tôi luôn luôn muốn nhắc nhở mình "
+"những gì các tính năng cốt lõi là xác định của RIPto để giúp đảm bảo "
+"chúng tôi không lạc khỏi mục tiêu ban đầu của chúng tôi:"
+
+#: templates/pages/footer.pyhtml:57
+msgid "Create / View / Share - Memorials"
+msgstr "Tạo / Xem / Chia - Truy điệu"
+
+#: templates/pages/footer.pyhtml:61
+msgid "Give condolences"
+msgstr "Tặng lời chia buồn"
+
+#: templates/pages/footer.pyhtml:65
+msgid "Learn about others who have passed away"
+msgstr "Học về những người đã qua đời"
+
+#: templates/pages/footer.pyhtml:71
+msgid ""
+"Since RIPto is still relatively new, we hope that you can understand "
+"sometimes things don't work, or don't work well. Though we work hard to "
+"make sure RIPto's usability and your experience are exceptional, we know "
+"that it's impossible for us to always make it perfect."
+msgstr ""
+"Kể từ khi RIPto vẫn còn tương đối mới, chúng tôi hy vọng bạn có thể hiểu "
+"đôi khi mọi thứ không làm việc, hoặc không làm việc tốt. Mặc dù chúng tôi"
+" làm việc chăm chỉ để làm cho khả năng sử dụng của RIPto chắc chắn và "
+"kinh nghiệm của bạn là đặc biệt, chúng ta biết rằng nó không thể cho "
+"chúng ta luôn luôn làm cho nó hoàn hảo."
+
+#: templates/pages/footer.pyhtml:75
+msgid ""
+"That is why we also depend on you, our users, to let us know any "
+"suggestions you might have on how to improve our site, whenever something"
+" breaks, doesn't function as expected, or is just a terrible user "
+"experience. Whatever it is, we want to hear from you, so please <a "
+"href=\"feedback\">visit our feedback page</a> and let us know!"
+msgstr ""
+"Đó là lý do tại sao chúng tôi cũng phụ thuộc vào bạn, người sử dụng của "
+"chúng tôi, cho chúng tôi biết bất cứ đề nghị bạn có thể làm thế nào để "
+"cải thiện trang web của chúng tôi, bất cứ khi nào một cái gì đó phá vỡ, "
+"không hoạt động như mong đợi, hoặc chỉ là một trải nghiệm người dùng "
+"khủng khiếp. Bất cứ điều gì, chúng tôi muốn nghe từ bạn, vì vậy xin vui "
+"lòng truy cập <a href=\"feedback\">trang thông tin phản hồi</a> của chúng"
+" tôi và cho chúng tôi biết!"
+
+#: templates/pages/footer.pyhtml:83
+msgid "Invalid email address or message."
+msgstr "Email hoặc thông tin phản hồi là không hợp lệ."
+
+#: templates/pages/footer.pyhtml:89
+msgid ""
+"Please let us know what it is you need help with by filling out our form "
+"below and we will get back to you as soon as we can."
+msgstr ""
+"Xin vui lòng cho chúng tôi biết những gì bạn cần giúp đỡ bằng cách điền "
+"vào mẫu của chúng tôi dưới đây và chúng tôi sẽ trả lời cho bạn trong thời"
+" gian sớm nhất có thể."
+
+#: templates/pages/footer.pyhtml:94
+msgid "Your email"
+msgstr "Email của bạn"
+
+#: templates/pages/footer.pyhtml:100 templates/pages/footer.pyhtml:101
+msgid "Message"
+msgstr "Tin nhắn"
+
+#: templates/pages/footer.pyhtml:105
+msgid "Send Message"
+msgstr "Gửi tin nhắn"
+
+#: templates/pages/footer.pyhtml:113
+msgid "Invalid email address or feedback."
+msgstr "Email hoặc thông tin phản hồi là không hợp lệ."
+
+#: templates/pages/footer.pyhtml:119
+msgid ""
+"Bugs? Errors? Suggestions? Whatever your feedback is, we would love to "
+"hear it, so please fill out the form below and let your voice be heard!"
+msgstr ""
+"Sai lầm? Lỗi? Đề nghị? Bất cứ thông tin phản hồi của bạn, chúng tôi rất "
+"thích nghe nó, vì vậy xin vui lòng điền vào mẫu dưới đây và cho giọng nói"
+" của bạn được lắng nghe!"
+
+#: templates/pages/footer.pyhtml:124
+msgid "Your email (optional)"
+msgstr "Email của bạn (tùy chọn)"
+
+#: templates/pages/footer.pyhtml:125 templates/pages/settings.pyhtml:30
+#: templates/pages/welcome.pyhtml:132
+msgid "Email (optional)"
+msgstr "Email (tùy chọn)"
+
+#: templates/pages/footer.pyhtml:135
+msgid "Send Feedback"
+msgstr "Gửi phản hồi"
+
+#: templates/pages/footer.pyhtml:143
+msgid ""
+"Please read these Terms of Service (\"Agreement\", \"Terms of Service\") "
+"carefully before using ripto.com (\"the Site\") operated by RIPto "
+"(\"us\", \"we\", or \"our\").\n"
+"                        This Agreement sets forth the legally binding "
+"terms and conditions for your use of the Site at ripto.com"
+msgstr ""
+"Xin vui lòng đọc các Điều khoản (\"Hợp đồng\", \"Điều khoản\") một cách "
+"cẩn thận trước khi sử dụng ripto.com (\"Trang\") điều hành bởi RIPto "
+"(\"chúng tôi\", \"chúng tôi\", hoặc \"chúng tôi\"). Hiệp định này quy "
+"định các điều khoản và điều kiện ràng buộc về mặt pháp lý cho việc sử "
+"dụng của bạn của Trang tại ripto.com"
+
+#: templates/pages/footer.pyhtml:148
+msgid ""
+"By accessing or using the Site in any manner, including, but not limited "
+"to, visiting or browsing the Site or contributing content or other "
+"materials\n"
+"                        to the Site, you agree to be bound by these Terms"
+" of Service. Capitalized terms are defined in this Agreement."
+msgstr ""
+"Khi truy cập hoặc sử dụng Trang trong bất cứ cách nào, bao gồm, nhưng "
+"không giới hạn, quý khách đến thăm hay duyệt các Trang hoặc đóng góp nội "
+"dung hoặc các vật liệu khác vào các Trang, bạn đồng ý bị ràng buộc bởi "
+"các Điều khoản."
+
+#: templates/pages/footer.pyhtml:153
+msgid "Intellectual Property"
+msgstr "Sở hữu trí tuệ"
+
+#: templates/pages/footer.pyhtml:154
+msgid ""
+"The Site and its original content, features and functionality are owned "
+"by RIPto and are protected by international\n"
+"                        copyright, trademark, patent, trade secret and "
+"other intellectual property or proprietary rights laws."
+msgstr ""
+"Trang và nội dung ban đầu của nó, tính năng và chức năng được sở hữu bởi "
+"RIPto và được bảo vệ bởi luật bản quyền quốc tế, thương hiệu, bằng sáng "
+"chế, bí mật thương mại và sở hữu trí tuệ khác hoặc pháp luật quyền sở "
+"hữu."
+
+#: templates/pages/footer.pyhtml:159
+msgid "Termination"
+msgstr "Chấm dứt"
+
+#: templates/pages/footer.pyhtml:160
+msgid ""
+"We may terminate your access to the Site, without cause or notice, which "
+"may result in the forfeiture and destruction of all information "
+"associated with you.\n"
+"                        All provisions of this Agreement that by their "
+"nature should survive termination shall survive termination, including, "
+"without limitation, ownership provisions,\n"
+"                        warranty disclaimers, indemnity, and limitations "
+"of liability."
+msgstr ""
+"Chúng ta có thể chấm dứt quyền truy cập vào Trang, không có nguyên nhân "
+"hoặc thông báo, có thể dẫn đến việc thu và tiêu huỷ tất cả các thông tin "
+"liên quan đến bạn. Tất cả các quy định của Hiệp định này là bởi bản chất "
+"của chúng nên tồn tại chấm dứt vẫn sẽ bao gồm, nhưng không giới hạn, quy "
+"định quyền sở hữu từ bỏ bảo đảm, bồi thường, và giới hạn trách nhiệm."
+
+#: templates/pages/footer.pyhtml:166
+msgid "Links To Other Sites"
+msgstr "Liên kết đến các Trang khác"
+
+#: templates/pages/footer.pyhtml:167
+msgid ""
+"Our Site may contain links to third-party sites that are not owned or "
+"controlled by RIPto"
+msgstr ""
+"Trang của chúng tôi có thể chứa các liên kết đến các trang của bên thứ ba"
+" không thuộc sở hữu hoặc kiểm soát bởi RIPto"
+
+#: templates/pages/footer.pyhtml:171
+msgid ""
+"RIPto has no control over, and assumes no responsibility for, the "
+"content, privacy policies, or practices of any third party sites or "
+"services. We strongly\n"
+"                        advise you to read the terms and conditions and "
+"privacy policy of any third-party site that you visit."
+msgstr ""
+"RIPto không kiểm soát, và không chịu trách nhiệm, nội dung, chính sách "
+"bảo mật, hoặc thực hành bất kỳ trang bên thứ ba hoặc dịch vụ. Chúng tôi "
+"khuyên bạn nên đọc các điều khoản và điều kiện và chính sách bảo mật của "
+"bất kỳ trang của bên thứ ba mà bạn truy cập."
+
+#: templates/pages/footer.pyhtml:176
+msgid "Governing Law"
+msgstr "Luật điều chỉnh"
+
+#: templates/pages/footer.pyhtml:177
+msgid ""
+"This Agreement (and any further rules, policies, or guidelines "
+"incorporated by reference) shall be governed and construed in accordance "
+"with the laws of California,\n"
+"                        United States, without giving effect to any "
+"principles of conflicts of law."
+msgstr ""
+"Hiệp định này (và bất kỳ quy tắc khác, chính sách, hướng dẫn hoặc kết hợp"
+" bằng cách tham chiếu) sẽ được điều chỉnh và hiểu theo luật pháp của tiểu"
+" bang California, Hoa Kỳ, mà không gây bất kỳ yếu tố mâu thuẫn của pháp "
+"luật."
+
+#: templates/pages/footer.pyhtml:182
+msgid "Changes To This Agreement"
+msgstr "Để thay đổi Hiệp định này"
+
+#: templates/pages/footer.pyhtml:183
+msgid ""
+"We reserve the right, at our sole discretion, to modify or replace these "
+"Terms of Service by posting the updated terms on the Site. Your continued"
+" use of the Site\n"
+"                        after any such changes constitutes your "
+"acceptance of the new Terms of Service."
+msgstr ""
+"Chúng tôi có quyền, bất cứ lúc nào, để sửa đổi hoặc thay thế các Điều "
+"khoản bằng cách đăng các điều khoản mới trên Trang. Bạn tiếp tục sử dụng "
+"Trang sau khi bất kỳ thay đổi như sự chấp nhận của bạn về các Điều khoản "
+"mới."
+
+#: templates/pages/footer.pyhtml:188
+msgid ""
+"Please review this Agreement periodically for changes. If you do not "
+"agree to any of this Agreement or any changes to this Agreement, do not "
+"use, access or continue\n"
+"                        to access the Site or discontinue any use of the "
+"Site immediately."
+msgstr ""
+"Vui lòng xem lại Hiệp định này định kỳ để thay đổi. Nếu bạn không đồng ý "
+"với bất kỳ của Hiệp định này hoặc bất kỳ thay đổi của Hiệp định này, "
+"không sử dụng, truy cập hoặc tiếp tục truy cập Trang hoặc chấm dứt bất kỳ"
+" việc sử dụng các Trang ngay lập tức."
+
+#: templates/pages/footer.pyhtml:193
+msgid "Contact Us"
+msgstr "Liên hệ"
+
+#: templates/pages/footer.pyhtml:194
+msgid "If you have any questions about this Agreement, please contact us."
+msgstr ""
+"Nếu bạn có bất kỳ câu hỏi về bản Hiệp định này, xin vui lòng liên hệ với "
+"chúng tôi."
+
+#: templates/pages/footer.pyhtml:198 templates/pages/footer.pyhtml:331
+#, python-format
+msgid "Last Updated on %(month)s %(day)s, %(year)s."
+msgstr "Sửa đổi lần cuối %(month)s %(day)s, %(year)s."
+
+#: templates/pages/footer.pyhtml:206
+msgid ""
+"This privacy policy (“<strong>Policy</strong>”) describes how RIPto and "
+"its related companies (“<strong>Company</strong>”) collect,\n"
+"                        use and share personal information of consumer "
+"users of this website, <a target=\"_blank\" "
+"href=\"http://ripto.com\">ripto.com</a>\n"
+"                        (the “Site”). This Policy also applies to any of "
+"our other websites that post this Policy. This Policy does not apply to "
+"websites\n"
+"                        that post different statements."
+msgstr ""
+"Chính sách bảo mật (\"<strong>Chính sách</strong>\") mô tả cách RIPto và "
+"các công ty liên quan của nó (\"<strong>Công ty</strong>\") thu thập, sử "
+"dụng và chia sẻ thông tin cá nhân của người sử dụng của người tiêu dùng "
+"của trang web này, <a target=\"_blank\" "
+"href=\"http://ripto.com\">ripto.com</a> (\"Trang\"). Chính sách này cũng "
+"áp dụng cho bất kỳ trang web khác của chúng tôi gửi Chính sách này. Chính"
+" sách này không áp dụng cho các trang web mà gửi báo cáo khác nhau."
+
+#: templates/pages/footer.pyhtml:213
+msgid "WHAT WE COLLECT"
+msgstr "GÌ CHÚNG TÔI THU THẬP"
+
+#: templates/pages/footer.pyhtml:214
+msgid "We get information about you in a range of ways."
+msgstr "Chúng tôi nhận được thông tin về bạn theo những cách khác nhau."
+
+#: templates/pages/footer.pyhtml:218
+msgid "Information You Give Us."
+msgstr "Thông tin bạn cho chúng tôi."
+
+#: templates/pages/footer.pyhtml:219
+msgid ""
+"We collect your name, email address, username and other information you "
+"directly give us on our Site."
+msgstr ""
+"Chúng tôi thu thập tên, email, tên người dùng và các thông tin khác mà "
+"bạn trực tiếp cho chúng tôi trên Trang của chúng tôi."
+
+#: templates/pages/footer.pyhtml:223
+msgid "Information We Get from Others."
+msgstr "Thông tin chúng tôi có được từ những người khác."
+
+#: templates/pages/footer.pyhtml:224
+msgid ""
+"We may get information about you from other sources. We may add this to "
+"information we get from this Site."
+msgstr ""
+"Chúng tôi có thể nhận được thông tin về bạn từ các nguồn khác. Chúng ta "
+"có thể thêm thông tin này để chúng ta có được từ Trang này."
+
+#: templates/pages/footer.pyhtml:228
+msgid "Information Automatically Collected."
+msgstr "Tự động thu thập thông tin."
+
+#: templates/pages/footer.pyhtml:229
+msgid "We automatically log information about you and your computer."
+msgstr "Chúng tôi tự động lưu thông tin về bạn và máy tính của bạn."
+
+#: templates/pages/footer.pyhtml:233
+msgid "Cookies."
+msgstr "Cookies."
+
+#: templates/pages/footer.pyhtml:233
+msgid ""
+"We may log information using \"cookies.\" Cookies are small data files "
+"stored on your hard drive by a website.\n"
+"                        Cookies help us make our Site and your visit "
+"better. We use cookies to see which parts of our Site people use and like"
+" and to count visits\n"
+"                        to our Site."
+msgstr ""
+"Chúng tôi có thể đăng nhập thông tin sử dụng \"cookies\". Cookies là các "
+"tập tin dữ liệu nhỏ được lưu trên ổ cứng của bạn bởi một trang web. "
+"Cookie giúp chúng tôi làm cho Trang của chúng tôi và chuyến thăm của bạn "
+"tốt hơn. Chúng tôi sử dụng cookie để xem phần nào của người sử dụng Trang"
+" của chúng tôi và thích và đếm lượt truy cập vào Trang của chúng tôi."
+
+#: templates/pages/footer.pyhtml:239
+msgid "Web Beacons."
+msgstr "Lỗi web."
+
+#: templates/pages/footer.pyhtml:239
+msgid ""
+"We may log information using digital images called Web beacons on our "
+"Site or in our emails. We use Web beacons\n"
+"                        to manage cookies, count visits, and to learn "
+"what marketing works and what does not. We also use Web Beacons to tell "
+"if you open or act\n"
+"                        on our emails."
+msgstr ""
+"Chúng ta có thể lưu thông tin sử dụng hình ảnh kỹ thuật số được gọi là "
+"Lỗi web trên Trang của chúng tôi hoặc trong email của chúng tôi. Chúng "
+"tôi sử dụng Lỗi web để quản lý các tập tin cookie, đếm thăm và tìm hiểu "
+"những gì tiếp thị việc và những gì không. Chúng tôi cũng sử dụng Lỗi web "
+"để nói nếu bạn mở hoặc sử dụng trên email của chúng tôi."
+
+#: templates/pages/footer.pyhtml:245
+msgid "USE OF PERSONAL INFORMATION"
+msgstr "SỬ DỤNG THÔNG TIN CÁ NHÂN"
+
+#: templates/pages/footer.pyhtml:246
+msgid "We use your personal information as follows:"
+msgstr "Chúng tôi sử dụng thông tin cá nhân của bạn:"
+
+#: templates/pages/footer.pyhtml:251
+msgid ""
+"We use your personal information to protect, investigate, and deter "
+"against fraudulent, unauthorized, or illegal activity."
+msgstr ""
+"Chúng tôi sử dụng thông tin cá nhân của bạn để bảo vệ, điều tra, ngăn "
+"chặn và chống lại hoạt động gian lận, không được phép, hoặc bất hợp pháp."
+
+#: templates/pages/footer.pyhtml:256
+msgid "SHARING OF PERSONAL INFORMATION"
+msgstr "CHIA SẺ THÔNG TIN CÁ NHÂN"
+
+#: templates/pages/footer.pyhtml:257
+msgid "We may share personal information as follows:"
+msgstr "Chúng tôi có thể chia sẻ thông tin cá nhân:"
+
+#: templates/pages/footer.pyhtml:262
+msgid ""
+"We may share personal information with your consent. For example, you may"
+" let us share personal information with others for\n"
+"                            their own marketing uses. Those uses will be "
+"subject to their privacy policies."
+msgstr ""
+"Chúng tôi có thể chia sẻ thông tin cá nhân với sự đồng ý của bạn. Ví dụ, "
+"bạn có thể để chúng tôi chia sẻ thông tin cá nhân với những người khác để"
+" sử dụng tiếp thị của mình. Những người sử dụng sẽ phải chịu chính sách "
+"bảo mật của họ."
+
+#: templates/pages/footer.pyhtml:266
+msgid ""
+"We may share personal information when we do a business deal, or "
+"negotiate a business deal, involving sale or transfer of all\n"
+"                            or a part of our business or assets. These "
+"deals can include any merger, financing, acquisition, or bankruptcy "
+"transaction or\n"
+"                            proceeding."
+msgstr ""
+"Chúng tôi có thể chia sẻ thông tin cá nhân khi chúng ta làm một việc kinh"
+" doanh, hoặc thương lượng một thỏa thuận kinh doanh, liên quan đến bán "
+"hoặc chuyển nhượng toàn bộ hoặc một phần của kinh doanh hoặc tài sản của "
+"chúng tôi. Các giao dịch có thể bao gồm bất kỳ sáp nhập, tài chính, mua "
+"lại, hoặc phá sản, giao dịch tiếp tục."
+
+#: templates/pages/footer.pyhtml:271
+msgid ""
+"We may share personal information for legal, protection, and safety "
+"purposes."
+msgstr ""
+"Chúng tôi có thể chia sẻ thông tin cá nhân cho pháp lý, bảo vệ, và các "
+"mục đích an toàn."
+
+#: templates/pages/footer.pyhtml:274
+msgid "We may share information to comply with laws."
+msgstr "Chúng tôi có thể chia sẻ thông tin tuân thủ pháp luật."
+
+#: templates/pages/footer.pyhtml:277
+msgid "We may share information to respond to lawful requests and legal process."
+msgstr ""
+"Chúng tôi có thể chia sẻ thông tin để đáp ứng yêu cầu hợp pháp và quá "
+"trình hợp pháp."
+
+#: templates/pages/footer.pyhtml:280
+msgid ""
+"We may share information to protect the rights and property of RIPto, our"
+" agents, customers, and others. This includes\n"
+"                                    enforcing our agreements, policies, "
+"and terms of use."
+msgstr ""
+"Chúng tôi có thể chia sẻ thông tin để bảo vệ các quyền và tài sản của "
+"RIPto, các đại lý của chúng tôi, khách hàng, và những người khác. Điều "
+"này bao gồm việc thực thi các hiệp định, chính sách của chúng tôi, và "
+"điều khoản sử dụng."
+
+#: templates/pages/footer.pyhtml:284
+msgid ""
+"We may share information in an emergency. This includes protecting the "
+"safety of our employees and agents, our customers,\n"
+"                                    or any person."
+msgstr ""
+"Chúng tôi có thể chia sẻ thông tin trong trường hợp khẩn cấp. Điều này "
+"bao gồm việc bảo vệ sự an toàn của nhân viên và các đại lý, khách hàng "
+"của chúng tôi, hoặc bất kỳ người nào."
+
+#: templates/pages/footer.pyhtml:290
+msgid "We may share information with those who need it to do work for us."
+msgstr ""
+"Chúng tôi có thể chia sẻ thông tin với những người cần nó để làm việc cho"
+" chúng tôi."
+
+#: templates/pages/footer.pyhtml:295
+msgid ""
+"We may also share aggregated and/or anonymized data with others for their"
+" own uses."
+msgstr ""
+"Chúng tôi cũng có thể chia sẻ dữ liệu tổng hợp và / hoặc ẩn danh với "
+"những người khác cho mục đích riêng của họ."
+
+#: templates/pages/footer.pyhtml:299
+msgid "INFORMATION CHOICES AND CHANGES"
+msgstr "LỰA CHỌN THÔNG TIN VÀ THAY ĐỔI"
+
+#: templates/pages/footer.pyhtml:300
+msgid ""
+"Our marketing emails tell you how to “opt-out”. If you opt out, we may "
+"still send you non-marketing emails. Non-marketing emails\n"
+"                        include emails about your accounts and our "
+"business dealings with you."
+msgstr ""
+"Email tiếp thị của chúng tôi cho bạn biết làm thế nào để \"không tham "
+"gia\". Nếu bạn không tham gia, chúng tôi vẫn có thể gửi cho bạn các loại "
+"email. Email có thể được về tài khoản của bạn và giao dịch kinh doanh với"
+" bạn."
+
+#: templates/pages/footer.pyhtml:305
+msgid ""
+"You may send requests about personal information to our Contact "
+"Information below. You can request to change contact choices,\n"
+"                        opt-out of our sharing with others, and update "
+"your personal information."
+msgstr ""
+"Bạn có thể gửi các yêu cầu về thông tin cá nhân Thông tin liên hệ của "
+"chúng tôi dưới đây. Bạn có thể yêu cầu để thay đổi lựa chọn liên lạc, "
+"không tham gia chia sẻ với những người khác, và cập nhật thông tin cá "
+"nhân của bạn."
+
+#: templates/pages/footer.pyhtml:310
+msgid ""
+"You can typically remove and reject cookies from our Site with your "
+"browser settings. Many browsers are set to accept cookies until\n"
+"                        you change your settings. If you remove or reject"
+" our cookies, it could affect how our Site works for you."
+msgstr ""
+"Bạn thường có thể loại bỏ và từ chối cookie từ Trang của chúng tôi với "
+"các thiết lập trình duyệt của bạn. Nhiều trình duyệt được thiết lập để "
+"chấp nhận cookie cho đến khi bạn thay đổi các thiết lập của bạn. Nếu bạn "
+"loại bỏ hoặc từ chối các tập tin cookie của chúng tôi, nó có thể ảnh "
+"hưởng đến cách Trang của chúng tôi làm việc cho bạn."
+
+#: templates/pages/footer.pyhtml:315
+msgid "SECURITY OF YOUR PERSONAL INFORMATION"
+msgstr "AN NINH THÔNG TIN CÁ NHÂN CỦA BẠN"
+
+#: templates/pages/footer.pyhtml:316
+msgid ""
+"We take steps to help protect personal information. No company can fully "
+"prevent security risks, however. Mistakes may happen.\n"
+"                        Bad actors may defeat even the best safeguards."
+msgstr ""
+"Chúng tôi thực hiện các bước để bảo vệ thông tin cá nhân. Không có công "
+"ty có thể ngăn chặn hoàn toàn nguy cơ bảo mật, tuy nhiên. Sai lầm có thể "
+"xảy ra. Kẻ giả mạo có thể đánh bại ngay cả những biện pháp bảo vệ tốt "
+"nhất."
+
+#: templates/pages/footer.pyhtml:321
+msgid "CONTACT INFORMATION"
+msgstr "THÔNG TIN LIÊN HỆ"
+
+#: templates/pages/footer.pyhtml:322
+msgid ""
+"We welcome your comments or questions about this Privacy Policy. You may "
+"also contact us at <a target=\"_blank\" "
+"href=\"http://ripto.com/support\">ripto.com/support</a>."
+msgstr ""
+"Chúng tôi hoan nghênh ý kiến ​​hoặc câu hỏi về Chính sách bảo mật. Bạn có"
+" thể liên hệ với chúng tôi tại <a target=\"_blank\" "
+"href=\"http://ripto.com/support\">ripto.com/support</a>."
+
+#: templates/pages/footer.pyhtml:326
+msgid "CHANGES TO THIS PRIVACY POLICY"
+msgstr "THAY ĐỔI CHÍNH SÁCH BẢO MẬT"
+
+#: templates/pages/footer.pyhtml:327
+msgid ""
+"We may change this Privacy Policy. If we make any changes, we will change"
+" the Last Updated date below."
+msgstr ""
+"Chúng tôi có thể thay đổi Chính sách bảo mật. Nếu chúng ta thực hiện bất "
+"kỳ thay đổi, chúng tôi sẽ cập nhật Sửa đổi lần cuối."
+
+#: templates/pages/home.pyhtml:3
+msgid "Created"
+msgstr "Tạo"
+
+#: templates/pages/home.pyhtml:8
+msgid "Remembered"
+msgstr "Đã nhớ"
+
+#: templates/pages/index.pyhtml:2 templates/pages/memorials.pyhtml:2
+msgid "visited"
+msgstr "đã thăm"
+
+#: templates/pages/index.pyhtml:3 templates/pages/memorials.pyhtml:3
+msgid "commented"
+msgstr "đã chú thích"
+
+#: templates/pages/index.pyhtml:4 templates/pages/memorials.pyhtml:4
+msgid "remembered"
+msgstr "đã nhớ"
+
+#: templates/pages/index.pyhtml:8 templates/pages/memorials.pyhtml:8
+msgid "today"
+msgstr "hôm nay"
+
+#: templates/pages/index.pyhtml:9 templates/pages/memorials.pyhtml:9
+msgid "yesterday"
+msgstr "ngày hôm qua"
+
+#: templates/pages/index.pyhtml:10 templates/pages/memorials.pyhtml:10
+msgid "this week"
+msgstr "trong tuần này"
+
+#: templates/pages/index.pyhtml:11 templates/pages/memorials.pyhtml:11
+msgid "this month"
+msgstr "trong tháng này"
+
+#: templates/pages/index.pyhtml:12 templates/pages/memorials.pyhtml:12
+msgid "all time"
+msgstr "từ đầu"
+
+#: templates/pages/index.pyhtml:34 templates/pages/memorials.pyhtml:36
+#, python-format
+msgid "The most %(filters)s Memorials, created %(times)s"
+msgstr "Truy điệu %(filters)s nhiều nhất, tạo ra %(times)s"
+
+#: templates/pages/lang.pyhtml:17
+msgid "That language is not yet available."
+msgstr "Ngôn ngữ mà không có sẵn chưa."
+
+#: templates/pages/lang.pyhtml:51
+msgid "Coming soon!"
+msgstr "Đến sớm!"
+
+#: templates/pages/memorial.pyhtml:10
+#, python-format
+msgid ""
+"Memorial was successfully created.<br>Click <a class=\"js-modal-click\" "
+"href=\"%(link)s\" data-modal-for=\"share-memorial-dialog\">here</a> to "
+"share with your friends and family."
+msgstr ""
+"Truy điệu đã được tạo thành công.<br>Bấm vào <a class=\"js-modal-click\" "
+"href=\"%(link)s\" data-modal-for=\"share-memorial-dialog\">đây</a> để "
+"chia sẻ với bạn bè và gia đình của bạn."
+
+#: templates/pages/memorial.pyhtml:17
+msgid "Photo"
+msgstr "Hình ảnh"
+
+#: templates/pages/memorial.pyhtml:23
+#, python-format
+msgid "Cause of death: %(cause)s"
+msgstr "Nguyên nhân tử vong: %(cause)s"
+
+#: templates/pages/memorial.pyhtml:43
+#, python-format
+msgid "Buried <strong>%(funeral_date)s</strong>"
+msgstr "Chôn <strong>%(funeral_date)s</strong>"
+
+#: templates/pages/memorial.pyhtml:45
+#, python-format
+msgid "Cremated <strong>%(funeral_date)s</strong>"
+msgstr "Hỏa táng <strong>%(funeral_date)s</strong>"
+
+#: templates/pages/memorial.pyhtml:60
+#, python-format
+msgid "Visited %(name)s"
+msgstr "Đến thăm %(name)s"
+
+#: templates/pages/memorial.pyhtml:64
+#, python-format
+msgid "Remembered %(name)s"
+msgstr "Nhớ %(name)s"
+
+#: templates/pages/memorial.pyhtml:79
+msgid "Condolences"
+msgstr "Lời chia buồn"
+
+#: templates/pages/memorial.pyhtml:91
+msgid "Your thoughts, feelings, praise..."
+msgstr "Suy nghĩ của bạn, cảm xúc, khen ngợi..."
+
+#: templates/pages/memorial.pyhtml:93 templates/pages/memorial.pyhtml:139
+msgid "Post"
+msgstr "Đăng"
+
+#: templates/pages/memorial.pyhtml:109
+#, fuzzy, python-format
+msgid "Like (%(num)s)"
+msgstr "Không thích (<span>%(num)s</span>)"
+
+#: templates/pages/memorial.pyhtml:110
+#, fuzzy, python-format
+msgid "Dislike (%(num)s)"
+msgstr "Không thích (<span>%(num)s</span>)"
+
+#: templates/pages/memorial.pyhtml:111
+#, fuzzy, python-format
+msgid "Reply (%(num)s)"
+msgstr "Đáp lại (<span>%(num)s</span>)"
+
+#: templates/pages/memorial.pyhtml:137
+msgid "Your reply..."
+msgstr ""
+
+#: templates/pages/new_memorial.pyhtml:8
+msgid ""
+"<a href=\"/login\">Sign in</a> or <a href=\"/signup\">register</a> first "
+"if you want to change this later."
+msgstr ""
+"<a href=\"login\">Đăng nhập</a> hoặc <a href=\"signup\">đăng ký</a> đầu "
+"tiên nếu bạn muốn chỉnh sửa sau này."
+
+#: templates/pages/new_memorial.pyhtml:15
+msgid "Create Memorial"
+msgstr "Tạo một truy điệu"
+
+#: templates/pages/reset.pyhtml:3
+msgid "Change my password"
+msgstr "Thay đổi mật khẩu"
+
+#: templates/pages/reset.pyhtml:7
+msgid ""
+"Looks like we couldn't find that username or no email was registered to "
+"it."
+msgstr "Tên người dùng không chính xác hoặc không có email đã được đăng ký với nó."
+
+#: templates/pages/reset.pyhtml:16
+msgid "Enter your new password"
+msgstr "Nhập mật khẩu mới"
+
+#: templates/pages/reset.pyhtml:23 templates/pages/welcome.pyhtml:208
+msgid "Submit"
+msgstr "Đệ trình"
+
+#: templates/pages/results.pyhtml:6
+#, python-format
+msgid "Found %(total)s memorials"
+msgstr "%(total)s truy điệu"
+
+#: templates/pages/settings.pyhtml:3 templates/pages/user.pyhtml:3
+msgid "Profile"
+msgstr "Trang cá nhân"
+
+#: templates/pages/settings.pyhtml:25
+msgid "My name"
+msgstr "Tên của tôi"
+
+#: templates/pages/settings.pyhtml:26 templates/pages/welcome.pyhtml:121
+msgid "Name (optional)"
+msgstr "Tên (tùy chọn)"
+
+#: templates/pages/settings.pyhtml:29
+msgid "My email"
+msgstr "Email của tôi"
+
+#: templates/pages/settings.pyhtml:35
+msgid "My username"
+msgstr "Tên người dùng của tôi"
+
+#: templates/pages/settings.pyhtml:36 templates/pages/welcome.pyhtml:146
+msgid "Username"
+msgstr "Tên người dùng"
+
+#: templates/pages/settings.pyhtml:39
+msgid "My new password"
+msgstr "Mật khẩu mới của tôi"
+
+#: templates/pages/settings.pyhtml:40
+msgid "New Password"
+msgstr "Mật khẩu mới"
+
+#: templates/pages/settings.pyhtml:44
+msgid "Save"
+msgstr "Lưu"
+
+#: templates/pages/settings.pyhtml:55
+msgid "Are you sure you want to delete your account?"
+msgstr "Bạn có chắc bạn muốn xóa tài khoản của bạn?"
+
+#: templates/pages/settings.pyhtml:60 templates/pages/settings.pyhtml:72
+msgid "Delete My Account"
+msgstr "Xóa tài khoản của tôi"
+
+#: templates/pages/settings.pyhtml:65 templates/pages/user.pyhtml:32
+msgid "Member Since:"
+msgstr "Thành viên từ:"
+
+#: templates/pages/settings.pyhtml:68 templates/pages/user.pyhtml:35
+msgid "Memorials Created:"
+msgstr "Truy điệu được tạo:"
+
+#: templates/pages/translate.pyhtml:27
+msgid "Translations saved."
+msgstr "Bản dịch đã được lưu."
+
+#: templates/pages/translate.pyhtml:35
+#, python-format
+msgid ""
+"There are currently <strong>%(num_blanks)s blank</strong> and "
+"<strong>%(num_fuzzies)s fuzzy</strong> translations."
+msgstr ""
+"Hiện nay có <strong>%(num_blanks)s trống</strong> và "
+"<strong>%(num_fuzzies)s</strong> bản dịch <strong>mờ</strong>."
+
+#: templates/pages/translate.pyhtml:60
+msgid "Save Translations"
+msgstr "Lưu các bản dịch."
+
+#: templates/pages/translate.pyhtml:66
+msgid "This language is not yet available."
+msgstr "Ngôn ngữ này vẫn chưa xuất hiện."
+
+#: templates/pages/translate.pyhtml:98
+msgid "If you would like to add a language, <a href=\"/support\">let us know</a>!"
+msgstr ""
+"Nếu bạn muốn thêm một ngôn ngữ, <a href=\"/support\">cho chúng tôi "
+"biết</a>!"
+
+#: templates/pages/translate.pyhtml:117
+msgid ""
+"A variable, such as a person's name. You must include this in your "
+"translation, otherwise the data will not be shown to users."
+msgstr ""
+"Một biến, chẳng hạn như tên của một người. Bạn phải bao gồm này trong bản"
+" dịch của bạn, nếu không dữ liệu sẽ không được hiển thị cho người dùng."
+
+#: templates/pages/translate.pyhtml:120
+msgid ""
+"HTML element, such as a link. You must include this in your translation, "
+"however make sure you translate any text between the tags."
+msgstr ""
+"Phần tử HTML, chẳng hạn như một liên kết. Bạn phải bao gồm này trong bản "
+"dịch của bạn, tuy nhiên chắc chắn rằng bạn dịch bất kỳ văn bản giữa các "
+"thẻ."
+
+#: templates/pages/translate.pyhtml:123
+msgid ""
+"Whenever messages are added or updated, RIPto must check each message to "
+"make sure a translation was provided for it.  If it encounters any "
+"messages that do not yet have a translation, it will be marked as "
+"\"blank\". In order to ensure consistency throughout RIPto, we require a "
+"translation be provided for every message listed. All messages with "
+"\"blank\" translations will be highlighted in <span "
+"style=\"color:#c13\">red</span>."
+msgstr ""
+"Bất cứ khi nào thông điệp được thêm vào hoặc cập nhật, RIPto phải kiểm "
+"tra mỗi tin nhắn để đảm bảo bản dịch được cung cấp cho nó. Nếu nó gặp bất"
+" kỳ thông báo rằng chưa có một bản dịch, nó sẽ được đánh dấu là "
+"\"trống\". Để đảm bảo tính thống nhất trong cả RIPto, chúng tôi yêu cầu "
+"một bản dịch được cung cấp cho tất cả các tin nhắn được liệt kê. Tất cả "
+"các tin nhắn với \"trống\" bản dịch sẽ được đánh dấu màu <span "
+"style=\"color:#c13\">đỏ</span>."
+
+#: templates/pages/translate.pyhtml:126
+msgid ""
+"Whenever translations are added or updated, RIPto must check each "
+"translation and compare to its previous translation to make sure it "
+"correctly saves. Sometimes, it encounters a translation that it has "
+"difficulty processing, so it marks this translation as \"fuzzy\" and "
+"waits for your approval. If you see any translations marked as \"fuzzy\","
+" please review to make sure the translation is correct, and fix any "
+"mistakes you see. When ready, check the checkbox next to the translation "
+"and submit to RIPto so we know what the correct translation should be. "
+"All messages with \"fuzzy\" translations will be highlighted in <span "
+"style=\"color:#efc144\">yellow</span>."
+msgstr ""
+"Bất cứ khi nào các bản dịch được thêm vào hoặc cập nhật, RIPto phải kiểm "
+"tra từng dịch và so sánh với bản dịch trước đây của mình để đảm bảo một "
+"cách chính xác tiết kiệm. Đôi khi, nó gặp một bản dịch mà nó có xử lý khó"
+" khăn, do đó, nó đánh dấu bản dịch này là \"mờ\" và chờ đợi chính của "
+"bạn. Nếu bạn thấy bất kỳ bản dịch được đánh dấu là \"mờ\", hãy xem lại để"
+" chắc chắn rằng bản dịch là chính xác, và sửa chữa các sai lầm mà bạn "
+"nhìn thấy. Khi đã sẵn sàng, kiểm tra hộp kiểm bên cạnh các bản dịch và "
+"gửi lên RIPto để chúng tôi biết những gì bản dịch chính xác nên được. Tất"
+" cả các tin nhắn với \"mờ\" bản dịch sẽ được đánh dấu màu <span "
+"style=\"color:#efc144\">vàng</span>."
+
+#: templates/pages/translate.pyhtml:129
+msgid "If you have any questions, please <a href=\"/support\">contact us</a>."
+msgstr ""
+"Nếu bạn có thắc mắc, xin vui lòng <a href=\"/support\">liên hệ với chúng "
+"tôi</a>."
+
+#: templates/pages/user.pyhtml:8
+msgid "Memorials"
+msgstr "Truy điệu"
+
+#: templates/pages/user.pyhtml:21
+msgid "User"
+msgstr "Người sử dụng:"
+
+#: templates/pages/user.pyhtml:29
+msgid "User:"
+msgstr "Người sử dụng:"
+
+#: templates/pages/wechat.pyhtml:13
+msgid "WeChat"
+msgstr "WeChat"
+
+#: templates/pages/wechat.pyhtml:20
+msgid ""
+"With WeChat, scan the QR Code to the right and you can share this "
+"memorial with your friends or WeChat circle of friends."
+msgstr ""
+"Sử dụng WeChat, quét Mã QR ở đây và bạn có thể sau đó bạn sẽ có thể chia "
+"sẻ truy điệu này với bạn bè của bạn WeChat."
+
+#: templates/pages/wechat.pyhtml:22
+#, python-format
+msgid "[%(url_title)s]"
+msgstr "[%(url_title)s]"
+
+#: templates/pages/wechat.pyhtml:33
+msgid ""
+"How to use <i class=\"wechat-app sprite\"></i>WeChat QR Code: <a "
+"href=\"http://baike.baidu.com/view/7443374.htm\" target=\"_blank\">View "
+"Details</a>"
+msgstr ""
+"Làm thế nào để sử dụng <i class=\"wechat-app sprite\"></i>WeChat Mã QR: "
+"<a href=\"http://baike.baidu.com/view/7443374.htm\" target=\"_blank\">xem"
+" chi tiết</a>"
+
+#: templates/pages/welcome.pyhtml:22
+msgid "Welcome!"
+msgstr "Chào mừng bạn!"
+
+#: templates/pages/welcome.pyhtml:30
+msgid "Incorrect username or password."
+msgstr "Tên người dùng hoặc mật khẩu không chính xác. "
+
+#: templates/pages/welcome.pyhtml:34
+msgid "You must be logged in to do that."
+msgstr "Bạn cần phải đăng nhập đầu tiên."
+
+#: templates/pages/welcome.pyhtml:45 templates/pages/welcome.pyhtml:201
+msgid "Enter your username"
+msgstr "Nhập tên người dùng"
+
+#: templates/pages/welcome.pyhtml:54
+msgid "Enter your password"
+msgstr "Nhập mật khẩu"
+
+#: templates/pages/welcome.pyhtml:54
+msgid "Forgot my password"
+msgstr "Quên mật khẩu"
+
+#: templates/pages/welcome.pyhtml:54
+msgid "Forgot?"
+msgstr "Quên?"
+
+#: templates/pages/welcome.pyhtml:64
+msgid "Remember me"
+msgstr "Duy trì đăng nhập"
+
+#: templates/pages/welcome.pyhtml:74
+msgid "Enter your first and last name."
+msgstr "Nhập tên đầu tiên và cuối cùng của bạn."
+
+#: templates/pages/welcome.pyhtml:75
+msgid "Name looks great."
+msgstr "Tên là tốt."
+
+#: templates/pages/welcome.pyhtml:78
+msgid "What's your email address?"
+msgstr "Địa chỉ email của bạn là gì?"
+
+#: templates/pages/welcome.pyhtml:79
+msgid "Email looks great."
+msgstr "Email là tốt."
+
+#: templates/pages/welcome.pyhtml:80 templates/pages/welcome.pyhtml:87
+msgid "Checking..."
+msgstr "Gửi bây giờ..."
+
+#: templates/pages/welcome.pyhtml:81
+msgid "Doesn't look like a valid email."
+msgstr "Không phải là một email hợp lệ."
+
+#: templates/pages/welcome.pyhtml:82
+msgid "This email is already registered."
+msgstr "Email này đã được đăng ký."
+
+#: templates/pages/welcome.pyhtml:85
+msgid "Username can only contain letters, numbers and underscores."
+msgstr "Chỉ có thể là chữ và số."
+
+#: templates/pages/welcome.pyhtml:86
+msgid "Username looks great."
+msgstr "Tên người dùng là tốt."
+
+#: templates/pages/welcome.pyhtml:88
+msgid "Doesn't look like a valid username."
+msgstr "Không một tên người dùng hợp lệ."
+
+#: templates/pages/welcome.pyhtml:89
+msgid "A username is required!"
+msgstr "Một tên người dùng được yêu cầu!"
+
+#: templates/pages/welcome.pyhtml:90
+msgid "This username is already registered."
+msgstr "Tên người dùng này không có sẵn."
+
+#: templates/pages/welcome.pyhtml:93
+msgid "6 characters or more! Be tricky."
+msgstr "6 ký tự hoặc nhiều hơn! Được thông minh."
+
+#: templates/pages/welcome.pyhtml:94
+msgid "Password is perfect!"
+msgstr "Mật khẩu là hoàn hảo!"
+
+#: templates/pages/welcome.pyhtml:95
+msgid "Password is okay."
+msgstr "Mật khẩu là tốt."
+
+#: templates/pages/welcome.pyhtml:96
+msgid "Password could be more secure."
+msgstr "Mật khẩu có thể mạnh mẽ hơn."
+
+#: templates/pages/welcome.pyhtml:97
+msgid "Password is not secure enough."
+msgstr "Mật khẩu không đủ mạnh."
+
+#: templates/pages/welcome.pyhtml:98
+msgid "Password must be at least 6 characters."
+msgstr "Mật khẩu phải có ít nhất 6 ký tự."
+
+#: templates/pages/welcome.pyhtml:99
+msgid "Password cannot be blank!"
+msgstr "Mật khẩu không thể để trống!"
+
+#: templates/pages/welcome.pyhtml:161
+msgid "Password"
+msgstr "Mật khẩu"
+
+#: templates/pages/welcome.pyhtml:181
+msgid ""
+"By clicking the button below, you agree to our <a href=\"terms\" "
+"target=\"_blank\">Terms</a> and that you have read our <a "
+"href=\"privacy\" target=\"_blank\">Privacy Policy</a>."
+msgstr ""
+"Khi nhấp chuột vào Đăng Ký, bạn đồng ý với Các điều khoản của chúng tôi "
+"và bạn đã đọc Chính sách bảo mật."
+
+#: templates/pages/welcome.pyhtml:186
+msgid "Create my account"
+msgstr "Tạo tài khoản"
+
+#: templates/pages/welcome.pyhtml:194
+msgid ""
+"Sorry, but we couldn't find that username or no email was registered to "
+"it."
+msgstr "Tên người dùng không chính xác hoặc không có email đã được đăng ký với nó."
+

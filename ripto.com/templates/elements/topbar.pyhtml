@@ -1,0 +1,138 @@
+<div class="topbar">
+    <div class="global-notices">
+        <noscript>
+           {{ jinjer.element( 'notice', notice_type='error nojs', notice_msg=_("Looks like your JavaScript is disabled. We strongly recommend you to enable it for a better experience."), hide_close=True ) }}
+        </noscript>
+        {#
+        {% if g.is_mobile %}
+        {{ jinjer.element( 'notice', notice_type='tip nols', notice_hide=True, notice_msg=_("RIPto is better in landscape."), hide_close=True ) }}
+        {% endif %}
+        #}
+    </div>
+    <div class="global-nav">
+        <a class="rip-topbar-logo" href="{{ jinjer.url_for('index') }}">
+            <i class="icon-logo sprite"></i>
+        </a>
+        <div class="rip-topbar-tm">~ {{ _("remember those important to you") }} ~</div>
+        <form id="topbar-search-form" action="{{ jinjer.url_for('results') }}" method="GET">
+            <button class="search-button" type="submit"><i class="icon-search sprite"></i></button>
+            <div class="search-input-container">
+                <input class="search-input" name="q" type="text" tabindex="{{ jinjer.tabindex() }}" title="{{ _("Search") }}"{% if g.is_mobile %} autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"{% endif %} value="{{ query }}"></input>
+            </div>
+        </form>
+        {% if g.user.is_anonymous() %}
+        <table class="login-submit-wrapper">
+            <tr>
+                <td><a class="submit red-submit" href="{{ jinjer.url_for('signup', _next=True) }}" tabindex="{{ jinjer.tabindex() }}">{{ _("Sign up!") }}</a></td>
+                <td><a class="submit blue-submit" href="{{ jinjer.url_for('login', _next=True) }}" tabindex="{{ jinjer.tabindex() }}">{{ _("Log in") }}</a></td>
+            </tr>
+        </table>
+        {% else %}
+        <ul class="nav">
+            <li class="home">
+                <a class="rip-topbar-moon" href="javascript:void(0)">
+                    <i class="icon-moon sprite"></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-caret">
+                        <span class="caret-outer"></span><span class="caret-inner"></span>
+                    </li>
+                    <li>
+                        <a href="{{ jinjer.url_for('home') }}">{{ _("Home") }}</a>
+                    </li>
+                    {% if g.user.isadmin() %}
+                    <li>
+                        <a href="{{ jinjer.url_for('admin') }}">{{ _("Admin") }}</a>
+                    </li>
+                    {% endif %}
+                    <li>
+                        <a href="{{ jinjer.url_for('settings') }}">{{ _("Settings") }}</a>
+                    </li>
+                    <li>
+                        <a href="{{ jinjer.url_for('logout') }}">{{ _("Log out") }}</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        {% endif %}
+    </div>
+    {% if page not in ['error', 'login', 'signup', 'forgot', 'reset', 'new_memorial', 'lang'] %}
+    <div class="new-submit-wrapper">
+        <a class="submit big black-submit" href="/~" tabindex="{{ jinjer.tabindex() }}">{{ _("New Memorial") }}</a>
+    </div>
+    {% endif %}
+</div>
+{# TODO - tweak drop down to be compatible with ie6. source -> http://www.cssplay.co.uk/menus/new-dropdown.html
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+            .nav1 {
+                height:25px;
+                font:normal 12px/25px arial, verdana, sans-serif;
+                width:720px;
+                margin:0 auto;
+                position:relative;
+            }
+            .nav1 ul {
+                margin:0;
+                padding:0;
+                list-style:none;
+            }
+            .nav1 ul.menu {
+                position:absolute;
+                overflow:hidden;
+            }
+            .nav1 .menu .level1-li {
+                float:left;
+                width:125px;
+                margin-top:-300px;
+                margin-right:1px;
+            }
+            .nav1 .menu a {
+                display:block;
+                width:120px;
+                text-decoration:none;
+                padding-left:5px;
+                color:#000;
+            }
+            .nav1 .menu a.level1-a {
+                position:relative;
+                float:left;
+                margin-right:-124px;
+                margin-top:300px;
+            }
+
+            .nav1 .menu .sub {
+                float:left;
+                margin-top:-25px;
+                padding-top:25px;
+            }
+            .nav1 .menu .sub a {
+                background:#099;
+                position:relative;
+                margin-right:-1px;
+            }
+            .nav1 .menu a:hover, .nav1 .menu a:focus, .nav1 .menu a:active {
+                background:#06c;
+                margin-right:0;
+            }
+        </style>
+    </head>
+    <body>
+    <div class="nav1">
+        <ul class="menu">
+            <li class="level1-li">
+                <a class="level1-a" href="#url">Products</a>
+                <ul class="sub">
+                    <li><a href="#url">Digital Cameras</a></li>
+                    <li><a href="#url">Tripods</a></li>
+                    <li><a href="#url">Flashguns</a></li>
+                    <li><a href="#url" class="last">Telephoto Lenses</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    </body>
+</html>
+#}

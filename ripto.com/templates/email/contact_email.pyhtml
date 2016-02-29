@@ -1,0 +1,9 @@
+{% extends "layouts/email.pyhtml" %}
+
+
+
+{% block content %}
+<p style="color:#aaaaaa;font-style:italic;margin:15px 0px">
+    {{ message.replace("\r\n", "<br>").replace("\n\r", "<br>").replace("\r", "<br>").replace("\n", "<br>") }}
+</p>
+{% endblock %}

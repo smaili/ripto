@@ -1,0 +1,1773 @@
+# Spanish translations for PROJECT.
+# Copyright (C) 2013 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2013-11-06 04:01+0000\n"
+"PO-Revision-Date: 2013-09-13 21:32+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.0\n"
+
+#: app.py:180 app.py:182 templates/elements/modal/lang.pyhtml:7
+#: templates/pages/lang.pyhtml:3
+msgid "Languages"
+msgstr "Idiomas"
+
+#: app.py:192 app.py:202 templates/elements/topbar.pyhtml:37
+#: templates/pages/home.pyhtml:16
+msgid "Home"
+msgstr "Inicio"
+
+#: app.py:223 templates/elements/topbar.pyhtml:52
+#: templates/pages/new_memorial.pyhtml:3
+msgid "New Memorial"
+msgstr "Monumento Nuevo"
+
+#: app.py:274
+msgid "Invalid email address."
+msgstr "Email no es válido."
+
+#: app.py:280
+msgid "Memorial was successfully shared."
+msgstr "Monumento se ha compartido exitosamente"
+
+#: app.py:396
+msgid "Share On WeChat"
+msgstr "Compartir Con WeChat"
+
+#: app.py:422 templates/elements/topbar.pyhtml:40
+#: templates/pages/settings.pyhtml:16
+msgid "Settings"
+msgstr "Configuración"
+
+#: app.py:447
+msgid "Your membership has been deactivated."
+msgstr "Su membresía se ha desactivado."
+
+#: app.py:448
+msgid "You will now be logged out and taken back to the home page."
+msgstr "Ahora se cerrará la sesión y llevado de vuelta a inicio."
+
+#: app.py:450
+msgid "Deleted"
+msgstr "Suprimido"
+
+#: app.py:450
+msgid "Membership Canceled"
+msgstr "Membresía Cancelada"
+
+#: app.py:452 app.py:454 templates/pages/settings.pyhtml:8
+msgid "Membership"
+msgstr "Membresía"
+
+#: app.py:495 app.py:746
+msgid "Thank you. Your report was successfully sent."
+msgstr "Gracias. Tu informe fue enviado con éxito."
+
+#: app.py:497 app.py:748
+msgid "You can only flag each thing once."
+msgstr "Sólo se puede marcar cada cosa una vez."
+
+#: app.py:526
+msgid "Sign In"
+msgstr "Acceder"
+
+#: app.py:560
+msgid "Sign Up"
+msgstr "Registrar"
+
+#: app.py:578
+msgid "An email has been sent containing a link to reset your password."
+msgstr "Un email ha sido enviado con un enlace para restablecer tu contraseña."
+
+#: app.py:579
+msgid ""
+"Be sure to also check your junk or spam folder or filter in case it does "
+"not appear in your inbox."
+msgstr ""
+"Por favor, comprueba tu archivo de correo Spam, (a veces llamado Correo "
+"No Deseado o Correo Basura), para estar seguro."
+
+#: app.py:581
+msgid "Sent!"
+msgstr "Enviado!"
+
+#: app.py:584 templates/pages/welcome.pyhtml:13
+msgid "Forgot"
+msgstr "Olvidó"
+
+#: app.py:598 app.py:616
+msgid "Change Password"
+msgstr "Cambiar La Contraseña"
+
+#: app.py:611
+msgid "Your password was successfully changed."
+msgstr "La contraseña se ha cambiado."
+
+#: app.py:612
+msgid "Please wait while we log you in."
+msgstr "Por favor, espere mientras que se conecte."
+
+#: app.py:614
+msgid "Changed!"
+msgstr "Cambiado!"
+
+#: app.py:636 templates/elements/footer.pyhtml:2
+#: templates/pages/footer.pyhtml:3
+msgid "About"
+msgstr "Sobre"
+
+#: app.py:651
+msgid "Your message was sent successfully."
+msgstr "Tu mensaje ha sido enviado con éxito."
+
+#: app.py:652 app.py:673
+msgid "You will now be taken back."
+msgstr "Ahora volverá."
+
+#: app.py:654 app.py:675
+msgid "Sent"
+msgstr "Enviado"
+
+#: app.py:654
+msgid "Message Sent!"
+msgstr "Mensaje enviado!"
+
+#: app.py:657 templates/elements/footer.pyhtml:3
+#: templates/pages/footer.pyhtml:8
+msgid "Support"
+msgstr "Apoyo"
+
+#: app.py:672
+msgid "Your feedback was sent successfully."
+msgstr "Tu sugerencias ha sido enviado con éxito."
+
+#: app.py:675
+msgid "Feedback Sent!"
+msgstr "Sugerencias Enviado!"
+
+#: app.py:678 templates/elements/footer.pyhtml:4
+#: templates/pages/footer.pyhtml:13 templates/pages/footer.pyhtml:130
+#: templates/pages/footer.pyhtml:131
+msgid "Feedback"
+msgstr "Sugerencias"
+
+#: app.py:684 templates/elements/footer.pyhtml:5
+#: templates/pages/footer.pyhtml:18
+msgid "Terms"
+msgstr "Términos"
+
+#: app.py:690 templates/elements/footer.pyhtml:6
+#: templates/pages/footer.pyhtml:23
+msgid "Privacy"
+msgstr "Privacidad"
+
+#: app.py:728 templates/pages/translate.pyhtml:3
+msgid "Translate"
+msgstr "Traducir"
+
+#: lib/mailer.py:48
+msgid "Request for changing your password on RIPto"
+msgstr "Solicitud de cambio de contraseña de RIPto"
+
+#: lib/mailer.py:61
+msgid "You have deactivated your RIPto account"
+msgstr "Usted ha desactivado su cuenta RIPto"
+
+#: lib/mailer.py:73
+msgid "You have been banned from RIPto"
+msgstr "Se le ha prohibido de RIPto"
+
+#: models/memorial.py:298
+msgid "Natural"
+msgstr "Natural"
+
+#: models/memorial.py:299
+msgid "Accidental"
+msgstr "Accidente"
+
+#: models/memorial.py:300
+msgid "Homicide"
+msgstr "Homicidio"
+
+#: models/memorial.py:301
+msgid "Suicide"
+msgstr "Suicidio"
+
+#: models/memorial.py:302
+msgid "War"
+msgstr "War"
+
+#: templates/elements/edit_new_memorial.pyhtml:5
+msgid "You must include a valid photo or select the checkbox."
+msgstr ""
+"Usted tienes que elegir una foto válida o seleccione la casilla de "
+"verificación."
+
+#: templates/elements/edit_new_memorial.pyhtml:7
+msgid "All fields are required."
+msgstr "Todo es necesario."
+
+#: templates/elements/edit_new_memorial.pyhtml:22
+msgid "I don't have their photo"
+msgstr "No tengo su foto"
+
+#: templates/elements/edit_new_memorial.pyhtml:24
+msgid "Choose photo"
+msgstr "Elegir foto"
+
+#: templates/elements/edit_new_memorial.pyhtml:25
+#: templates/elements/edit_new_memorial.pyhtml:30
+msgid "Change photo"
+msgstr "Cambiar foto"
+
+#: templates/elements/edit_new_memorial.pyhtml:26
+msgid "No photo"
+msgstr "No foto"
+
+#: templates/elements/edit_new_memorial.pyhtml:27
+msgid "Click to select"
+msgstr "Haga clic para seleccionar"
+
+#: templates/elements/edit_new_memorial.pyhtml:31
+msgid "Select a photo"
+msgstr "Seleccionar una foto"
+
+#: templates/elements/edit_new_memorial.pyhtml:34
+msgid "Save photo"
+msgstr "Guardar la foto"
+
+#: templates/elements/edit_new_memorial.pyhtml:43
+msgid "Photo saved."
+msgstr "Foto guardada."
+
+#: templates/elements/edit_new_memorial.pyhtml:47
+#, python-format
+msgid "Photo must be a %(exts)s, or %(ext_last)s."
+msgstr "foto debe ser %(exts)s, o %(ext_last)s."
+
+#: templates/elements/edit_new_memorial.pyhtml:51
+msgid "A photo is required."
+msgstr "Se requiere una foto."
+
+#: templates/elements/edit_new_memorial.pyhtml:55
+msgid ""
+"Please make sure photo is at least <strong>640x480</strong> and at most "
+"<strong>10MB</strong>."
+msgstr ""
+
+#: templates/elements/edit_new_memorial.pyhtml:64
+msgid "Name"
+msgstr "Nombre"
+
+#: templates/elements/edit_new_memorial.pyhtml:66
+msgid "Person's name?"
+msgstr "Su nombre?"
+
+#: templates/elements/edit_new_memorial.pyhtml:71
+#: templates/elements/edit_new_memorial.pyhtml:72
+msgid "Born"
+msgstr "Nacido"
+
+#: templates/elements/edit_new_memorial.pyhtml:78
+#: templates/elements/edit_new_memorial.pyhtml:79
+msgid "Died"
+msgstr "Muerto"
+
+#: templates/elements/edit_new_memorial.pyhtml:81
+msgid "Date born/died?"
+msgstr "Fecha nacido/muerto?"
+
+#: templates/elements/edit_new_memorial.pyhtml:86
+#: templates/elements/edit_new_memorial.pyhtml:93
+msgid "Cause of death?"
+msgstr "Causa de la muerte?"
+
+#: templates/elements/edit_new_memorial.pyhtml:98
+msgid "Epitaph"
+msgstr "Epitafio"
+
+#: templates/elements/edit_new_memorial.pyhtml:100
+msgid "Short description?"
+msgstr "Descripción corta?"
+
+#: templates/elements/edit_new_memorial.pyhtml:105
+msgid "Buried"
+msgstr "Enterrado"
+
+#: templates/elements/edit_new_memorial.pyhtml:106
+msgid "Cremated"
+msgstr "Cremado"
+
+#: templates/elements/edit_new_memorial.pyhtml:109
+msgid "Buried/Cremated"
+msgstr "Enterrado/Cremado"
+
+#: templates/elements/edit_new_memorial.pyhtml:110
+msgid "When"
+msgstr "Cuando"
+
+#: templates/elements/edit_new_memorial.pyhtml:112
+msgid "Date buried/cremated?"
+msgstr "Fecha enterrado/cremado?"
+
+#: templates/elements/edit_new_memorial.pyhtml:118
+msgid "Arlington National Cemetery"
+msgstr "La Recoleta"
+
+#: templates/elements/edit_new_memorial.pyhtml:120
+msgid "Place buried/cremated?"
+msgstr "Dónde enterrado/cremado?"
+
+#: templates/elements/results.pyhtml:2
+msgid "Sorry but we couldn't find any memorials."
+msgstr "Lo sentimos pero no hay monumentos."
+
+#: templates/elements/results.pyhtml:21
+msgid "Show more memorials"
+msgstr "Mostrar más monumentos"
+
+#: templates/elements/topbar.pyhtml:5
+msgid ""
+"Looks like your JavaScript is disabled. We strongly recommend you to "
+"enable it for a better experience."
+msgstr "Tienes JavaScript desactivado. Le recomendamos que habilite."
+
+#: templates/elements/topbar.pyhtml:14 templates/elements/topbar.pyhtml:16
+msgid "Search"
+msgstr "Buscar"
+
+#: templates/elements/topbar.pyhtml:30 templates/pages/welcome.pyhtml:3
+#: templates/pages/welcome.pyhtml:61
+msgid "Log in"
+msgstr "Acceder"
+
+#: templates/elements/topbar.pyhtml:33 templates/pages/welcome.pyhtml:8
+msgid "Sign up"
+msgstr "Registrar"
+
+#: templates/elements/topbar.pyhtml:43
+msgid "Log out"
+msgstr "Salir"
+
+#: templates/elements/topbar.pyhtml:52
+msgid "Remember someone"
+msgstr "Recordar a alguien"
+
+#: templates/elements/modal/calendar.pyhtml:4
+msgid "Calendar"
+msgstr "Calendario"
+
+#: templates/elements/modal/calendar.pyhtml:30
+msgid "January"
+msgstr "enero"
+
+#: templates/elements/modal/calendar.pyhtml:30
+msgid "February"
+msgstr "febrero"
+
+#: templates/elements/modal/calendar.pyhtml:30
+msgid "March"
+msgstr "marzo"
+
+#: templates/elements/modal/calendar.pyhtml:30
+msgid "April"
+msgstr "abril"
+
+#: templates/elements/modal/calendar.pyhtml:30
+#: templates/elements/modal/calendar.pyhtml:31
+msgid "May"
+msgstr "mayo"
+
+#: templates/elements/modal/calendar.pyhtml:30
+msgid "June"
+msgstr "junio"
+
+#: templates/elements/modal/calendar.pyhtml:30
+msgid "July"
+msgstr "julio"
+
+#: templates/elements/modal/calendar.pyhtml:30
+msgid "August"
+msgstr "agosto"
+
+#: templates/elements/modal/calendar.pyhtml:30
+#: templates/pages/footer.pyhtml:198 templates/pages/footer.pyhtml:331
+msgid "September"
+msgstr "septiembre"
+
+#: templates/elements/modal/calendar.pyhtml:30
+msgid "October"
+msgstr "octubre"
+
+#: templates/elements/modal/calendar.pyhtml:30
+msgid "November"
+msgstr "noviembre"
+
+#: templates/elements/modal/calendar.pyhtml:30
+msgid "December"
+msgstr "diciembre"
+
+#: templates/elements/modal/calendar.pyhtml:31
+msgid "Jan"
+msgstr "enero"
+
+#: templates/elements/modal/calendar.pyhtml:31
+msgid "Feb"
+msgstr "feb"
+
+#: templates/elements/modal/calendar.pyhtml:31
+msgid "Mar"
+msgstr "marzo"
+
+#: templates/elements/modal/calendar.pyhtml:31
+msgid "Apr"
+msgstr "abr"
+
+#: templates/elements/modal/calendar.pyhtml:31
+msgid "Jun"
+msgstr "jun"
+
+#: templates/elements/modal/calendar.pyhtml:31
+msgid "Jul"
+msgstr "jul"
+
+#: templates/elements/modal/calendar.pyhtml:31
+msgid "Aug"
+msgstr "agosto"
+
+#: templates/elements/modal/calendar.pyhtml:31
+msgid "Sep"
+msgstr "sept"
+
+#: templates/elements/modal/calendar.pyhtml:31
+msgid "Oct"
+msgstr "oct"
+
+#: templates/elements/modal/calendar.pyhtml:31
+msgid "Nov"
+msgstr "nov"
+
+#: templates/elements/modal/calendar.pyhtml:31
+msgid "Dec"
+msgstr "dic"
+
+#: templates/elements/modal/calendar.pyhtml:32
+msgid "Sunday"
+msgstr "domingo"
+
+#: templates/elements/modal/calendar.pyhtml:32
+msgid "Monday"
+msgstr "lunes"
+
+#: templates/elements/modal/calendar.pyhtml:32
+msgid "Tuesday"
+msgstr "martes"
+
+#: templates/elements/modal/calendar.pyhtml:32
+msgid "Wednesday"
+msgstr "miércoles"
+
+#: templates/elements/modal/calendar.pyhtml:32
+msgid "Thursday"
+msgstr "jueves"
+
+#: templates/elements/modal/calendar.pyhtml:32
+msgid "Friday"
+msgstr "viernes"
+
+#: templates/elements/modal/calendar.pyhtml:32
+msgid "Saturday"
+msgstr "sábado"
+
+#: templates/elements/modal/calendar.pyhtml:57
+msgid "Select Date"
+msgstr "Elegir Fecha"
+
+#: templates/elements/modal/flag.pyhtml:4
+msgid "Notify"
+msgstr "Notificar"
+
+#: templates/elements/modal/flag.pyhtml:7 templates/pages/memorial.pyhtml:69
+#: templates/pages/user.pyhtml:13
+msgid "Report"
+msgstr "Informe"
+
+#: templates/elements/modal/flag.pyhtml:21 templates/pages/user.pyhtml:55
+msgid "Report for serious problems or moderator attention?"
+msgstr "Informe para problemas graves o atención moderador?"
+
+#: templates/elements/modal/flag.pyhtml:24 templates/pages/user.pyhtml:58
+msgid "Report Abuse"
+msgstr "Informar"
+
+#: templates/elements/modal/lang.pyhtml:4 templates/pages/lang.pyhtml:11
+#: templates/pages/translate.pyhtml:17
+msgid "International"
+msgstr "Internacional"
+
+#: templates/elements/modal/share.pyhtml:4 templates/pages/memorial.pyhtml:71
+msgid "Share"
+msgstr "Compartir"
+
+#: templates/elements/modal/share.pyhtml:7
+msgid "Community"
+msgstr "Comunidad"
+
+#: templates/elements/modal/share.pyhtml:13 templates/pages/footer.pyhtml:95
+msgid "Email"
+msgstr "Email"
+
+#: templates/elements/modal/share.pyhtml:19
+msgid "HTML"
+msgstr "Código"
+
+#: templates/elements/modal/share.pyhtml:32
+msgid "You can use the short link or share to a network below."
+msgstr "Puede usar el enlace de abajo o compartir con un sitio web."
+
+#: templates/elements/modal/share.pyhtml:43
+#, python-format
+msgid "Share to %(service)s"
+msgstr "Compartir con %(service)s"
+
+#: templates/elements/modal/share.pyhtml:51
+msgid "You can email this Memorial by filling out the form below."
+msgstr "Puede enviar este monumento rellenando el siguiente formulario."
+
+#: templates/elements/modal/share.pyhtml:64
+#: templates/elements/modal/share.pyhtml:65
+msgid "Your name"
+msgstr "Su nombre"
+
+#: templates/elements/modal/share.pyhtml:70
+msgid "Friend's email"
+msgstr "Email del amigo"
+
+#: templates/elements/modal/share.pyhtml:71
+msgid "email@example.com, email@example.com, . . ."
+msgstr "Email 1, Email 2, . . ."
+
+#: templates/elements/modal/share.pyhtml:76
+msgid "Message (optional)"
+msgstr "Mensaje (opcional)"
+
+#: templates/elements/modal/share.pyhtml:77
+msgid "Add a comment..."
+msgstr "Añadir un comentario..."
+
+#: templates/elements/modal/share.pyhtml:90
+#: templates/email/share_email.pyhtml:61
+#, python-format
+msgid "Buried %(funeral_date)s"
+msgstr "Enterrado %(funeral_date)s"
+
+#: templates/elements/modal/share.pyhtml:92
+#: templates/email/share_email.pyhtml:63
+#, python-format
+msgid "Cremated %(funeral_date)s"
+msgstr "Cremado %(funeral_date)s"
+
+#: templates/elements/modal/share.pyhtml:101
+msgid "Send Email"
+msgstr "Enviar Email"
+
+#: templates/elements/modal/share.pyhtml:107
+msgid "You can add this Memorial to your website by copying the code below."
+msgstr "Puede agregar este monumento a tu sitio web copiando el código de abajo."
+
+#: templates/email/deactivate_email.pyhtml:7
+#, python-format
+msgid "Sorry to see you go %(name)s."
+msgstr "Lamento que deja %(name)s."
+
+#: templates/email/deactivate_email.pyhtml:11
+#, python-format
+msgid ""
+"Unfortunately, once your account has been deactivated, it can no longer "
+"be activated. This means that username <strong>%(username)s</strong> is "
+"now available for somebody else to use."
+msgstr ""
+"Desafortunadamente, una vez que su cuenta ha sido desactivada, ya no "
+"puede ser activado. Esto significa que alguien más ya puede utilizar el "
+"nombre <strong>%(username)s</strong>."
+
+#: templates/email/deactivate_email.pyhtml:16
+msgid ""
+"Thank you for taking the time to use RIPto. We hope during your "
+"membership, we were able to help you remember those important to you. If "
+"at any time you change your mind and would like to come back to RIPto, "
+"please follow the Changed My Mind button below."
+msgstr ""
+"Muchas gracias por usar RIPto. Esperamos que durante su afiliación, hemos"
+" sido capaces de ayudar a recordar que son importantes para usted. Si en "
+"algún momento cambia de opinión y desea volver a RIPto, por favor siga el"
+" botón Cambié De Opinión a continuación."
+
+#: templates/email/deactivate_email.pyhtml:20
+msgid ""
+"We take great pride in making sure RIPto is easy to use and understand, "
+"but we know sometimes things just don't work or don't work well. That's "
+"why we always push our users to give us their feedback on how to improve "
+"RIPto. Though you are no longer a member, we still value your opinion and"
+" would love to hear your input. If there is anything you would like to "
+"share with us, please follow the Give Feedback button below."
+msgstr ""
+"Nos enorgullecemos en cerciorarse de RIPto es fácil de usar y entender, "
+"pero sabemos que a veces las cosas no funcionan o no funcionan bien. Es "
+"por eso que siempre empujamos nuestros usuarios nos den sus opiniones "
+"sobre cómo mejorar la RIPto. Aunque ya no es un miembro, todavía "
+"Valoramos su opinión y nos encantaría escuchar su opinión. Si hay algo "
+"que le gustaría compartir con nosotros, por favor, siga el botón Dar "
+"Sugerencia a continuación."
+
+#: templates/email/deactivate_email.pyhtml:34
+msgid "Changed My Mind!"
+msgstr "Cambié De Opinión!"
+
+#: templates/email/deactivate_email.pyhtml:48
+msgid "Give Feedback"
+msgstr "Dar Sugerencia"
+
+#: templates/email/reset_email.pyhtml:7
+msgid "Sorry to hear you were having trouble logging in."
+msgstr "Siento mucho lo que estaba teniendo problemas accediendo."
+
+#: templates/email/reset_email.pyhtml:11
+msgid ""
+"To reset your password, please follow the button below. You will be taken"
+" to a page that will ask you to enter your new password."
+msgstr ""
+"Para restablecer su contraseña, por favor siga el siguiente botón. Usted "
+"será llevado a una página que le pedirá que ingresa tu nueva contraseña."
+
+#: templates/email/reset_email.pyhtml:25
+msgid "Change My Password"
+msgstr "Cambiar Mi Contraseña"
+
+#: templates/email/share_email.pyhtml:11
+#, python-format
+msgid "Your friend %(name)s has shared a memorial with you:"
+msgstr "Su amigo ha compartido un monumento con usted:"
+
+#: templates/email/share_email.pyhtml:105
+msgid "Visit Memorial"
+msgstr "Visitar Monumento"
+
+#: templates/email/share_email.pyhtml:119
+msgid "Give Condolences"
+msgstr "Dar Condolencias"
+
+#: templates/layouts/base.pyhtml:12
+msgid "A place to remember."
+msgstr "Un lugar para recordar."
+
+#: templates/layouts/email.pyhtml:146
+#, python-format
+msgid ""
+"This message was sent to <a href=\"mailto:%(email)s\" "
+"style=\"color:#222222;text-decoration:none;\">%(email)s</a>."
+msgstr ""
+"Este mensaje fue enviado a <a href=\"mailto:%(email)s\" "
+"style=\"color:#222222;text-decoration:none;\">%(email)s</a>."
+
+#: templates/layouts/email.pyhtml:148
+#, python-format
+msgid ""
+"If this is a mistake, please let us know: <a href=\"%(report)s\" "
+"style=\"color:#3b5998;text-decoration:none;\">report</a>."
+msgstr ""
+"Si se trata de un error, por favor díganos: <a href=\"%(report)s\" "
+"style=\"color:#3b5998;text-decoration:none;\">informe</a>."
+
+#: templates/layouts/email.pyhtml:150
+msgid "Please disregard this email if it was sent by mistake."
+msgstr "Por favor ignore este email si ha sido enviado por error."
+
+#: templates/layouts/memorial.pyhtml:14
+#, python-format
+msgid "Memorial for %(name)s, %(dob)s - %(dod)s"
+msgstr "Monumento para %(name)s, %(dob)s - %(dod)s"
+
+#: templates/pages/edit_memorial.pyhtml:3 templates/pages/memorial.pyhtml:67
+msgid "Edit"
+msgstr "Editar"
+
+#: templates/pages/edit_memorial.pyhtml:9 templates/pages/settings.pyhtml:59
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: templates/pages/edit_memorial.pyhtml:10
+msgid "Save Changes"
+msgstr "Guardar Los Cambios"
+
+#: templates/pages/footer.pyhtml:31 templates/pages/translate.pyhtml:108
+msgid "Guide"
+msgstr "Guía"
+
+#: templates/pages/footer.pyhtml:38
+msgid ""
+"Every day, we interact and surround ourselves with family, friends, "
+"colleagues, and many others that shape who we are today and what kind of "
+"memories we have."
+msgstr ""
+"Todos los días, en que interactuamos y nos rodeamos con la familia, "
+"amigos, colegas, y muchos otros que dan forma a lo que somos hoy y qué "
+"tipo de recuerdos que tenemos."
+
+#: templates/pages/footer.pyhtml:42
+msgid "Why RIPto"
+msgstr "Por qué RIPto"
+
+#: templates/pages/footer.pyhtml:43
+msgid ""
+"Unfortunately, sometimes we lose those that are important in our lives, "
+"but it's important to remember that though they are no longer here, we "
+"shouldn't forget them and how they impacted us."
+msgstr ""
+"Por desgracia, a veces perdemos los que son importantes en nuestras "
+"vidas, pero es importante recordar que a pesar de que ya no están aquí, "
+"que no debemos olvidar y cómo nos afectaron."
+
+#: templates/pages/footer.pyhtml:47
+msgid ""
+"RIPto was created from the need for a place where you can easily go to "
+"remember and share your feelings about people that have passed away."
+msgstr ""
+"RIPto se crea a partir de la necesidad de un lugar donde usted puede ir "
+"fácilmente a recordar y compartir sus sentimientos acerca de las personas"
+" que han fallecido."
+
+#: templates/pages/footer.pyhtml:51
+msgid "Features"
+msgstr "Características"
+
+#: templates/pages/footer.pyhtml:52
+msgid ""
+"While we are always looking for ways to enhance the site to improve it in"
+" every way possible, we always like to remind ourselves what the core "
+"features are that define RIPto to help ensure we don't stray away from "
+"our original purpose:"
+msgstr ""
+"Aunque siempre estamos buscando maneras de mejorar el sitio web para "
+"mejorarlo en todo lo posible, siempre nos gusta recordar cuáles son las "
+"características principales son que definen RIPto para ayudar a asegurar "
+"que no se apartan de nuestro propósito original:"
+
+#: templates/pages/footer.pyhtml:57
+msgid "Create / View / Share - Memorials"
+msgstr "Crear / Ver / Compartir - Monumentos"
+
+#: templates/pages/footer.pyhtml:61
+msgid "Give condolences"
+msgstr "Dar condolencias"
+
+#: templates/pages/footer.pyhtml:65
+msgid "Learn about others who have passed away"
+msgstr "Aprenda acerca de otros que han fallecido"
+
+#: templates/pages/footer.pyhtml:71
+msgid ""
+"Since RIPto is still relatively new, we hope that you can understand "
+"sometimes things don't work, or don't work well. Though we work hard to "
+"make sure RIPto's usability and your experience are exceptional, we know "
+"that it's impossible for us to always make it perfect."
+msgstr ""
+"Debido RIPto es todavía relativamente nuevo, esperamos que usted pueda "
+"entender a veces las cosas no funcionan o no funcionan bien. Aunque "
+"trabajamos duro para hacer uso seguro de RIPto y su experiencia son "
+"excepcionales, sabemos que es imposible para nosotros siempre que sea "
+"perfecto."
+
+#: templates/pages/footer.pyhtml:75
+msgid ""
+"That is why we also depend on you, our users, to let us know any "
+"suggestions you might have on how to improve our site, whenever something"
+" breaks, doesn't function as expected, or is just a terrible user "
+"experience. Whatever it is, we want to hear from you, so please <a "
+"href=\"feedback\">visit our feedback page</a> and let us know!"
+msgstr ""
+"Es por eso que también dependemos de ustedes, nuestros usuarios, para "
+"hacernos saber cualquier sugerencia que pueda tener sobre cómo mejorar "
+"nuestro sitio web, siempre que algo se rompe, no funciona como se espera,"
+" o es sólo una experiencia de usuario terrible. Sea lo que sea, queremos "
+"saber de ti, así que por favor <a href=\"feedback\">visite nuestra página"
+" de sugerencias</a> y cuentanos!"
+
+#: templates/pages/footer.pyhtml:83
+msgid "Invalid email address or message."
+msgstr "Email no es válido o un mensaje no es válido."
+
+#: templates/pages/footer.pyhtml:89
+msgid ""
+"Please let us know what it is you need help with by filling out our form "
+"below and we will get back to you as soon as we can."
+msgstr ""
+"Por favor déjenos saber qué es lo que necesita ayuda con rellenando el "
+"siguiente formulario y nos pondremos en contacto con usted lo antes "
+"posible."
+
+#: templates/pages/footer.pyhtml:94
+msgid "Your email"
+msgstr "Su email"
+
+#: templates/pages/footer.pyhtml:100 templates/pages/footer.pyhtml:101
+msgid "Message"
+msgstr "Mensaje"
+
+#: templates/pages/footer.pyhtml:105
+msgid "Send Message"
+msgstr "Enviar Mensajes"
+
+#: templates/pages/footer.pyhtml:113
+msgid "Invalid email address or feedback."
+msgstr "Email no es válido o una sugerencia no es válida."
+
+#: templates/pages/footer.pyhtml:119
+msgid ""
+"Bugs? Errors? Suggestions? Whatever your feedback is, we would love to "
+"hear it, so please fill out the form below and let your voice be heard!"
+msgstr ""
+"Fallas? Errores? Sugerencias? Lo que quiere decir, nos encantaría "
+"escucharlo, así que por favor rellene el formulario abajo y se oirá "
+"vuestra voz!"
+
+#: templates/pages/footer.pyhtml:124
+msgid "Your email (optional)"
+msgstr "Su email (opcional)"
+
+#: templates/pages/footer.pyhtml:125 templates/pages/settings.pyhtml:30
+#: templates/pages/welcome.pyhtml:132
+msgid "Email (optional)"
+msgstr "Email (opcional)"
+
+#: templates/pages/footer.pyhtml:135
+msgid "Send Feedback"
+msgstr "Enviar Sugerencia"
+
+#: templates/pages/footer.pyhtml:143
+msgid ""
+"Please read these Terms of Service (\"Agreement\", \"Terms of Service\") "
+"carefully before using ripto.com (\"the Site\") operated by RIPto "
+"(\"us\", \"we\", or \"our\").\n"
+"                        This Agreement sets forth the legally binding "
+"terms and conditions for your use of the Site at ripto.com"
+msgstr ""
+"Por favor, lea estos Términos de Servicio (\"Acuerdo\", \"Términos de "
+"Servicio\") antes de utilizar ripto.com (el \"Sitio\") operado por RIPto "
+"(\"nosotros\", \"nos\" o \"nuestro\"). Este Acuerdo establece los "
+"términos y condiciones jurídicamente vinculantes para su uso del Sitio en"
+" ripto.com"
+
+#: templates/pages/footer.pyhtml:148
+msgid ""
+"By accessing or using the Site in any manner, including, but not limited "
+"to, visiting or browsing the Site or contributing content or other "
+"materials\n"
+"                        to the Site, you agree to be bound by these Terms"
+" of Service. Capitalized terms are defined in this Agreement."
+msgstr ""
+"Al acceder o utilizar el Sitio de cualquier manera, incluyendo, pero no "
+"limitado a, visitar o navegar por la Sitio o el aporte de contenidos u "
+"otros materiales en el Sitio, usted acepta que quedará vinculado por "
+"estas Términos de Servicio. Los términos en mayúscula se definen en el "
+"presente Acuerdo."
+
+#: templates/pages/footer.pyhtml:153
+msgid "Intellectual Property"
+msgstr "Propiedad Intelectual"
+
+#: templates/pages/footer.pyhtml:154
+msgid ""
+"The Site and its original content, features and functionality are owned "
+"by RIPto and are protected by international\n"
+"                        copyright, trademark, patent, trade secret and "
+"other intellectual property or proprietary rights laws."
+msgstr ""
+"El Sitio y su contenido original, las características y la funcionalidad "
+"son propiedad de RIPto y están protegidos por derechos de autor "
+"internacionales, marcas registradas, patentes, secretos comerciales y "
+"otra propiedad intelectual o las leyes de derechos de propiedad."
+
+#: templates/pages/footer.pyhtml:159
+msgid "Termination"
+msgstr "Terminación"
+
+#: templates/pages/footer.pyhtml:160
+msgid ""
+"We may terminate your access to the Site, without cause or notice, which "
+"may result in the forfeiture and destruction of all information "
+"associated with you.\n"
+"                        All provisions of this Agreement that by their "
+"nature should survive termination shall survive termination, including, "
+"without limitation, ownership provisions,\n"
+"                        warranty disclaimers, indemnity, and limitations "
+"of liability."
+msgstr ""
+"Podemos terminar su acceso al Sitio, sin causa o aviso, que puede "
+"resultar en la confiscación y destrucción de toda la información "
+"relacionada con usted. Todas las disposiciones de este Acuerdo que por su"
+" naturaleza deberían sobrevivir a la terminación sobrevivirán la "
+"terminación, incluyendo, sin limitación, las disposiciones de propiedad, "
+"renuncias de garantía, indemnización y limitaciones de responsabilidad."
+
+#: templates/pages/footer.pyhtml:166
+msgid "Links To Other Sites"
+msgstr "Enlaces A Otros Sitios"
+
+#: templates/pages/footer.pyhtml:167
+msgid ""
+"Our Site may contain links to third-party sites that are not owned or "
+"controlled by RIPto"
+msgstr ""
+"Nuestro Sitio puede contener enlaces a sitios de terceros que no son "
+"propiedad o controladas por RIPto"
+
+#: templates/pages/footer.pyhtml:171
+msgid ""
+"RIPto has no control over, and assumes no responsibility for, the "
+"content, privacy policies, or practices of any third party sites or "
+"services. We strongly\n"
+"                        advise you to read the terms and conditions and "
+"privacy policy of any third-party site that you visit."
+msgstr ""
+"RIPto no tiene control sobre, y no asume ninguna responsabilidad por el "
+"contenido, políticas de privacidad o las prácticas de los sitios o "
+"servicios de terceros. Le aconsejamos que lea los términos y condiciones "
+"y la política de privacidad de cualquier sitio de terceros que usted "
+"visite."
+
+#: templates/pages/footer.pyhtml:176
+msgid "Governing Law"
+msgstr "Legislación"
+
+#: templates/pages/footer.pyhtml:177
+msgid ""
+"This Agreement (and any further rules, policies, or guidelines "
+"incorporated by reference) shall be governed and construed in accordance "
+"with the laws of California,\n"
+"                        United States, without giving effect to any "
+"principles of conflicts of law."
+msgstr ""
+"Este Acuerdo (y cualesquiera otras normas, políticas o lineamientos "
+"incorporados por referencia) se regirá e interpretará de acuerdo con las "
+"leyes de California, Estados Unidos, sin dar efecto a cualquier principio"
+" de conflicto de leyes."
+
+#: templates/pages/footer.pyhtml:182
+msgid "Changes To This Agreement"
+msgstr "Cambios A Este Acuerdo"
+
+#: templates/pages/footer.pyhtml:183
+msgid ""
+"We reserve the right, at our sole discretion, to modify or replace these "
+"Terms of Service by posting the updated terms on the Site. Your continued"
+" use of the Site\n"
+"                        after any such changes constitutes your "
+"acceptance of the new Terms of Service."
+msgstr ""
+"Tenemos el derecho, a nuestra sola discreción, de modificar o sustituir "
+"estas Términos de Servicio mediante la publicación de los términos "
+"actualizados en el Sitio. Su uso continuado del Sitio después de "
+"cualquier cambio constituye su aceptación de los nuevos Términos de "
+"Servicio."
+
+#: templates/pages/footer.pyhtml:188
+msgid ""
+"Please review this Agreement periodically for changes. If you do not "
+"agree to any of this Agreement or any changes to this Agreement, do not "
+"use, access or continue\n"
+"                        to access the Site or discontinue any use of the "
+"Site immediately."
+msgstr ""
+"Por favor revise este Acuerdo periódicamente para los cambios. Si usted "
+"no está de acuerdo con cualquiera de este Acuerdo o cualquier cambio a "
+"este Acuerdo, no usar, acceder o continuar teniendo acceso al Sitio o "
+"descontinuar cualquier uso del Sitio inmediatamente."
+
+#: templates/pages/footer.pyhtml:193
+msgid "Contact Us"
+msgstr "Contáctenos"
+
+#: templates/pages/footer.pyhtml:194
+msgid "If you have any questions about this Agreement, please contact us."
+msgstr ""
+"Si usted tiene alguna pregunta acerca de este Acuerdo, por favor póngase "
+"en contacto con nosotros."
+
+#: templates/pages/footer.pyhtml:198 templates/pages/footer.pyhtml:331
+#, python-format
+msgid "Last Updated on %(month)s %(day)s, %(year)s."
+msgstr "Última actualización %(month)s %(day)s, %(year)s."
+
+#: templates/pages/footer.pyhtml:206
+msgid ""
+"This privacy policy (“<strong>Policy</strong>”) describes how RIPto and "
+"its related companies (“<strong>Company</strong>”) collect,\n"
+"                        use and share personal information of consumer "
+"users of this website, <a target=\"_blank\" "
+"href=\"http://ripto.com\">ripto.com</a>\n"
+"                        (the “Site”). This Policy also applies to any of "
+"our other websites that post this Policy. This Policy does not apply to "
+"websites\n"
+"                        that post different statements."
+msgstr ""
+"Esta política de privacidad (“<strong>Política</strong>”) describe como "
+"RIPto y sus empresas companias (“<strong>Compania</strong>”) recogen, "
+"utilizan y comparten información personal de los usuarios de consumo de "
+"este sitio web <a target=\"_blank\" "
+"href=\"http://ripto.com\">ripto.com</a> (el \"Sitio\"). Esta Política "
+"también se aplica a cualquiera de los otros sitios web que publican esta "
+"Política. Esta Política no se aplica a los sitios web que publican "
+"diferentes declaraciones."
+
+#: templates/pages/footer.pyhtml:213
+msgid "WHAT WE COLLECT"
+msgstr "Qué Nos Recoger"
+
+#: templates/pages/footer.pyhtml:214
+msgid "We get information about you in a range of ways."
+msgstr "Obtenemos información sobre usted en una variedad de maneras."
+
+#: templates/pages/footer.pyhtml:218
+msgid "Information You Give Us."
+msgstr "Información Que Usted Nos Da."
+
+#: templates/pages/footer.pyhtml:219
+msgid ""
+"We collect your name, email address, username and other information you "
+"directly give us on our Site."
+msgstr ""
+"Recopilamos su nombre, correo electrónico, nombre de usuario, y otra "
+"información que nos proporciona directamente en nuestro Sitio."
+
+#: templates/pages/footer.pyhtml:223
+msgid "Information We Get from Others."
+msgstr "Información Que Recibe De Los Demás."
+
+#: templates/pages/footer.pyhtml:224
+msgid ""
+"We may get information about you from other sources. We may add this to "
+"information we get from this Site."
+msgstr ""
+"Podemos obtener información sobre usted de otras fuentes. Podemos agregar"
+" esta información para que obtenemos de este Sitio."
+
+#: templates/pages/footer.pyhtml:228
+msgid "Information Automatically Collected."
+msgstr "Información Obtenida Automáticamente."
+
+#: templates/pages/footer.pyhtml:229
+msgid "We automatically log information about you and your computer."
+msgstr "Nosotros recordamos automáticamente información sobre usted y su equipo."
+
+#: templates/pages/footer.pyhtml:233
+msgid "Cookies."
+msgstr "Cookies."
+
+#: templates/pages/footer.pyhtml:233
+msgid ""
+"We may log information using \"cookies.\" Cookies are small data files "
+"stored on your hard drive by a website.\n"
+"                        Cookies help us make our Site and your visit "
+"better. We use cookies to see which parts of our Site people use and like"
+" and to count visits\n"
+"                        to our Site."
+msgstr ""
+"Podemos registrar información de uso de \"cookies\". Las cookies son "
+"pequeños archivos de datos almacenados en su disco duro de una página "
+"web. Las cookies nos ayudan a hacer nuestro Sitio y su visita mejor. "
+"Utilizamos cookies para ver qué partes de nuestro Sitio y como lugar de "
+"uso y para contar las visitas a nuestro Sitio."
+
+#: templates/pages/footer.pyhtml:239
+msgid "Web Beacons."
+msgstr "Archivos en Blanco."
+
+#: templates/pages/footer.pyhtml:239
+msgid ""
+"We may log information using digital images called Web beacons on our "
+"Site or in our emails. We use Web beacons\n"
+"                        to manage cookies, count visits, and to learn "
+"what marketing works and what does not. We also use Web Beacons to tell "
+"if you open or act\n"
+"                        on our emails."
+msgstr ""
+"Podemos recordar información de uso de imágenes digitales llamados "
+"contadores de visitantes en nuestro Sitio o en nuestros correos "
+"electrónicos. Nosotros utilizamos archivos en blanco para administrar "
+"cookies, contar las visitas, y aprender lo que funciona de marketing y lo"
+" que no. También utilizamos archivos en blanco para determinar si se abre"
+" o actuar en nuestros emails."
+
+#: templates/pages/footer.pyhtml:245
+msgid "USE OF PERSONAL INFORMATION"
+msgstr "USO DE LA INFORMACIÓN PERSONAL"
+
+#: templates/pages/footer.pyhtml:246
+msgid "We use your personal information as follows:"
+msgstr "Nosotros usamos su información personal de la siguiente manera:"
+
+#: templates/pages/footer.pyhtml:251
+msgid ""
+"We use your personal information to protect, investigate, and deter "
+"against fraudulent, unauthorized, or illegal activity."
+msgstr ""
+"Nosotros usamos su información personal para proteger, investigar y "
+"disuadir contra la actividad fraudulenta, no autorizados o ilegales."
+
+#: templates/pages/footer.pyhtml:256
+msgid "SHARING OF PERSONAL INFORMATION"
+msgstr "INTERCAMBIO DE INFORMACIÓN PERSONAL"
+
+#: templates/pages/footer.pyhtml:257
+msgid "We may share personal information as follows:"
+msgstr "Podemos compartir la información personal de la siguiente manera:"
+
+#: templates/pages/footer.pyhtml:262
+msgid ""
+"We may share personal information with your consent. For example, you may"
+" let us share personal information with others for\n"
+"                            their own marketing uses. Those uses will be "
+"subject to their privacy policies."
+msgstr ""
+"Podemos compartir su información personal con su consentimiento. Por "
+"ejemplo, es posible que vamos a compartir la información personal con "
+"terceros para sus propios fines de marketing. Estos usos estarán sujetos "
+"a sus políticas de privacidad."
+
+#: templates/pages/footer.pyhtml:266
+msgid ""
+"We may share personal information when we do a business deal, or "
+"negotiate a business deal, involving sale or transfer of all\n"
+"                            or a part of our business or assets. These "
+"deals can include any merger, financing, acquisition, or bankruptcy "
+"transaction or\n"
+"                            proceeding."
+msgstr ""
+"Podemos compartir su información personal cuando lo hacemos un negocio, o"
+" negociar un acuerdo de negocios, que implica la venta o transferencia de"
+" la totalidad o de una parte de nuestro negocio o activos. Estas ofertas "
+"pueden incluir cualquier fusión, la financiación, la adquisición o "
+"transacción de quiebra o procedimiento."
+
+#: templates/pages/footer.pyhtml:271
+msgid ""
+"We may share personal information for legal, protection, and safety "
+"purposes."
+msgstr ""
+"Podemos compartir la información personal por razones legales, la "
+"protección y los propósitos de seguridad."
+
+#: templates/pages/footer.pyhtml:274
+msgid "We may share information to comply with laws."
+msgstr "Podemos compartir la información para cumplir con las leyes."
+
+#: templates/pages/footer.pyhtml:277
+msgid "We may share information to respond to lawful requests and legal process."
+msgstr ""
+"Podemos compartir la información para responder a solicitudes legítimas y"
+" procedimientos legales."
+
+#: templates/pages/footer.pyhtml:280
+msgid ""
+"We may share information to protect the rights and property of RIPto, our"
+" agents, customers, and others. This includes\n"
+"                                    enforcing our agreements, policies, "
+"and terms of use."
+msgstr ""
+"Podemos compartir su información para proteger los derechos y propiedad "
+"de RIPto, nuestros agentes, clientes, y otros. Esto incluye la aplicación"
+" de nuestros acuerdos, políticas y condiciones de uso."
+
+#: templates/pages/footer.pyhtml:284
+msgid ""
+"We may share information in an emergency. This includes protecting the "
+"safety of our employees and agents, our customers,\n"
+"                                    or any person."
+msgstr ""
+"Podemos compartir su información en caso de emergencia. Esto incluye la "
+"protección de la seguridad de nuestros empleados y agentes, clientes o "
+"cualquier persona."
+
+#: templates/pages/footer.pyhtml:290
+msgid "We may share information with those who need it to do work for us."
+msgstr ""
+"Podemos compartir información con aquellos que lo necesitan para hacer el"
+" trabajo por nosotros."
+
+#: templates/pages/footer.pyhtml:295
+msgid ""
+"We may also share aggregated and/or anonymized data with others for their"
+" own uses."
+msgstr ""
+"También podemos compartir datos agregados y / o anónima con otros para "
+"sus propios usos."
+
+#: templates/pages/footer.pyhtml:299
+msgid "INFORMATION CHOICES AND CHANGES"
+msgstr "OPCIONES Y CAMBIOS DE INFORMACIÓN"
+
+#: templates/pages/footer.pyhtml:300
+msgid ""
+"Our marketing emails tell you how to “opt-out”. If you opt out, we may "
+"still send you non-marketing emails. Non-marketing emails\n"
+"                        include emails about your accounts and our "
+"business dealings with you."
+msgstr ""
+"Nuestros correos electrónicos de marketing dicen que la forma de "
+"\"exclusión voluntaria\". Si se excluye, todavía podríamos enviarle otros"
+" tipos de mensajes de correo electrónico. Estos correos electrónicos "
+"pueden ser acerca de sus cuentas y nuestras relaciones de negocio con "
+"usted."
+
+#: templates/pages/footer.pyhtml:305
+msgid ""
+"You may send requests about personal information to our Contact "
+"Information below. You can request to change contact choices,\n"
+"                        opt-out of our sharing with others, and update "
+"your personal information."
+msgstr ""
+"Usted puede enviar peticiones sobre información personal para nuestra "
+"Información de Contacto a continuación. Usted puede solicitar el cambio "
+"de las opciones de contacto, optar por no compartir con los demás, y "
+"actualizar su información personal."
+
+#: templates/pages/footer.pyhtml:310
+msgid ""
+"You can typically remove and reject cookies from our Site with your "
+"browser settings. Many browsers are set to accept cookies until\n"
+"                        you change your settings. If you remove or reject"
+" our cookies, it could affect how our Site works for you."
+msgstr ""
+"Por lo general, se puede quitar y rechazar las cookies de nuestro Sitio "
+"con la configuración del navegador. Muchos navegadores están configurados"
+" para aceptar cookies hasta que cambie la configuración. Si elimina o "
+"rechaza nuestras cookies, podría afectar el funcionamiento de nuestro "
+"Sitio para usted."
+
+#: templates/pages/footer.pyhtml:315
+msgid "SECURITY OF YOUR PERSONAL INFORMATION"
+msgstr "SEGURIDAD DE TU INFORMACIÓN PERSONAL"
+
+#: templates/pages/footer.pyhtml:316
+msgid ""
+"We take steps to help protect personal information. No company can fully "
+"prevent security risks, however. Mistakes may happen.\n"
+"                        Bad actors may defeat even the best safeguards."
+msgstr ""
+"Tomamos medidas para ayudar a proteger la información personal. Ninguna "
+"empresa puede evitar totalmente los riesgos de seguridad, sin embargo. "
+"Los errores pueden ocurrir. Impostores pueden derrotar incluso las "
+"mejores garantías."
+
+#: templates/pages/footer.pyhtml:321
+msgid "CONTACT INFORMATION"
+msgstr "INFORMACIÓN DE CONTACTO"
+
+#: templates/pages/footer.pyhtml:322
+msgid ""
+"We welcome your comments or questions about this Privacy Policy. You may "
+"also contact us at <a target=\"_blank\" "
+"href=\"http://ripto.com/support\">ripto.com/support</a>."
+msgstr ""
+"Damos la bienvenida a sus comentarios o preguntas sobre esta Política de "
+"Privacidad. También puede comunicarse con nosotros al <a "
+"target=\"_blank\" "
+"href=\"http://ripto.com/support\">ripto.com/support</a>."
+
+#: templates/pages/footer.pyhtml:326
+msgid "CHANGES TO THIS PRIVACY POLICY"
+msgstr "CAMBIOS A ESTA POLÍTICA DE PRIVACIDAD"
+
+#: templates/pages/footer.pyhtml:327
+msgid ""
+"We may change this Privacy Policy. If we make any changes, we will change"
+" the Last Updated date below."
+msgstr ""
+"Podemos cambiar esta Política de Privacidad. Si hacemos cambios, vamos a "
+"cambiar la Fecha de Última actualización más adelante."
+
+#: templates/pages/home.pyhtml:3
+msgid "Created"
+msgstr "Creado"
+
+#: templates/pages/home.pyhtml:8
+msgid "Remembered"
+msgstr "Recordado"
+
+#: templates/pages/index.pyhtml:2 templates/pages/memorials.pyhtml:2
+msgid "visited"
+msgstr "visitados"
+
+#: templates/pages/index.pyhtml:3 templates/pages/memorials.pyhtml:3
+msgid "commented"
+msgstr "comentados"
+
+#: templates/pages/index.pyhtml:4 templates/pages/memorials.pyhtml:4
+msgid "remembered"
+msgstr "recordados"
+
+#: templates/pages/index.pyhtml:8 templates/pages/memorials.pyhtml:8
+msgid "today"
+msgstr "hoy"
+
+#: templates/pages/index.pyhtml:9 templates/pages/memorials.pyhtml:9
+msgid "yesterday"
+msgstr "ayer"
+
+#: templates/pages/index.pyhtml:10 templates/pages/memorials.pyhtml:10
+msgid "this week"
+msgstr "esta semana"
+
+#: templates/pages/index.pyhtml:11 templates/pages/memorials.pyhtml:11
+msgid "this month"
+msgstr "este mes"
+
+#: templates/pages/index.pyhtml:12 templates/pages/memorials.pyhtml:12
+msgid "all time"
+msgstr "todo el tiempo"
+
+#: templates/pages/index.pyhtml:34 templates/pages/memorials.pyhtml:36
+#, python-format
+msgid "The most %(filters)s Memorials, created %(times)s"
+msgstr "Los monumentos más %(filters)s, creado %(times)s"
+
+#: templates/pages/lang.pyhtml:17
+msgid "That language is not yet available."
+msgstr "Este idioma no está disponible."
+
+#: templates/pages/lang.pyhtml:51
+msgid "Coming soon!"
+msgstr "Próximamente!"
+
+#: templates/pages/memorial.pyhtml:10
+#, python-format
+msgid ""
+"Memorial was successfully created.<br>Click <a class=\"js-modal-click\" "
+"href=\"%(link)s\" data-modal-for=\"share-memorial-dialog\">here</a> to "
+"share with your friends and family."
+msgstr ""
+"Monumento fue creado con éxito. <br>Haga clic <a class=\"js-modal-click\""
+" href=\"%(link)s\" data-modal-for=\"share-memorial-dialog\">aquí</a> t "
+"para compartir con sus amigos y familiares."
+
+#: templates/pages/memorial.pyhtml:17
+msgid "Photo"
+msgstr "Foto"
+
+#: templates/pages/memorial.pyhtml:23
+#, python-format
+msgid "Cause of death: %(cause)s"
+msgstr "Causa de la muerte: %(cause)s"
+
+#: templates/pages/memorial.pyhtml:43
+#, python-format
+msgid "Buried <strong>%(funeral_date)s</strong>"
+msgstr "Enterrado <strong>%(funeral_date)s</strong>"
+
+#: templates/pages/memorial.pyhtml:45
+#, python-format
+msgid "Cremated <strong>%(funeral_date)s</strong>"
+msgstr "Cremado <strong>%(funeral_date)s</strong>"
+
+#: templates/pages/memorial.pyhtml:60
+#, python-format
+msgid "Visited %(name)s"
+msgstr "Visitados %(name)s"
+
+#: templates/pages/memorial.pyhtml:64
+#, python-format
+msgid "Remembered %(name)s"
+msgstr "Recordados %(name)s"
+
+#: templates/pages/memorial.pyhtml:79
+msgid "Condolences"
+msgstr "Condolencias"
+
+#: templates/pages/memorial.pyhtml:91
+msgid "Your thoughts, feelings, praise..."
+msgstr "Tus pensamientos, los sentimientos, la alabanza..."
+
+#: templates/pages/memorial.pyhtml:93 templates/pages/memorial.pyhtml:139
+msgid "Post"
+msgstr "Enviar"
+
+#: templates/pages/memorial.pyhtml:109
+#, fuzzy, python-format
+msgid "Like (%(num)s)"
+msgstr "No me gusta (<span>%(num)s</span>)"
+
+#: templates/pages/memorial.pyhtml:110
+#, fuzzy, python-format
+msgid "Dislike (%(num)s)"
+msgstr "No me gusta (<span>%(num)s</span>)"
+
+#: templates/pages/memorial.pyhtml:111
+#, fuzzy, python-format
+msgid "Reply (%(num)s)"
+msgstr "Responder (<span>%(num)s</span>)"
+
+#: templates/pages/memorial.pyhtml:137
+msgid "Your reply..."
+msgstr ""
+
+#: templates/pages/new_memorial.pyhtml:8
+msgid ""
+"<a href=\"/login\">Sign in</a> or <a href=\"/signup\">register</a> first "
+"if you want to change this later."
+msgstr ""
+"<a href=\"/login\">Inicie sesión</a> o <a href=\"/signup\">regístrese</a>"
+" primero si desea editar más tarde."
+
+#: templates/pages/new_memorial.pyhtml:15
+msgid "Create Memorial"
+msgstr "Crear Monumento"
+
+#: templates/pages/reset.pyhtml:3
+msgid "Change my password"
+msgstr "Cambiar mi contraseña"
+
+#: templates/pages/reset.pyhtml:7
+msgid ""
+"Looks like we couldn't find that username or no email was registered to "
+"it."
+msgstr ""
+"Parece que no se encontró el nombre de usuario o dirección de email no se"
+" registró a la misma."
+
+#: templates/pages/reset.pyhtml:16
+msgid "Enter your new password"
+msgstr "Tu nueva contraseña"
+
+#: templates/pages/reset.pyhtml:23 templates/pages/welcome.pyhtml:208
+msgid "Submit"
+msgstr "Enviar"
+
+#: templates/pages/results.pyhtml:6
+#, python-format
+msgid "Found %(total)s memorials"
+msgstr "%(total)s monumentos"
+
+#: templates/pages/settings.pyhtml:3 templates/pages/user.pyhtml:3
+msgid "Profile"
+msgstr "Perfil"
+
+#: templates/pages/settings.pyhtml:25
+msgid "My name"
+msgstr "Mi nombre"
+
+#: templates/pages/settings.pyhtml:26 templates/pages/welcome.pyhtml:121
+msgid "Name (optional)"
+msgstr "Nombre (opcional)"
+
+#: templates/pages/settings.pyhtml:29
+msgid "My email"
+msgstr "Mi email"
+
+#: templates/pages/settings.pyhtml:35
+msgid "My username"
+msgstr "Mi nombre de usario"
+
+#: templates/pages/settings.pyhtml:36 templates/pages/welcome.pyhtml:146
+msgid "Username"
+msgstr "Nombre de usario"
+
+#: templates/pages/settings.pyhtml:39
+msgid "My new password"
+msgstr "Mi nueva contraseña"
+
+#: templates/pages/settings.pyhtml:40
+msgid "New Password"
+msgstr "Nueva Contraseña"
+
+#: templates/pages/settings.pyhtml:44
+msgid "Save"
+msgstr "Guardar"
+
+#: templates/pages/settings.pyhtml:55
+msgid "Are you sure you want to delete your account?"
+msgstr "Está seguro de que desea eliminar su cuenta?"
+
+#: templates/pages/settings.pyhtml:60 templates/pages/settings.pyhtml:72
+msgid "Delete My Account"
+msgstr "Eliminar Mi Cuenta"
+
+#: templates/pages/settings.pyhtml:65 templates/pages/user.pyhtml:32
+msgid "Member Since:"
+msgstr "Miembro Desde:"
+
+#: templates/pages/settings.pyhtml:68 templates/pages/user.pyhtml:35
+msgid "Memorials Created:"
+msgstr "Monumento Creado:"
+
+#: templates/pages/translate.pyhtml:27
+msgid "Translations saved."
+msgstr "Traducciones guardada."
+
+#: templates/pages/translate.pyhtml:35
+#, python-format
+msgid ""
+"There are currently <strong>%(num_blanks)s blank</strong> and "
+"<strong>%(num_fuzzies)s fuzzy</strong> translations."
+msgstr ""
+"En este momento hay <strong>%(num_blanks)s vacía</strong> y "
+"<strong>%(num_fuzzies)s borroso</strong> traducciones."
+
+#: templates/pages/translate.pyhtml:60
+msgid "Save Translations"
+msgstr "Guardar Traducciones"
+
+#: templates/pages/translate.pyhtml:66
+msgid "This language is not yet available."
+msgstr "Este idioma no está disponible."
+
+#: templates/pages/translate.pyhtml:98
+msgid "If you would like to add a language, <a href=\"/support\">let us know</a>!"
+msgstr "Si desea agregar un idioma, <a href=\"/support\">háganoslo saber</a>!"
+
+#: templates/pages/translate.pyhtml:117
+msgid ""
+"A variable, such as a person's name. You must include this in your "
+"translation, otherwise the data will not be shown to users."
+msgstr ""
+"Una variable, como el nombre de una persona. Debe incluir esto en su "
+"traducción, de lo contrario los datos no se muestran a los usuarios."
+
+#: templates/pages/translate.pyhtml:120
+msgid ""
+"HTML element, such as a link. You must include this in your translation, "
+"however make sure you translate any text between the tags."
+msgstr ""
+"Elemento HTML, como un enlace. Debe incluir esto en su traducción, pero "
+"asegúrese de traducir cualquier texto entre las etiquetas."
+
+#: templates/pages/translate.pyhtml:123
+msgid ""
+"Whenever messages are added or updated, RIPto must check each message to "
+"make sure a translation was provided for it.  If it encounters any "
+"messages that do not yet have a translation, it will be marked as "
+"\"blank\". In order to ensure consistency throughout RIPto, we require a "
+"translation be provided for every message listed. All messages with "
+"\"blank\" translations will be highlighted in <span "
+"style=\"color:#c13\">red</span>."
+msgstr ""
+"Cuando se agregan o actualizan los mensajes, RIPto deberá verificar cada "
+"mensaje para asegurarse de que la traducción se proporciona para ello. Si"
+" se encuentra con algún mensaje de que aún no tienen una traducción, se "
+"marcará como \"blanco\". A fin de garantizar la coherencia en RIPto, se "
+"requiere una traducción se proporciona para cada mensaje en la lista. "
+"Todos los mensajes con las traducciones \"blanco\" se destacan en <span "
+"style=\"color:#c13\">rojo</span>."
+
+#: templates/pages/translate.pyhtml:126
+msgid ""
+"Whenever translations are added or updated, RIPto must check each "
+"translation and compare to its previous translation to make sure it "
+"correctly saves. Sometimes, it encounters a translation that it has "
+"difficulty processing, so it marks this translation as \"fuzzy\" and "
+"waits for your approval. If you see any translations marked as \"fuzzy\","
+" please review to make sure the translation is correct, and fix any "
+"mistakes you see. When ready, check the checkbox next to the translation "
+"and submit to RIPto so we know what the correct translation should be. "
+"All messages with \"fuzzy\" translations will be highlighted in <span "
+"style=\"color:#efc144\">yellow</span>."
+msgstr ""
+"Cuando se agregan o actualizan traducciones, RIPto debe comprobar cada "
+"traducción y comparar a las traducciones anteriores para asegurarse de "
+"que guarda correctamente. A veces, se encuentra con una traducción que "
+"tiene dificultades para procesar, por lo que marca esta traducción como "
+"\"borroso\" y espera a su aprobación. Si hay traducciones marcadas como "
+"\"borroso\", revise para asegurarse de que la traducción es correcta, y "
+"corregir los errores que se ven. Cuando esté listo, seleccione la casilla"
+" junto a la traducción y enviar a RIPto para que sepamos lo que la "
+"traducción correcta debería ser. Todos los mensajes con traducciones "
+"\"borroso\" se resaltarán en amarillo."
+
+#: templates/pages/translate.pyhtml:129
+msgid "If you have any questions, please <a href=\"/support\">contact us</a>."
+msgstr "If you have any questions, please <a href=\"/support\">contáctenos</a>."
+
+#: templates/pages/user.pyhtml:8
+msgid "Memorials"
+msgstr "Monumentos"
+
+#: templates/pages/user.pyhtml:21
+msgid "User"
+msgstr "Usuario:"
+
+#: templates/pages/user.pyhtml:29
+msgid "User:"
+msgstr "Usuario:"
+
+#: templates/pages/wechat.pyhtml:13
+msgid "WeChat"
+msgstr "WeChat"
+
+#: templates/pages/wechat.pyhtml:20
+msgid ""
+"With WeChat, scan the QR Code to the right and you can share this "
+"memorial with your friends or WeChat circle of friends."
+msgstr ""
+"Usando WeChat, escanee este código QR ​​y se puede compartir este "
+"monumento con tus amigos WeChat."
+
+#: templates/pages/wechat.pyhtml:22
+#, python-format
+msgid "[%(url_title)s]"
+msgstr "[%(url_title)s]"
+
+#: templates/pages/wechat.pyhtml:33
+msgid ""
+"How to use <i class=\"wechat-app sprite\"></i>WeChat QR Code: <a "
+"href=\"http://baike.baidu.com/view/7443374.htm\" target=\"_blank\">View "
+"Details</a>"
+msgstr ""
+"Cómo utilizar <i class=\"wechat-app sprite\"></i>Código QR de WeChat: <a "
+"href=\"http://baike.baidu.com/view/7443374.htm\" target=\"_blank\">Ver "
+"Los Detalles</a>"
+
+#: templates/pages/welcome.pyhtml:22
+msgid "Welcome!"
+msgstr "Bienvenido!"
+
+#: templates/pages/welcome.pyhtml:30
+msgid "Incorrect username or password."
+msgstr "El nombre de usuario o la contraseña es incorrecto."
+
+#: templates/pages/welcome.pyhtml:34
+msgid "You must be logged in to do that."
+msgstr "Por favor, acceda primero."
+
+#: templates/pages/welcome.pyhtml:45 templates/pages/welcome.pyhtml:201
+msgid "Enter your username"
+msgstr "Tu nombre de usuario"
+
+#: templates/pages/welcome.pyhtml:54
+msgid "Enter your password"
+msgstr "Tu contraseña"
+
+#: templates/pages/welcome.pyhtml:54
+msgid "Forgot my password"
+msgstr "Olvidó mi contraseña?"
+
+#: templates/pages/welcome.pyhtml:54
+msgid "Forgot?"
+msgstr "Olvidó?"
+
+#: templates/pages/welcome.pyhtml:64
+msgid "Remember me"
+msgstr "No cerrar sesión"
+
+#: templates/pages/welcome.pyhtml:74
+msgid "Enter your first and last name."
+msgstr "Ingresa tu nombre y apellido."
+
+#: templates/pages/welcome.pyhtml:75
+msgid "Name looks great."
+msgstr "El nombre se ve genial."
+
+#: templates/pages/welcome.pyhtml:78
+msgid "What's your email address?"
+msgstr "Cual es tu email?"
+
+#: templates/pages/welcome.pyhtml:79
+msgid "Email looks great."
+msgstr "Te enviaremos una confirmación por email."
+
+#: templates/pages/welcome.pyhtml:80 templates/pages/welcome.pyhtml:87
+msgid "Checking..."
+msgstr "Envío..."
+
+#: templates/pages/welcome.pyhtml:81
+msgid "Doesn't look like a valid email."
+msgstr "No parece ser un email valido."
+
+#: templates/pages/welcome.pyhtml:82
+msgid "This email is already registered."
+msgstr "Este email ya está registrado."
+
+#: templates/pages/welcome.pyhtml:85
+msgid "Username can only contain letters, numbers and underscores."
+msgstr "Sólo caracteres alfanuméricos."
+
+#: templates/pages/welcome.pyhtml:86
+msgid "Username looks great."
+msgstr "El nombre de usuario está disponible."
+
+#: templates/pages/welcome.pyhtml:88
+msgid "Doesn't look like a valid username."
+msgstr "Nombre de usuario inválido!"
+
+#: templates/pages/welcome.pyhtml:89
+msgid "A username is required!"
+msgstr "Se requiere un nombre de usuario!"
+
+#: templates/pages/welcome.pyhtml:90
+msgid "This username is already registered."
+msgstr "¡Este nombre de usuario ya está en uso!"
+
+#: templates/pages/welcome.pyhtml:93
+msgid "6 characters or more! Be tricky."
+msgstr "¡6 caracteres o más! Sé ingenioso."
+
+#: templates/pages/welcome.pyhtml:94
+msgid "Password is perfect!"
+msgstr "¡La contraseña es perfecta!"
+
+#: templates/pages/welcome.pyhtml:95
+msgid "Password is okay."
+msgstr "La contraseña está bien."
+
+#: templates/pages/welcome.pyhtml:96
+msgid "Password could be more secure."
+msgstr "La contraseña podría ser mas segura."
+
+#: templates/pages/welcome.pyhtml:97
+msgid "Password is not secure enough."
+msgstr "La contraseña no es suficientemente segura."
+
+#: templates/pages/welcome.pyhtml:98
+msgid "Password must be at least 6 characters."
+msgstr "La contraseña debe ser de al menos 6 caracteres."
+
+#: templates/pages/welcome.pyhtml:99
+msgid "Password cannot be blank!"
+msgstr "La contraseña no puede quedar en blanco!"
+
+#: templates/pages/welcome.pyhtml:161
+msgid "Password"
+msgstr "Contraseña"
+
+#: templates/pages/welcome.pyhtml:181
+msgid ""
+"By clicking the button below, you agree to our <a href=\"terms\" "
+"target=\"_blank\">Terms</a> and that you have read our <a "
+"href=\"privacy\" target=\"_blank\">Privacy Policy</a>."
+msgstr ""
+"Al hacer clic en el botón de abajo, aceptas las <a href=\"terms\" "
+"target=\"_blank\">Condiciones</a>y que has leído la <a href=\"privacy\" "
+"target=\"_blank\">Política de Privacidad</a>."
+
+#: templates/pages/welcome.pyhtml:186
+msgid "Create my account"
+msgstr "Crear mi cuenta"
+
+#: templates/pages/welcome.pyhtml:194
+msgid ""
+"Sorry, but we couldn't find that username or no email was registered to "
+"it."
+msgstr ""
+"Parece que no se encontró el nombre de usuario o dirección de email no se"
+" registró a la misma."
+

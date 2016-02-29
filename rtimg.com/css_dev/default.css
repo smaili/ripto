@@ -1,0 +1,592 @@
+/*--------------------------------------------------
+
+default.css
+Common css for all except index page
+
+-------------------------------------------------- */
+
+
+
+/* Font
+-------------------------------------------------- */
+@font-face {
+    font-family: 'delius';
+    src: url('../font/delius.eot');
+    src: url('../font/delius.eot?#iefix') format('embedded-opentype'),
+         url('../font/delius.woff') format('woff'),
+         url('../font/delius.ttf') format('truetype'),
+         url('../font/delius.svg#delius') format('svg');
+}
+
+
+
+/* General
+-------------------------------------------------- */
+/* IE < 9 hack */
+html, body, #doc {
+    overflow: hidden;
+}
+
+#page-outer {
+    overflow-x: hidden;
+    position: relative;
+}
+
+.hidden {
+    display: none;
+}
+
+.no-focus:focus {
+    outline: 0 none;
+}
+
+.scroller {
+    overflow-y: auto;
+}
+
+.page-title {
+    color: #222;
+    font-family: 'delius';
+    font-size: 22px;
+    font-weight: normal;
+    margin: 15px 0 20px;
+}
+
+.sprite {
+    background: url('../img/sprites.png') no-repeat;
+}
+
+
+
+/* Topbar
+-------------------------------------------------- */
+.topbar {
+    background-color: #000;
+}
+
+.global-notices {
+    position: relative;
+}
+
+.global-nav {
+    height: 53px;
+}
+
+.rip-topbar-logo {
+    float: left;
+    padding: 5px 5px 0 5px;
+}
+
+.rip-topbar-logo .icon-logo {
+    background-position: -83px 0;
+    float: left;
+    width: 88px;
+    height: 48px;
+}
+
+.rip-topbar-tm {
+    color: #888;
+    font-size: 14px;
+    position: absolute;
+    top: 21px;
+    left: 115px;
+}
+
+.rip-topbar-moon {
+    float: right;
+}
+
+.rip-topbar-moon .icon-moon {
+    background-position: -201px -102px;
+    float: right;
+    width: 43px;
+    height: 46px;
+}
+
+
+
+/* Search
+-------------------------------------------------- */
+#topbar-search-form {
+    position: absolute;
+    margin-top: 13px;
+    margin-left: -200px;
+    left: 50%;
+    overflow: hidden;
+    width: 400px;
+}
+
+#topbar-search-form .search-input-container {
+    border-right: 1px solid #000;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2px;
+}
+
+#topbar-search-form .search-input {
+    background-color: #333;
+    border-radius: 0; -moz-border-radius: 0; -webkit-border-radius: 0;
+    color: #aaa;
+    font-size: 16px;
+    width: 98%;
+    height: 25px;
+    padding: 2px 1%;
+    zoom: 1;
+}
+
+#topbar-search-form .search-input:focus {
+    background-color: #fff;
+    color: #000;
+}
+
+#topbar-search-form .search-button {
+    background-color: #333;
+    border: 1px solid #333;
+    border-left: 0;
+    border-radius: 0 2px 2px 0; -moz-border-radius: 0 2px 2px 0; -webkit-border-radius: 0 2px 2px 0; /* top left, top right, bottom right, bottom left */
+    color: #333;
+    float: right;
+    height: 29px;
+}
+
+.search-button .icon-search {
+    background-position: -246px -81px;
+    display: block;
+    margin: 0 25px;
+    width: 14px;
+    height: 14px;
+    opacity: .5; -moz-opacity: .5; -khtml-opacity: .5; filter:alpha(opacity: 50); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+}
+
+.search-button:hover .icon-search, .search-button:focus .icon-search {
+    opacity: 1; -moz-opacity: 1; -khtml-opacity: 1; filter:alpha(opacity: 100); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+
+
+/* Sign In Button
+-------------------------------------------------- */
+.login-submit-wrapper {
+    float: right;
+    height: 100%;
+    margin-right: 1%;
+}
+
+.login-submit-wrapper .red-submit {
+    margin-right: 20px;
+}
+
+
+
+/* Navigation
+-------------------------------------------------- */
+.nav {
+    height: 100%;
+    padding: 0 2%;
+}
+
+.nav li, .nav a {
+    position: relative;
+}
+
+.nav .dropdown-menu {
+    position: absolute;
+    right: -12px;
+    top: 50px;
+    display: none;
+    padding: 7px 9px;
+    background-color: #000;
+    border: 2px solid #fff;
+    border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px;
+    z-index: 1;
+}
+
+.nav:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    display: block;
+    float: none;
+}
+
+.dropdown-menu a {
+    display: block;
+    float: none;
+    clear: both;
+    padding: 3px 20px;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 18px;
+    color: #fff;
+}
+
+.dropdown-menu a:hover {
+    color: #ccc;
+}
+
+.dropdown-menu .dropdown-caret {
+    right: 27px;
+    position: absolute;
+    top: -11px;
+    width: 12px;
+    height: 10px;
+    float: left;
+}
+
+.dropdown-caret .caret-outer, .dropdown-caret .caret-inner {
+    position: absolute;
+    display: inline-block;
+    margin-left: -1px;
+}
+
+
+.dropdown-caret .caret-outer {
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 10px solid #fff;
+    border-bottom-color: #fff;
+    top: 0;
+    left: 0;
+}
+
+.dropdown-caret .caret-inner {
+    top: 2px;
+    left: 1px;
+    display: inline-block;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 10px solid #000;
+}
+
+
+
+/* New Memorial Button
+-------------------------------------------------- */
+.new-submit-wrapper {
+    position: absolute;
+    right: 10%;
+    margin-top: 20px;
+}
+
+
+
+/* Container
+-------------------------------------------------- */
+#page-container {
+    margin: 0 auto;
+    min-height: 100%;
+    padding: 0 14px;
+    position: relative;
+}
+
+.page-wrapper {
+    padding-top: 65px;
+}
+
+
+
+/* Sticky Footer
+http://code.google.com/p/cleanstickyfooter/
+-------------------------------------------------- */
+#page-container {
+    margin-bottom: -96px; /* 96 = 36px + ( 30px padding * 2 ) */
+}
+
+.page-wrapper {
+    padding-bottom: 96px; /* 96 = 36px + ( 30px padding * 2 ) */
+}
+
+.footer {
+    color: #c0c0c0;
+    position: relative;
+    height: 36px; /* 36px = 96px - ( 30px padding * 2 ) */
+}
+
+
+
+/* Canvas
+-------------------------------------------------- */
+.canvas {
+    background: rgba(255, 255, 255, .1);
+    border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;
+    border: 1px solid #666;
+}
+
+
+
+/* Canvas Menu
+-------------------------------------------------- */
+.canvas-menu {
+    margin: 10px 0 15px 5px;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.canvas-menu li {
+    display: inline;
+}
+
+.canvas-menu a, .canvas-menu span {
+    display: block;
+    float: left;
+}
+
+.canvas-menu a {
+    color: #555;
+    font-size: 13px;
+    padding: 5px 12px;
+}
+
+.canvas-menu a:hover, .canvas-menu a:focus {
+    color: #000;
+}
+
+.canvas-menu .selected {
+    color: #000;
+    font-weight: bold;
+}
+
+.canvas-menu span {
+    color: #000;
+    font-size: 16px;
+    padding-top: 6px;
+}
+
+.canvas-content {
+    margin: 15px 20px;
+}
+
+
+
+/* Notice Box
+-------------------------------------------------- */
+.notice-box {
+    font-size: 14px;
+    padding: 10px 4px;
+    margin: 15px auto;
+    width: 382px;
+    position: relative;
+    text-align: center;
+}
+
+.notice-box a {
+    font-weight: bold;
+}
+
+.notice-box a:hover {
+    text-decoration: underline;
+}
+
+.notice-box.ok {
+    border: 1px solid #003d01;
+    background-color: #ddffdd;
+    color: #003d01;
+}
+
+.notice-box.ok a {
+    color: #003d01;
+}
+
+.notice-box.tip {
+    background-color: #fff8d6;
+    border: 1px solid #efc144;
+    color: #333;
+}
+
+.notice-box.tip a {
+    color: #000;
+}
+
+.notice-box.error {
+    background-color: #ffebe8;
+    border: 1px solid #c13;
+    color: #c13;
+}
+
+.notice-box.error a {
+    color: #c13;
+}
+
+.notice-box .close {
+    color: #000;
+    font-family: arial,sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 9px;
+    height: 9px;
+    padding: 0 7px 7px;
+    opacity: .5; -moz-opacity: .5; -khtml-opacity: .5; filter:alpha(opacity: 50); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+}
+
+.notice-box .close:hover {
+    opacity: .7; -moz-opacity: .7; -khtml-opacity: .7; filter:alpha(opacity: 70); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+    text-decoration: none;
+}
+
+.global-notices .notice-box {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: 35px;
+}
+
+.global-notices .notice-box span {
+    line-height: 35px; /* needs to match notice-box's height so that it vertically centers */
+}
+
+
+/* Modal
+-------------------------------------------------- */
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #000;
+    background: rgba(0, 0, 0, .5);
+}
+
+.modal {
+    border-radius: 6px; -moz-border-radius: 6px; -webkit-border-radius: 6px;
+    position: absolute;
+    overflow: auto;
+    overflow-x: hidden;
+    left: 0; right: 0;
+    top: 20%;
+    width: 520px;
+    margin: 0 auto;
+}
+
+.modal .modal-bar {
+    border-bottom: 1px solid #ddd;
+    border-radius: 6px 6px 0 0; -moz-border-radius: 6px 6px 0 0; -webkit-border-radius: 6px 6px 0 0;
+    padding: 8px 0;
+    position: relative;
+    height: 20px;
+    border: 1px solid #333;
+    background-color: #000;
+}
+
+.modal-bar .modal-title {
+    color: #fff;
+    font-family:'delius';
+    font-weight:normal;
+    font-size: 16px;
+    line-height: normal;
+    margin-left: 7px;
+}
+
+.modal-bar .close-modal {
+    background: #000;
+    border-radius: 0 6px 0 0; -moz-border-radius: 0 6px 0 0; -webkit-border-radius: 0 6px 0 0;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 37px;
+    padding: 0 14px;
+}
+
+.close-modal .icon-close {
+    background-position: -72px 0;
+    float: left;
+    width: 10px;
+    height: 12px;
+}
+
+.modal .modal-content {
+    background-color: rgba(255, 255, 255, .1);
+    padding: 15px 5px;
+}
+
+.modal-content .canvas-menu {
+    margin: 0;
+}
+
+.modal-content .canvas-content {
+    margin-bottom: 0;
+}
+
+
+
+/* Memorial List
+-------------------------------------------------- */
+.memorial-list {
+    overflow: hidden;
+}
+
+.memorial-list .no-memorials {
+    margin-top: 30px;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.memorial-list .memorial {
+    position: relative;
+    float: left;
+    margin: 5px 20px 5px 0;
+    padding: 8px;
+}
+
+.memorial-list .memorial:hover {
+    background-color: rgba(255, 255, 255, .3);
+    border-color: #000;
+}
+
+.memorial-list .memorial img {
+    width: 120px;
+    height: 120px;
+    vertical-align: middle;
+    border: 1px solid transparent;
+}
+
+.memorial-list .memorial:hover img {
+    border-color: #000;
+}
+
+.memorial-list .memorial .bubble {
+    top: auto;
+    bottom: -5px;
+    text-align: center;
+    left: 0;
+    right: 0;
+    padding: 0;
+}
+
+.memorial-list .memorial:hover .bubble {
+    display: block;
+}
+
+.memorial-list .submit-wrapper {
+    display: block;
+    width: 100%;
+}
+
+.memorial-list .submit {
+    margin-top: 20px;
+    width: 300px;
+    height: 40px;
+}
+
+
+
+
+
+/* Retina
+-------------------------------------------------- */
+@media 
+only screen and (-webkit-min-device-pixel-ratio: 2), 
+only screen and (min-resolution: 192dpi) {
+
+    .sprite {
+        background-image: url('../img/sprites@2x.png');
+        background-size: 277px 211px;
+    }
+
+}

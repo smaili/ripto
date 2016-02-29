@@ -1,0 +1,35 @@
+{% extends "elements/modal/base.pyhtml" %}
+
+{% set modal_id = "welcome" %}
+{% set modal_title = _("Welcome!") %}
+{% set canvas_menu = [
+    {
+        'title': _("Log in"),
+        'name': 'login',
+        'section': None,
+        'link': jinjer.url_for('login')
+    },
+    {
+        'title': _("Sign up"),
+        'name': 'signup',
+        'section': None,
+        'link': jinjer.url_for('signup')
+    },
+    {
+        'title': _("Forgot"),
+        'name': 'forgot',
+        'section': None,
+        'link': jinjer.url_for('forgot')
+    }
+] %}
+
+
+
+{% block content %}
+<div class="login-container">
+</div>
+<div class="signup-container hidden">
+</div>
+<div class="forgot-container hidden">
+</div>
+{% endblock %}

@@ -1,0 +1,11 @@
+<div id="search-container" class="content-container">
+    <div class="results">
+        {#<i class="changing"></i>{# force browser to preload #}
+        <h1 class="results-header">
+            {{ _("Found %(total)s memorials", total=total) }}
+        </h1>
+        <ul class="memorial-list">
+            {{ jinjer.element( 'results', results=results, paging=paging ) }}
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,105 @@
+/*--------------------------------------------------
+
+wechat.css
+Used when getting sharing instructions for WeChat
+
+-------------------------------------------------- */
+
+
+
+/* Container
+-------------------------------------------------- */
+.content-container {
+    font-size: 12px;
+    margin: 0 auto 10px;
+    position: relative;
+    width: 585px;
+}
+
+
+
+/* Canvas
+-------------------------------------------------- */
+.canvas {
+    margin-top: 25px;
+    width: 100%;
+}
+
+
+
+/* WeChat
+-------------------------------------------------- */
+.wechat-container img {
+    vertical-align: top;
+}
+
+.wechat-container a:hover {
+    text-decoration: underline;
+}
+
+.wechat-container .clear {
+    clear: both;
+    height: 0px;
+    overflow: hidden;
+}
+
+.wechat-container .divider {
+    margin: 25px 0;
+    height: 1px;
+    line-height: 1px;
+    overflow: hidden;
+    background: #777;
+}
+
+
+
+/* Detail
+-------------------------------------------------- */
+.wechat-container .detail {
+    float: left;
+    width: 350px;
+    margin-right: 50px;
+}
+
+.wechat-container .detail p {
+    margin-bottom: 35px;
+}
+
+.wechat-container .detail a {
+    color: #000;
+    font-size: 16px;
+}
+
+
+
+/* QR
+-------------------------------------------------- */
+.qr {
+    float: right;
+}
+
+.qr .qr-code {
+    position: relative;
+}
+
+
+
+/* Teach
+-------------------------------------------------- */
+.teach p {
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.teach a {
+    color: #ccc;
+}
+
+.teach .wechat-app {
+    background-position: -43px -25px;
+    width: 39px;
+    height: 32px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 5px;
+}

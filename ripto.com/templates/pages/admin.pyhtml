@@ -1,0 +1,125 @@
+{% set canvas_menu = [
+    {
+        'title': _("Users"),
+        'name': 'users',
+        'link': jinjer.url_for('admin')
+    },
+    {
+        'title': _("Memorials"),
+        'name': 'memorials',
+        'link': jinjer.url_for('admin', action='memorials')
+    },
+    {
+        'title': _("Comments"),
+        'name': 'comments',
+        'link': jinjer.url_for('admin', action='comments')
+    }
+] %}
+
+<div id="admin-container" class="content-container">
+    <h1 class="page-title">{{ _("Admin") }}</h1>
+    <div class="admin-pages canvas">
+        {{ jinjer.element( 'menu', canvas_menu=canvas_menu, section=section ) }}
+        <div class="canvas-content">
+            {% set abar = {
+                'users': [ _("New User"), _("View All") ],
+                'memorials': [ _("New Memorial"), _("View All") ],
+                'comments': [ _("New Comment"), _("View All") ]
+            } %}
+
+            {% set buttons = [ 'green', 'blue', 'red' ] %}
+
+            <div class="abar">
+                {% for button in abar[section] %}
+                <a href="javascript:void(0)" class="submit {{ buttons[loop.index0] }}-submit" data-section="{{ button.replace(' ', '-').lower() }}" tabindex="{{ jinjer.tabindex() }}">{{ button }}</a>
+                {% endfor %}
+            </div>
+
+
+            {% if section == 'users' %}
+            <div class="users-container">
+                <div class="section-container view-all hidden">
+                    {% for u in data['users'] %}
+                    <p>{{ u.username }}</p>
+                    {% endfor %}
+                </div>
+            </div>
+            {% elif section == 'memorials' %}
+            <div class="memorials-container">
+                <div class="section-container view-all hidden">
+                    {% for m in data['memorials'] %}
+                    <p>{{ m.name }}</p>
+                    {% endfor %}
+                </div>
+            </div>
+            {% elif section == 'comments' %}
+            <div class="comments-container">
+
+                <div class="section-container new-comment hidden">
+                    <form id="comments-form" action="{{ jinjer.url_for('admin', action='comments') }}" method="POST">
+                        <select class="memorial-select" title="{{ _("Memorial") }}" name="memorial">
+                            <option selected="" value="">{{ _("Memorial") }}</option>
+                            {% for m in data['memorials'] %}
+                            <option value="{{ m.id }}">{{ m.name }}</option>
+                            {% endfor %}
+                        </select>
+
+                        <select class="user-select" title="{{ _("User") }}" name="user">
+                            <option selected="" value="">{{ _("User") }}</option>
+                            {% for u in data['users'] %}
+                            <option value="{{ u.id }}">{{ u.username }}</option>
+                            {% endfor %}
+                        </select>
+
+                        <select class="parent-select" title="{{ _("Parent") }}" name="parent">
+                            <option selected="" value="">{{ _("Parent") }}</option>
+                            {% for c in data['comments'] %}
+                            <option value="{{ c.id }}">{% autoescape true %}{{ c.text }}{% endautoescape %}</option>
+                            {% endfor %}
+                        </select>
+
+                        <div class="prompt">
+                            <div class="placeholding-input date">
+                                <input type="text" id="comments-date" class="text-input date-input" name="date" readonly="true" title="{{ _("Date") }}"{% if g.is_mobile %} autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"{% endif %} data-modal-header="{{ _("Date") }}" value="" tabindex="{{ jinjer.tabindex() }}"></input>
+                                <label for="comments-date" class="placeholder">{{ _("Date") }}</label>
+                            </div>
+                        </div>
+
+                        <div class="prompt">
+                            <div class="placeholding-input likes">
+                                <input type="text" id="comments-likes" class="text-input likes-input" name="likes" title="{{ _("Likes") }}"{% if g.is_mobile %} autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"{% endif %} value="0" tabindex="{{ jinjer.tabindex() }}"></input>
+                                <label for="comments-likes" class="placeholder hasome">{{ _("Likes") }}</label>
+                            </div>
+                        </div>
+
+                        <div class="prompt">
+                            <div class="placeholding-input dislikes">
+                                <input type="text" id="comments-dislikes" class="text-input dislikes-input" name="dislikes" title="{{ _("Dislikes") }}"{% if g.is_mobile %} autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"{% endif %} value="0" tabindex="{{ jinjer.tabindex() }}"></input>
+                                <label for="comments-dislikes" class="placeholder hasome">{{ _("Dislikes") }}</label>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+
+                        <div class="prompt">
+                            <div class="placeholding-input message">
+                                <textarea id="comments-message" class="text-input message-input" name="message" title="{{ _("Message") }}" tabindex="{{ jinjer.tabindex() }}"></textarea>
+                                <label for="comments-message" class="placeholder">{{ _("Message") }}</label>
+                            </div>
+                        </div>
+                        <div class="submit-wrapper">
+                            <button type="submit" class="submit black-submit" tabindex="{{ jinjer.tabindex() }}">{{ _("Post Comment") }}</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="section-container view-all hidden">
+                    {% for c in data['comments'] %}
+                    <p>{% autoescape true %}{{ c.text }}{% endautoescape %}</p>
+                    {% endfor %}
+                </div>
+
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>

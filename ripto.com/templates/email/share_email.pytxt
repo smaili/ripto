@@ -1,0 +1,37 @@
+RIPto
+
+-----------------------------------
+
+{{ header }}
+
+{{ _("Your friend %(name)s has shared a memorial with you:", name=sharer) }}
+{% if message %}
+
+{{ message }}
+{% endif %}
+
+{{ memorial.name }}
+
+{{ memorial.print_date('dob') }} - {{ memorial.print_date('dod') }}
+{% if memorial.funeral_type == 1 %}
+{{ _("Buried %(funeral_date)s", funeral_date=memorial.print_date('funeral_date')) }}
+{% elif memorial.funeral_type == 2 %}
+{{ _("Cremated %(funeral_date)s", funeral_date=memorial.print_date('funeral_date')) }}
+{% else %}
+{{ _("Funeral unknown") }}
+{% endif %}
+{% if memorial.funeral_type in [ 1, 2 ] %} 
+{{ memorial.funeral_loc }}
+{% endif %}
+
+{{ _("To learn more, visit: %(link)s", link=cta) }}
+
+{{ _("To give your condolences: %(link)s", link=(jinjer.memorial_url( memorial, action='comments', _external=True ))) }}
+
+
+-----------------------------------
+
+{{ _("Please disregard this email if it was sent by mistake.") }}
+
+RIPto (c) 2013. San Francisco, CA.
+

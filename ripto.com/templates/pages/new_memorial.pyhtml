@@ -1,0 +1,20 @@
+<div id="new-memorial-container" class="content-container">
+    <h1 class="page-title">{{ _("New Memorial") }}</h1>
+    <form id="new-memorial-form" method="POST" action="/~" enctype="multipart/form-data">
+
+        {% set login_url = jinjer.url_for('login', _next=True) %}
+        {% set register_url = jinjer.url_for('signup', _next=True) %}
+
+        {% if g.user.is_anonymous() %}
+        {{ jinjer.element( 'notice', notice_type='tip', notice_msg=_("<a href=\"%(link1)s\">Sign in</a> or <a href=\"%(link2)s\">register</a> first if you want to change this later.", link1=login_url, link2=register_url) ) }}
+        {% endif %}
+
+        {{ jinjer.element( 'edit_new_memorial', memorial=memorial, page=page ) }}
+
+        <div class="submit-wrapper">
+            <button type="submit" class="submit big black-submit" tabindex="{{ jinjer.tabindex() }}">{{ _("Create Memorial") }}</button>
+        </div>
+
+    </form>
+
+</div>

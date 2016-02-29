@@ -1,0 +1,97 @@
+/*--------------------------------------------------
+
+settings.css
+Used when viewing settings
+
+-------------------------------------------------- */
+
+
+
+/* Container
+-------------------------------------------------- */
+.content-container {
+    font-size: 12px;
+    margin: 0 auto 10px;
+    position: relative;
+    width: 585px;
+}
+
+.content-container input:focus {
+    outline-color: #aaa;
+}
+
+
+
+/* Canvas
+-------------------------------------------------- */
+.canvas {
+    margin-top: 25px;
+    width: 100%;
+}
+
+
+
+/* Profile
+-------------------------------------------------- */
+#profile-form .prompt {
+    margin-top: 0;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+#profile-form .left {
+    float: left;
+}
+
+#profile-form .right {
+    float: right;
+}
+
+#profile-form .text-input {
+    border: 1px solid #777;
+    border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;
+    height: 21px;
+    width: 242px;
+}
+
+#profile-form .submit-wrapper {
+    margin-top: 20px;
+    text-align: right;
+}
+
+
+
+/* Membership
+-------------------------------------------------- */
+.membership-stats {
+    padding: 10px 50px;
+    text-align: center;
+}
+
+.membership-stats p {
+    font-size: 14px;
+    margin: 10px auto;
+    overflow: hidden;
+    width: 350px;
+}
+
+.membership-stats span {
+    float: left;
+}
+
+.membership-stats strong {
+    float: right;
+}
+
+
+
+/* Submit
+-------------------------------------------------- */
+#membership-form .submit-wrapper {
+    margin-top: 20px;
+    text-align: right;
+}
+
+#membership-form .submit {
+    margin-left: 20px;
+}

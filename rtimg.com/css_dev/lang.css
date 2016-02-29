@@ -1,0 +1,121 @@
+/*--------------------------------------------------
+
+lang.css
+Used when choosing languages
+
+-------------------------------------------------- */
+
+
+
+/* General
+-------------------------------------------------- */
+table, tr, td {
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+/* Container
+-------------------------------------------------- */
+.content-container {
+    font-size: 12px;
+    margin: 0 auto 10px;
+    position: relative;
+    width: 585px;
+}
+
+
+
+/* Canvas
+-------------------------------------------------- */
+.canvas {
+    margin-top: 25px;
+    width: 100%;
+}
+
+
+
+/* Locales
+-------------------------------------------------- */
+.lang .lang-content {
+    margin: 15px 20px;
+    padding: 10px;
+}
+
+.lang .locales-wrapper {
+    overflow: hidden;
+    padding: 0 10px;
+}
+
+.locales-wrapper .locales {
+    table-layout: fixed;
+    width: 100%;
+}
+
+.locales td {
+    text-align: left;
+    vertical-align: top;
+}
+
+.locales .lc {
+    padding-right: 5px;
+}
+
+.locales .mc {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.locales .rc {
+    padding-left: 5px;
+}
+
+.locales div {
+    padding: 3px 0 2px 7px;
+    white-space: nowrap;
+}
+
+.locales a {
+    color: #333;
+    display: inline-block;
+    font-size: 12px;
+    padding: 5px 0;
+}
+
+.locales a:hover {
+    text-decoration: underline;
+}
+
+.locales a.selected {
+    color: #000;
+    font-weight: bold;
+}
+
+
+/* Coming Soon
+-------------------------------------------------- */
+.lang .cs-wrapper {
+    margin: 15px 0 -20px -15px;
+}
+
+.lang .cs-star {
+    color: #c10;
+    font-size: 13px;
+}
+
+.lang .cs {
+    color: #333;
+    margin-left: 2px;
+    font-style: italic;
+}
+
+.lang .locales .cs-star {
+    margin-left: 3px;
+}

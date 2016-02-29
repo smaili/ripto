@@ -1,0 +1,32 @@
+/*--------------------------------------------------
+
+lang.css
+Used when choosing languages
+
+-------------------------------------------------- */
+
+
+
+/* Font
+-------------------------------------------------- */
+@font-face {
+    font-family: 'rip';
+    src: url('../font/rip.eot');
+    src: url('../font/rip.eot?#iefix') format('embedded-opentype'),
+         url('../font/rip.woff') format('woff'),
+         url('../font/rip.ttf') format('truetype'),
+         url('../font/rip.svg#rip') format('svg');
+}
+
+
+
+/* Error
+-------------------------------------------------- */
+h2 {
+    color: #fff;
+    font-family: 'rip';
+    font-size: 6em;
+    margin-top: 300px;
+    opacity: .1; -moz-opacity: .1; -khtml-opacity: .1; filter:alpha(opacity: 10); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
+    text-align: center;
+}

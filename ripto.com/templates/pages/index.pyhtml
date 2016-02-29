@@ -1,0 +1,45 @@
+{% set filters = [
+    _("visited"),
+    _("commented"),
+    _("remembered")
+] %}
+
+{% set times = [
+    _("today"),
+    _("yesterday"),
+    _("this week"),
+    _("this month"),
+    _("all time")
+] %}
+
+
+{% set options = [] %}
+{% for f in filters %}
+{% set x = options.append( "<option " + ( "selected=\"\"" if filter_by == loop.index0 else "" ) + "value=\"%d\">%s</option>" % (loop.index0, f) ) %}
+{% endfor %}
+{% set filters = "<span><b>%s</b><b class=\"arw\">&#8743;</b><select name=\"f\">%s</select></span>" % (filters[filter_by], "".join(options)) %}
+
+{% set options = [] %}
+{% for t in times %}
+{% set x = options.append( "<option " + ( "selected=\"\"" if time_by == loop.index0 else "" ) + "value=\"%d\">%s</option>" % (loop.index0, t) ) %}
+{% endfor %}
+{% set times = "<span><b>%s</b><b class=\"arw\">&#8743;</b><select name=\"t\">%s</select></span>" % (times[time_by], "".join(options)) %}
+
+
+<div id="search-container" class="content-container">
+    <div class="results">
+        <form id="filter-form" action="/" method="GET">
+            <h1 class="page-title">
+                {% if g.is_mobile %}
+                {{ _("Most %(filters)s Memorials, %(times)s", filters=filters, times=times) }}
+                {% else %}
+                {{ _("The most %(filters)s Memorials, created %(times)s", filters=filters, times=times) }}
+                {% endif %}
+            </h1>
+        </form>
+        {#<i class="changing"></i>{# force browser to preload #}
+        <ul class="memorial-list">
+            {{ jinjer.element( 'results', results=results, paging=paging ) }}
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+Welcome to RIPto, {{ name }}!
+
+To complete the Sign Up process, please follow this link:
+
+{{ jinjer.url_for("confirmemail", e=email, c=code, _external=True) }}
+
+Once we have confirmed your email, your account will be activated and ready to use!
+
+
+Didn't sign up for RIPto? Please let us know:
+{{ jinjer.url_for("confirmemail", report=1, c=code, e=email, _external=True) }}

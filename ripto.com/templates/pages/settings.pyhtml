@@ -1,0 +1,109 @@
+{% set canvas_menu = [
+    {
+        'title': _("Profile"),
+        'name': 'profile',
+        'link': jinjer.url_for('settings')
+    },
+    {
+        'title': _("Membership"),
+        'name': 'membership',
+        'link': jinjer.url_for('membership')
+    }
+] %}
+
+<div id="settings-container" class="content-container">
+    <h1 class="page-title">{{ _("Settings") }}</h1>
+    <div class="settings canvas">
+        {{ jinjer.element( 'menu', canvas_menu=canvas_menu, section=section ) }}
+        <div class="canvas-content">
+            {% if section == 'profile' %}
+            <div class="profile-container">
+                {% if save == False %}
+                {%
+                    set msgs = {
+                        'email': {
+                            'invalid': _("Doesn't look like a valid email."),
+                            'taken': _("This email is already registered.")
+                        },
+                        'username': {
+                            'invalid': _("Doesn't look like a valid username."),
+                            'blank': _("A username is required!"),
+                            'taken': _("This username is already registered.")
+                        },
+                        'password': {
+                            'weak': _("Password could be more secure."),
+                            'tooweak': _("Password is not secure enough."),
+                            'invalid': _("Password must be at least 6 characters."),
+                        }
+                    }
+                %}
+
+                {% set fields_to_check = [ 'name', 'email', 'username', 'password' ] %}
+                {% for field in fields_to_check %}
+                {% if field in valid and valid[field] != 'ok' %}
+                {{ jinjer.element( 'notice', notice_type='error', notice_msg=msgs[ field ][ valid[field] ] ) }}
+                {% endif %}
+                {% endfor %}
+                {% elif save %}
+                {{ jinjer.element( 'notice', notice_type='ok', notice_msg=_("Your profile was successfully updated.") ) }}
+                {% endif %}
+
+                <form id="profile-form" action="settings" method="POST">
+                    <div class="prompt">
+                        <div class="placeholding-input name left">
+                            <input type="text" id="profile-name" class="text-input name-input" name="name" title="{{ _("My name") }}"{% if g.is_mobile %} autocomplete="off" autocorrect="off" spellcheck="false"{% endif %} value="{% autoescape true %}{{ user.name }}{% endautoescape %}" tabindex="{{ jinjer.tabindex() }}"></input>
+                            <label for="profile-name" class="placeholder{% if user.name %} hasome{% endif %}">{{ _("Name (optional)") }}</label>
+                        </div>
+                        <div class="placeholding-input email right">
+                            <input type="text" id="profile-email" class="text-input email-input" name="email" title="{{ _("My email") }}" value="{{ user.email }}" tabindex="{{ jinjer.tabindex() }}"></input>
+                            <label for="profile-email" class="placeholder{% if user.email %} hasome{% endif %}">{{ _("Email (optional)") }}</label>
+                        </div>
+                    </div>
+                    <div class="prompt">
+                        <div class="placeholding-input username left">
+                            <input type="text" id="profile-username" class="text-input username-input" name="username" title="{{ _("My username") }}"{% if g.is_mobile %} autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"{% endif %} value="{% autoescape true %}{{ user.username }}{% endautoescape %}" tabindex="{{ jinjer.tabindex() }}"></input>
+                            <label for="profile-username" class="placeholder{% if user.username %} hasome{% endif %}">{{ _("Username") }}</label>
+                        </div>
+                        <div class="placeholding-input password right">
+                            <input type="password" id="profile-password" class="text-input password-input" name="password" title="{{ _("My new password") }}" value="" tabindex="{{ jinjer.tabindex() }}"></input>
+                            <label for="profile-password" class="placeholder">{{ _("New Password") }}</label>
+                        </div>
+                    </div>
+                    <div class="submit-wrapper">
+                        <button type="submit" class="submit black-submit" tabindex="{{ jinjer.tabindex() }}">{{ _("Save") }}</button>
+                    </div>
+                </form>
+            </div>
+            {% else %}
+            <div class="membership-container">
+                <form id="membership-form" action="membership" method="POST">
+                    {% if confirm %}
+                    <input type="hidden" name="confirm" value="1"></input>
+                    <div class="membership-stats">
+                        <p>
+                            {{ _("Are you sure you want to delete your account?") }}
+                        </p>
+                    </div>
+                    <div class="submit-wrapper">
+                        <button type="submit" class="submit black-submit" name="submit" value="cancel" tabindex="{{ jinjer.tabindex() }}">{{ _("Cancel") }}</button>
+                        <button type="submit" class="submit red-submit" name="submit" value="delete" tabindex="{{ jinjer.tabindex() }}">{{ _("Delete My Account") }}</button>
+                    </div>
+                    {% else %}
+                    <div class="membership-stats">
+                        <p>
+                            <span>{{ _("Member Since:") }}</span> <strong>{{ user.created.year }}</strong>
+                        </p>
+                        <p>
+                            <span>{{ _("Memorials Created:") }}</span> <strong>{{ user.get_memorial_count() }}</strong>
+                        </p>
+                    </div>
+                    <div class="submit-wrapper">
+                        <button type="submit" class="submit red-submit" tabindex="{{ jinjer.tabindex() }}">{{ _("Delete My Account") }}</button>
+                    </div>
+                    {% endif %}
+                </form>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+{% set canvas_menu = [
+    {
+        'title': _("Languages"),
+        'name': 'lang',
+        'link': jinjer.url_for('lang')
+    }
+] %}
+
+<div id="lang-container" class="content-container">
+    <h1 class="page-title">{{ _("International") }}</h1>
+    <div class="lang canvas">
+        {{ jinjer.element( 'menu', canvas_menu=canvas_menu, section=section ) }}
+
+        {% if invalid %}
+        {{ jinjer.element( 'notice', notice_type='error', notice_msg=_("That language is not yet available.") ) }}
+        {% endif %}
+
+        <div class="lang-content">
+            <div class="locales-wrapper">
+                <table class="locales" cellspacing="0" cellpadding="0">
+                    <tbody>
+                        <tr>
+                            {# http://stackoverflow.com/questions/6003799/ , http://stackoverflow.com/questions/13430435/ #}
+                            {% set columns = 4 %}
+                            {% set count = config.LANGUAGES|length %}
+                            {% set rows = ( count/columns if count % columns == 0 else count/columns + 1 )|int %}
+                            {% for (lang, display, ldir, enabled) in config.LANGUAGES %}
+                            {% if loop.first or loop.index0 is divisibleby(rows) %}
+                            <td class="{% if loop.first %}lc{% elif loop.last %}rc{% else %}mc{% endif %}">
+                                <ul>
+                            {% endif %}
+                                    <li>
+                                        {# http://stackoverflow.com/questions/5040532/python-ascii-codec-cant-decode-byte #}
+                                        <a href="{{ jinjer.url_for('lang', lang=lang, next=next_url) }}" {% if g.babler.locale == lang %} class="selected"{% endif %} data-lang-code="{{ lang }}">{{ jinjer.decode( display ) }}</a>
+                                        {% if not enabled %}<span class="cs-star">*</span>{% endif %}
+                                    </li>
+                            {% if loop.last or loop.index is divisibleby(rows) %}
+                                </ul>
+                            </td>
+                            {% endif %}
+                            {% endfor %}
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="cs-wrapper">
+                <span class="cs-star">*</span><span class="cs">{{ _("Coming soon!") }}</span>
+            </div>
+        </div>
+    </div>
+</div>

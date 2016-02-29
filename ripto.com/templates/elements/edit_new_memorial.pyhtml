@@ -1,0 +1,106 @@
+{% if memorial.get_error('media') != 'ok' %}
+{{ jinjer.element( 'notice', notice_type='error', notice_msg=_("You must include a valid photo or select the checkbox.") ) }}
+{% endif %}
+{% if memorial.get_error(exclude='media') != 'ok' %}
+{{ jinjer.element( 'notice', notice_type='error', notice_msg=_("All fields are required.") ) }}
+{% endif %}
+
+
+<fieldset class="tomb canvas">
+    {# TODO - use https://github.com/blueimp/jQuery-File-Upload for async file uploading (compatible with IE6+) #}
+    <div class="photo">
+        <label class="nophoto" for="nophoto"><input type="checkbox" id="nophoto" name="nophoto" value="1"{% if memorial.media and memorial.media.filename == 'nophoto.png' %} checked{% endif %}></input>{{ _("I don't have their photo") }}</label>
+        <div id="select-container"{% if memorial.get_error('media') != 'ok' %} class="bad-input"{% endif %}>
+            <div class="img img-selectphoto sprite{% if memorial.media and memorial.media.filename %} hidden{% endif %}" title="{{ _("Choose photo") }}"></div>
+            <img class="img img-selectedphoto{% if not memorial.media or memorial.media.filename == 'nophoto.png' %} hidden{% endif %}" alt="{{ _("Change photo") }}" src="{% if page == 'edit_memorial' %}{{ jinjer.static(memorial.media.filename, 'memorial') }}{% elif memorial.media and memorial.media.filename %}{{ jinjer.static(memorial.media.filename, 'tmp') }}{% else %}{{ jinjer.static('nophoto.png', 'memorial') }}{% endif %}"></img>
+            <img class="img img-nophoto{% if not memorial.media or memorial.media.filename != 'nophoto.png' %} hidden{% endif %}" alt="{{ _("No photo") }}" src="{{ jinjer.static('nophoto.png', 'memorial') }}"></img>
+            <input type="file" name="photo" id="photo-upload" class="file-input photo-input{% if memorial.media and memorial.media.filename == 'nophoto.png' %} hidden{% endif %}" title="{{ _("Click to select") }}" data-field="file"></input>
+        </div>
+        <div id="selected-container">
+            <h4{% if not memorial.media or memorial.media.filename == 'nophoto.png' %} class="hidden"{% endif %}>{{ _("Change photo") }}</h4>
+            <h4{% if memorial.media and memorial.media.filename %} class="hidden"{% endif %}>{{ _("Select a photo") }}</h4>
+            <p class="selected-filename"></p>
+            <div class="submit-wrapper">
+                <button type="button" class="submit black-submit hidden" tabindex="{{ jinjer.tabindex() }}">{{ _("Save photo") }}</button>
+            </div>
+        </div>
+        <div class="sidetip">
+            {% set exts = ', '.join( config['ALLOWED_EXTENSIONS'][:-1] ) %}
+            {% set ext_last = config['ALLOWED_EXTENSIONS'][-1] %}
+
+            {{ jinjer.element( 'notice', notice_type='ok', notice_hide=True, notice_msg=_("Photo saved.") ) }}
+            {{ jinjer.element( 'notice', notice_type='error invalid', notice_hide=True, notice_msg=_("Photo must be a %(exts)s, or %(ext_last)s.", exts=exts, ext_last=ext_last) ) }}
+            {{ jinjer.element( 'notice', notice_type='error blank', notice_hide=True, notice_msg=_("A photo is required.") ) }}
+            {{ jinjer.element( 'notice', notice_type='error unknown', notice_hide=True, notice_msg=_("Please make sure photo is at least <strong>640x480</strong> and at most <strong>10MB</strong>.") ) }}
+        </div>
+    </div>
+
+    <div class="details">
+        <div class="details-container">
+            <div class="prompt placeholding-input name" data-field="name">
+                <input type="text" id="details-name" class="text-input name-input{% if memorial.get_error('name') != 'ok' %} bad-input{% endif %}" name="name" autocomplete="on" tabindex="{{ jinjer.tabindex() }}" value="{% autoescape true %}{{ memorial.name }}{% endautoescape %}"></input>
+                <label for="details-name" class="placeholder{% if memorial.name %} hasome{% endif %}">{{ _("Name") }}</label>
+                <div class="sidetip right">
+                    <a class="tip" href="javascript:void(0)">?<span class="bubble">{{ _("Person's name?") }}</span></a>
+                </div>
+            </div>
+            <div class="prompt dates">
+                <div class="placeholding-input dob" data-field="dob">
+                    <input type="text" id="details-dob" class="text-input dob-input{% if memorial.get_error('dob') != 'ok' %} bad-input{% endif %}" name="dob" readonly="true" autocomplete="off" tabindex="{{ jinjer.tabindex() }}" value="{{ memorial.get_date('dob') }}" data-modal-header="{{ _("Born") }}"></input>
+                    <label for="details-dob" class="placeholder{% if memorial.get_date('dob') %} hasome{% endif %}">{{ _("Born") }}</label>
+                </div>
+                <div class="separator">
+                    <span>&#8212;</span>
+                </div>
+                <div class="placeholding-input dod" data-field="dod">
+                    <input type="text" id="details-dod" class="text-input dod-input{% if memorial.get_error('dod') != 'ok' %} bad-input{% endif %}" name="dod" readonly="true" autocomplete="off" tabindex="{{ jinjer.tabindex() }}" value="{{ memorial.get_date('dod') }}" data-modal-header="{{ _("Died") }}"></input>
+                    <label for="details-dod" class="placeholder{% if memorial.get_date('dod') %} hasome{% endif %}">{{ _("Died") }}</label>
+                    <div class="sidetip right">
+                        <a class="tip" href="javascript:void(0)">?<span class="bubble">{{ _("Date born/died?") }}</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="prompt placeholding-input cause" data-field="cause">
+                <select class="cause-select{% if memorial.get_error('cause') != 'ok' %} bad-input{% endif %}" title="{{ _("Cause of death?") }}" name="cause">
+                    {% set causes = memorial.cause_types() %}
+                    {% for cause in causes %}
+                    <option {% if cause == memorial.cause %}selected=""{% endif %} value="{{ cause }}">{{ causes[cause] }}</option>
+                    {% endfor %}
+                </select>
+                <div class="sidetip right">
+                    <a class="tip" href="javascript:void(0)">?<span class="bubble">{{ _("Cause of death?") }}</span></a>
+                </div>
+            </div>
+            <div class="prompt placeholding-input epitaph" data-field="epitaph">
+                <textarea id="details-epitaph" class="text-input epitaph-input{% if memorial.get_error('epitaph') != 'ok' %} bad-input{% endif %}" name="epitaph" autocomplete="on" tabindex="{{ jinjer.tabindex() }}">{% autoescape true %}{{ memorial.epitaph }}{% endautoescape %}</textarea>
+                <label for="details-epitaph" class="placeholder{% if memorial.epitaph %} hasome{% endif %}">{{ _("Epitaph") }}</label>
+                <div class="sidetip right">
+                    <a class="tip" href="javascript:void(0)">?<span class="bubble">{{ _("Short description?") }}</span></a>
+                </div>
+            </div>
+            <div class="prompt isburied">
+                <select class="ftype-select{% if memorial.get_error('funeral_type') != 'ok' %} bad-input{% endif %}" name="ftype">
+                    {% set ftypes = [ _("Buried"), _("Cremated"), _("Don't know") ] %}
+                    {% for ftype in ftypes %}
+                    <option {% if loop.index == memorial.funeral_type %}selected=""{% endif %} value="{{ loop.index }}">{{ ftype }}</option>
+                    {% endfor %}
+                </select>
+                <div class="placeholding-input dof{% if memorial.funeral_type == ftypes|length %} hidden{% endif %}" data-field="dof">
+                    <input type="text" id="details-dof" class="text-input dof-input{% if memorial.get_error('funeral_date') != 'ok' %} bad-input{% endif %}" name="fdate" readonly="true" autocomplete="off" tabindex="{{ jinjer.tabindex() }}" value="{{ memorial.get_date('funeral_date') }}" data-modal-header="{{ _("Buried/Cremated") }}"></input>
+                    <label for="details-dof" class="placeholder{% if memorial.get_date('funeral_date') %} hasome{% endif %}">{{ _("When") }}</label>
+                    <div class="sidetip right">
+                        <a class="tip" href="javascript:void(0)">?<span class="bubble">{{ _("Date buried/cremated?") }}</span></a>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="prompt placeholding-input floc{% if memorial.funeral_type == ftypes|length %} hidden{% endif %}" data-field="floc">
+                <input type="text" id="details-floc" class="text-input floc-input{% if memorial.get_error('funeral_loc') != 'ok' %} bad-input{% endif %}" name="floc" autocomplete="on" tabindex="{{ jinjer.tabindex() }}" value="{% autoescape true %}{{ memorial.funeral_loc }}{% endautoescape %}"></input>
+                <label for="details-floc" class="placeholder{% if memorial.funeral_loc %} hasome{% endif %}">{{ _("Arlington National Cemetery") }}</label>
+                <div class="sidetip right">
+                    <a class="tip" href="javascript:void(0)">?<span class="bubble">{{ _("Place buried/cremated?") }}</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</fieldset>

@@ -1,0 +1,232 @@
+/*--------------------------------------------------
+
+form.css
+Used for forms
+
+-------------------------------------------------- */
+
+
+
+/* General
+-------------------------------------------------- */
+form, fieldset, label, input, textarea, button, select {
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+}
+
+
+label {
+    cursor: pointer;
+}
+
+input, textarea {
+    font-size: 13px;
+}
+
+textarea {
+    resize: none;
+}
+
+
+
+/* Inputs
+-------------------------------------------------- */
+.text-input {
+    display: inline-block;
+    font-size: 13px;
+    padding: 4px;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;
+}
+
+.text-input:focus {
+    outline-color: #aaa;
+    /* outline-color: #888; */
+}
+
+.bad-input {
+    border-color: #c13 !important;
+}
+
+.prompt {
+    margin: 10px 0;
+}
+
+
+
+/*  TODO - put into separate file */
+/* Placholders/Labels
+-------------------------------------------------- */
+.placeholding-input {
+    position: relative;
+}
+
+.placeholding-input .placeholder {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    left: 2px;
+    padding: 4px;
+    font-size: 13px;
+    line-height: 20px;
+    color: #999;
+    white-space: nowrap;
+    transition: opacity .1s,font-size .1s; -webkit-transition: opacity .1s,font-size .1s; -moz-transition: opacity .1s,font-size .1s; -o-transition: opacity .1s,font-size .1s;
+    user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;
+}
+
+.placeholding-input .text-input:focus {
+    outline-color: #888;
+}
+
+.placeholding-input .text-input:focus + .placeholder {
+    opacity: .6; -moz-opacity: .6; -khtml-opacity: .6; filter:alpha(opacity: 60); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+}
+
+.placeholding-input .placeholder.hasome {
+    font-size: 0;
+    opacity: 0; -moz-opacity: 0; -khtml-opacity: 0; filter:alpha(opacity: 0); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    z-index: -1;
+}
+
+
+
+/* Sidetip
+-------------------------------------------------- */
+.sidetip {
+    position: absolute;
+}
+
+.sidetip a {
+    color: #444;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+
+/* Bubble
+-------------------------------------------------- */
+.bubble {
+    background-color: #333;
+    border: 1px solid #222;
+    border-radius: 10px; -moz-border-radius: 10px; -webkit-border-radius: 10px;
+    color: #ccc;
+    cursor: default;
+    display: none;
+    font-size: 11px;
+    font-weight: normal;
+    padding: 5px 20px;
+    position: absolute;
+    top: -10px;
+    left: -5px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.sidetip a:hover .bubble {
+    display: block;
+}
+
+
+
+/* Submit
+-------------------------------------------------- */
+.submit-wrapper {
+    text-align: center;
+}
+
+.submit {
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 0; -moz-border-radius: 0; -webkit-border-radius: 0;
+    color: #fff;
+    cursor: default;
+    font-family: 'delius';
+    font-size: 14px;
+    line-height: 18px;
+    padding: 5px 20px;
+    white-space: nowrap;
+}
+
+.submit.big {
+    font-size: 16px;
+    padding: 7px 23px;
+}
+
+.submit.wait {
+    color: #666;
+}
+
+.black-submit {
+    background: #222;
+    border-color: #222;
+}
+
+.black-submit.alpha {
+    background: rgba(32, 32, 32, .6);
+}
+
+.black-submit:hover, .black-submit:focus {
+    background: #333;
+}
+
+.black-submit.wait:hover, .black-submit.wait:focus {
+    background: #222;
+}
+
+.green-submit {
+    background: #003d01;
+    border-color: #003d01;
+}
+
+.green-submit.alpha {
+    background: rgba(0, 61, 1, .6);
+}
+
+.green-submit:hover, .green-submit:focus {
+    background: #006d01;
+}
+
+.blue-submit {
+    background: #096eb3;
+    border-color: #096eb3;
+}
+
+.blue-submit.alpha {
+    background: rgba(9, 110, 179, .6);
+}
+
+.blue-submit:hover, .blue-submit:focus {
+    background: #019ad2;
+}
+
+.red-submit {
+    background: #af001c;
+    border-color: #af001c;
+}
+
+.red-submit.alpha {
+    background: rgba(175, 0, 28, .6);
+}
+
+.red-submit:hover, .red-submit:focus {
+    background: #df001c;
+}
+
+.gray-submit {
+    background: #aaa;
+    border-color: #666;
+    color: #000;
+}
+
+.gray-submit.alpha {
+    background: rgba(187, 187, 187, .6);
+}
+
+.gray-submit:hover, .gray-submit:focus {
+    background: #ccc;
+}

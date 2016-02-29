@@ -1,0 +1,181 @@
+/*--------------------------------------------------
+
+login.css
+Used when logging in
+
+-------------------------------------------------- */
+
+
+
+/* Container
+-------------------------------------------------- */
+.content-container {
+    margin: 0 auto 10px;
+    position: relative;
+    width: 600px;
+}
+
+.content-container .notice-box {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.content-container form {
+    margin: 0 auto 10px;
+    padding-bottom: 10px;
+    width: 400px;
+}
+
+.content-container .textbox {
+    margin-bottom: 15px;
+}
+
+.content-container .field-name {
+    color: #333;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.content-container .holding {
+    position: relative;
+    overflow: visible;
+    margin-bottom: 15px;
+}
+
+.holding input {
+    height: 20px;
+    padding: 4px;
+    background-color: #fff;
+    border: 1px solid #777;
+    border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;
+    width: 382px;
+}
+
+.holding input:focus {
+    outline-color: #aaa;
+}
+
+
+
+/* Login
+-------------------------------------------------- */
+.login-container a {
+    color: #333;
+}
+
+.login-container a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+.login-container .notice-box {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#login-form .forgot {
+    color: #333;
+    margin-right: 10px;
+    float: right;
+}
+
+#login-form .subchck {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.subchck .stay-in {
+    cursor: pointer;
+    display: block;
+    font-size: 12px;
+    margin-left: 20px;
+    text-align: left;
+    color: #000;
+    line-height: 30px;
+}
+
+.stay-in input {
+    margin: 3px 5px 3px 0;
+    cursor: pointer;
+}
+
+
+
+/* Sign Up
+-------------------------------------------------- */
+#signup-form .prompt {
+    position: relative;
+}
+
+#signup-form .field-name {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+#signup-form .sidetip {
+    margin-top: 8px;
+    position: absolute;
+    right: -11px;
+}
+
+#signup-form .score {
+    position: absolute;
+    top: 26px;
+    right: 16px;
+}
+
+.score span {
+    width: 50px;
+    height: 8px;
+    display: inline-block;
+    overflow: hidden;
+    background-color: #ddd;
+    vertical-align: middle;
+    border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;
+}
+
+.score .fill {
+    display: block;
+    height: 8px;
+    width: 0;
+    background-color: #6ec02a;
+}
+
+#signup-form .terms {
+    margin: 20px 0;
+}
+
+.terms p {
+    line-height: 15px;
+    font-size: 11px;
+    color: #444;
+}
+
+.terms a {
+    color: #000;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Forgot
+-------------------------------------------------- */
+
+
+
+
+/* Submit
+-------------------------------------------------- */
+#signup-form .submit-wrapper {
+    margin: 15px 0;
+    text-align: left;
+}
+
+#signup-form .submit {
+    padding: 10px 0;
+    width: 392px;
+}

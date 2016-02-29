@@ -1,0 +1,14 @@
+{% if refresh %}
+<meta http-equiv="refresh" content="{{ seconds or 5 }};url={{ jinjer.url_for(url, _external=True) }}"></meta>
+{% endif %}
+<div id="{{ section }}" class="confirm-container canvas">
+    <div class="confirm-wrapper">
+        <h1>{{ header or title }}</h1>
+
+        {% for p in paragraphs %}
+        <p>
+            {{ p }}
+        </p>
+        {% endfor %}
+    </div>
+</div>

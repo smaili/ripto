@@ -1,0 +1,28 @@
+{% extends "elements/modal/base.pyhtml" %}
+
+{% set modal_id = "flag" %}
+{% set modal_title = _("Notify") %}
+{% set canvas_menu = [
+    {
+        'title': _("Report"),
+        'name': 'flag',
+        'section': None,
+        'link': 'javascript:void(0)'
+    }
+] %}
+
+
+
+{% block content %}
+<div class="flag-container container">
+    <form id="flag-form" action="{{ jinjer.url_for('flag') }}" method="POST">
+        <input type="hidden" name="flag" value=""></input>
+        <p>
+            {{ _("Report for serious problems or moderator attention?") }}
+        </p>
+        <div class="submit-wrapper">
+            <button type="submit" class="submit black-submit" tabindex="{{ jinjer.tabindex() }}">{{ _("Report Abuse") }}</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

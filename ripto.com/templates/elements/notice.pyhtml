@@ -1,0 +1,3 @@
+<p class="notice-box {{ notice_type }}{% if notice_hide %} hidden{% endif %}">
+    <span>{{ notice_msg }}</span>{% if notice_img %}<img src="{{ jinjer.static(notice_img, 'img') }}"></img>{% endif %}<a href="javascript:void(0)" class="close{% if hide_close %} hidden{% endif %}">&#215;</a>
+</p>

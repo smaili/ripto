@@ -1,0 +1,20 @@
+{% extends "elements/modal/base.pyhtml" %}
+
+{% set modal_id = "lang" %}
+{% set modal_title = _("International") %}
+{% set canvas_menu = [
+    {
+        'title': _("Languages"),
+        'name': 'lang',
+        'section': None,
+        'link': 'javascript:void(0)'
+    }
+] %}
+
+
+
+{% block content %}
+<div class="lang-container">
+
+</div>
+{% endblock %}

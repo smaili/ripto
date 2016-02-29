@@ -1,0 +1,133 @@
+{% extends "layouts/email.pyhtml" %}
+
+
+
+{% block content %}
+{% set memorial_img = jinjer.static( memorial.media.filename, 'memorial' ) %}
+{% set memorial_title = memorial.name %}
+
+
+<p style="margin:15px 0px">
+    {{ _("Your friend %(name)s has shared a memorial with you:", name=sharer) }}
+</p>
+
+{% if message %}
+<p style="color:#aaaaaa;font-style:italic;margin:15px 0px">
+    {{ message.replace("\r\n", "<br>").replace("\n\r", "<br>").replace("\r", "<br>").replace("\n", "<br>") }}
+</p>
+{% endif %}
+
+<table width="100%" cellspacing="0" cellpadding="20" border="0">
+    <tbody>
+        <tr>
+            <td width="100%" bgcolor="f6f6f6" style="border-color:#e1e1e1;font-size:13px;font-family:arial,helvetica,clean,sans-serif;color:#222222;border-style:solid;border-width:1px;background-color:#f6f6f6">
+                <table cellspacing="0" cellpadding="0" border="0">
+                    <tbody>
+                        <tr>
+                            <td width="100%" style="color:#222222;font-size:13px;font-family:arial,helvetica,clean,sans-serif">
+                                <table cellspacing="0" cellpadding="0" border="0">
+                                    <tbody>
+                                        <tr>
+                                            <td style="color:#222222;font-size:13px;font-family:arial,helvetica,clean,sans-serif;text-align:left">
+                                                <a style="font-weight:bold;font-size:20px;text-decoration:none;color:#000000" href="{{ cta }}">{{ memorial_title }}</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color:#222222;font-size:13px;font-family:arial,helvetica,clean,sans-serif">
+                                                <img src="{{ jinjer.static( 'spacer.gif', 'img/email', True ) }}" alt="" width="1" height="15">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="100%" style="color:#222222;font-size:13px;font-family:arial,helvetica,clean,sans-serif">
+                                                <table cellspacing="0" cellpadding="0" border="0">
+                                                    <tbody>
+                                                        <tr style="text-align:left">
+                                                            <td valign="top" style="color:#222222;font-size:13px;font-family:arial,helvetica,clean,sans-serif;text-align:left">
+                                                                <a style="text-decoration:none" href="{{ cta }}">
+                                                                    <img src="{{ memorial_img }}" alt="{{ memorial.name }}" width="120" height="85" border="0">
+                                                                </a>
+                                                            </td>
+                                                            <td style="color:#222222;font-size:13px;font-family:arial,helvetica,clean,sans-serif">
+                                                                <img src="{{ jinjer.static( 'spacer.gif', 'img/email', True ) }}" alt="" width="15" height="1">
+                                                            </td>
+                                                            <td width="100%" style="color:#222222;font-size:13px;font-family:arial,helvetica,clean,sans-serif">
+                                                                <table cellspacing="0" cellpadding="0" border="0">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td valign="top" style="color:#222222;font-size:12px;font-family:arial,helvetica,clean,sans-serif;text-align:left">
+                                                                                {{ memorial.print_date('dob') }} - {{ memorial.print_date('dod') }}
+                                                                                <br>
+                                                                                {% if memorial.funeral_type == 1 %}
+                                                                                {{ _("Buried %(funeral_date)s", funeral_date=memorial.print_date('funeral_date')) }}
+                                                                                {% elif memorial.funeral_type == 2 %}
+                                                                                {{ _("Cremated %(funeral_date)s", funeral_date=memorial.print_date('funeral_date')) }}
+                                                                                {% else %}
+                                                                                {{ _("Funeral unknown") }}
+                                                                                {% endif %}
+                                                                                <br>
+                                                                                {% if memorial.funeral_type in [ 1, 2 ] %}
+                                                                                {{ memorial.funeral_loc }}
+                                                                                {% endif %}
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td valign="top" style="color:#222222;font-size:12px;font-family:arial,helvetica,clean,sans-serif;text-align:left">
+                                                                                <a style="color:#444444;font-weight:bold;text-decoration:none" href="{{ cta }}">{{ cta }}</a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+<br>
+
+<table cellspacing="0" cellpadding="0">
+    <tbody>
+        <tr>
+            <td style="border-width:1px;border-style:solid;border-color:#111111;background-color:#333333">
+                <table cellspacing="0" cellpadding="0">
+                    <tbody>
+                        <tr>
+                            <td style="font-size:11px;font-family:'lucida grande',tahoma,verdana,arial,sans-serif;padding:8px 20px;border-top:1px solid #555555">
+                                <a href="{{ cta }}" style="color:#3b5998;text-decoration:none">
+                                    <span style="font-size:14px;font-family:'lucida grande',tahoma,verdana,arial,sans-serif;font-weight:bold;white-space:nowrap;color:#ffffff">{{ _("Visit Memorial") }}</span>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+            <td style="{{ default_text }};padding:0px 10px"></td>
+            <td style="border-width:1px;border-style:solid;border-color:#057ed0;background-color:#019ad2">
+                <table cellspacing="0" cellpadding="0">
+                    <tbody>
+                        <tr>
+                            <td style="font-size:11px;font-family:'lucida grande',tahoma,verdana,arial,sans-serif;padding:8px 20px;border-top:1px solid #05aed0">
+                                <a href="{{ jinjer.memorial_url( memorial, action='condolences', _external=True ) }}" style="color:#3b5998;text-decoration:none">
+                                    <span style="font-size:14px;font-family:'lucida grande',tahoma,verdana,arial,sans-serif;font-weight:bold;white-space:nowrap;color:#ffffff">{{ _("Give Condolences") }}</span>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+{% endblock %}

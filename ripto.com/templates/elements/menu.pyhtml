@@ -1,0 +1,10 @@
+{% set section = section or canvas_menu[0].section or canvas_menu[0].name %} {# if no section, we assume initial is current section #}
+
+<ul class="canvas-menu">
+    {% for item in canvas_menu %}
+    <li><a{% if ( item.section or item.name ) == section %} class="selected"{% endif %} href="{{ item.link }}" data-menu-for="{{ item.name }}-container">{{ item.title }}</a></li>
+    {% if not loop.last %}
+    <li><span>|</span></li>
+    {% endif %}
+    {% endfor %}
+</ul>

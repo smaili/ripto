@@ -1,0 +1,509 @@
+/*--------------------------------------------------
+
+memorial.css
+Used when viewing and previewing a memorial
+
+-------------------------------------------------- */
+
+
+
+/* Font
+-------------------------------------------------- */
+@font-face {
+    font-family: 'epitaph';
+    src: url('../font/epitaph.eot');
+    src: url('../font/epitaph.eot?#iefix') format('embedded-opentype'),
+         url('../font/epitaph.woff') format('woff'),
+         url('../font/epitaph.ttf') format('truetype'),
+         url('../font/epitaph.svg#epitaph') format('svg');
+}
+
+@font-face {
+    font-family: 'tomb';
+    src: url('../font/tomb.eot');
+    src: url('../font/tomb.eot?#iefix') format('embedded-opentype'),
+         url('../font/tomb.woff') format('woff'),
+         url('../font/tomb.ttf') format('truetype'),
+         url('../font/tomb.svg#tomb') format('svg');
+}
+
+@font-face {
+    font-family: 'comment';
+    src: url('../font/comment.eot');
+    src: url('../font/comment.eot?#iefix') format('embedded-opentype'),
+         url('../font/comment.woff') format('woff'),
+         url('../font/comment.ttf') format('truetype'),
+         url('../font/comment.svg#comment') format('svg');
+}
+
+
+
+/* Container
+-------------------------------------------------- */
+.content-container {
+    font-size: 12px;
+    margin: 5px auto 10px;
+    position: relative;
+    width: 585px;
+}
+
+
+
+/* Canvas
+-------------------------------------------------- */
+.canvas {
+    margin-top: 25px;
+    width: 100%;
+}
+
+.canvas .canvas-header {
+    margin: 10px 0 15px 5px;
+}
+
+
+
+/* Memorial
+-------------------------------------------------- */
+.memorial {
+    height: 250px;
+    margin-top: 0px;
+}
+
+
+
+/* Photo
+-------------------------------------------------- */
+.memorial .photo {
+    float: left;
+    width: 60%;
+    height: 100%;
+}
+
+.memorial .photo img {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+/* Details
+-------------------------------------------------- */
+.memorial .details {
+    float: right;
+    height: 100%;
+    width: 39%;
+}
+
+#details-container {
+    height: 100%;
+    margin: 0 8.5%;
+}
+
+#details-container a {
+    display: block;
+    position: absolute;
+    width: 13px;
+    height: 20px;
+    right: 0;
+    margin-top: 1px;
+}
+
+#details-container .bubble {
+    top: -8px;
+    left: -85px;
+    padding: 4px 18px;
+}
+
+#details-container a:hover .bubble {
+    display: block;
+}
+
+#details-container .ribbon-1 {
+    background-position: -232px -81px;
+}
+
+#details-container .ribbon-2 {
+    background-position: -194px 0;
+}
+
+#details-container .ribbon-3 {
+    background-position: -245px -102px;
+}
+
+#details-container .ribbon-4 {
+    background-position: -245px -123px;
+}
+
+#details-container .ribbon-5 {
+    background-position: -194px -21px;
+}
+
+#details-container .group-top, #details-container .group-middle, #details-container .group-bottom {
+    border-bottom: 1px solid #777;
+    padding: 10px 0 2px;
+    text-align: center;
+    overflow: hidden;
+}
+
+#details-container .group-top {
+    height: 26%;
+}
+
+#details-container .group-middle {
+    width: 100%;
+    height: 37.5%;
+    padding: 0;
+    border-spacing: 0;
+}
+
+#details-container .group-bottom {
+    height: 27%;
+}
+
+#details-container .last {
+    border-bottom: 0 none;
+}
+
+#details-container .name {
+    font-family: 'tomb';
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+#details-container .dobd {
+    font-family: 'tomb';
+    font-size: 14px;
+}
+
+#details-container .epitaph {
+    font-family: 'epitaph';
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+#details-container .fdate {
+    margin-top: 10px;
+}
+
+
+
+/* Memorial Footer
+-------------------------------------------------- */
+.mbar {
+    width: 100%;
+    padding-top: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.mbar span {
+    color: #333;
+    font-family: arial,sans-serif;
+    font-size: 19px;
+    vertical-align: middle;
+}
+
+.visited .icon-visit, .remembered .icon-remember {
+    float: left;
+}
+
+.visited .visit-count, .remembered .remember-count {
+    cursor: default;
+}
+
+.visited .icon-visit {
+    background-position: -208px -16px;
+    width: 23px;
+    height: 13px;
+    margin-top: 2px;
+}
+
+.visited .visit-count {
+    float: left;
+    margin-left: 5px;
+}
+
+.mbar .remembered {
+    position: absolute;
+    left: 50%;
+}
+
+.remembered .icon-remember {
+    background-position: -24px -31px;
+    width: 18px;
+    height: 15px;
+    margin-top: 1px;
+    opacity: .6; -moz-opacity: .6; -khtml-opacity: .6; filter:alpha(opacity: 60); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+}
+
+.remembered .icon-remember:hover {
+    opacity: 1; -moz-opacity: 1; -khtml-opacity: 1; filter:alpha(opacity: 100); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+.has .icon-remember {
+    background-position: -32px 0;
+    opacity: 1; -moz-opacity: 1; -khtml-opacity: 1; filter:alpha(opacity: 100); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+.remembered .remember-count {
+    float: left;
+    margin-left: 5px;
+}
+
+.mbar .mem-icon {
+    float: right;
+    height: 18px;
+    opacity: .6; -moz-opacity: .6; -khtml-opacity: .6; filter:alpha(opacity: 60); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+}
+
+.mbar .mem-icon:hover {
+    opacity: 1; -moz-opacity: 1; -khtml-opacity: 1; filter:alpha(opacity: 100); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+.mbar .icon-share {
+    background-position: 0 -31px;
+    width: 23px;
+    margin-right: 15px;
+}
+
+.mbar .icon-report {
+    background-position: -245px -62px;
+    width: 15px;
+}
+
+.mbar .icon-edit {
+    background-position: -208px -30px;
+    width: 18px;
+}
+
+
+
+/* Comment Form
+-------------------------------------------------- */
+#comment-memorial-form {
+    border-bottom: 1px solid #999;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+#comment-memorial-form .placeholder {
+    height: 38px;
+}
+
+#comment-memorial-form .comment-input {
+    border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;
+    width: 430px;
+    padding: 5px;
+    height: 36px;
+}
+
+#comment-memorial-form .submit {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+
+/* Reply Form
+-------------------------------------------------- */
+#reply-comment-form {
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+#reply-comment-form .placeholding-input {
+    float: left;
+}
+
+#reply-comment-form .comment-input {
+    width: 350px;
+    padding: 5px;
+    height: 45px;
+}
+
+#reply-comment-form .submit {
+    float: right;
+}
+
+
+
+/* Edit Form
+-------------------------------------------------- */
+#edit-comment-form {
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+#edit-comment-form .placeholding-input {
+    float: left;
+}
+
+#edit-comment-form .comment-input {
+    width: 350px;
+    padding: 5px;
+    height: 45px;
+}
+
+#edit-comment-form .submit {
+    float: left;
+    margin-left: 5px;
+}
+
+
+
+/* Comments
+-------------------------------------------------- */
+.comments .comment {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.comment .cmsg {
+    line-height: 22px;
+    padding-top: 20px;
+}
+
+.cmsg .qmark {
+    float: left;
+    font-family: 'Times New Roman', 'Nimbus Roman No9 L', Times;
+    font-size: 75px;
+    line-height: 18px;
+    margin: 0 8px 0 0;
+    opacity: .2; -moz-opacity: .2; -khtml-opacity: .2; filter:alpha(opacity: 20); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+}
+
+.cmsg .ctext {
+    font-family: 'comment';
+    font-size: 15px;
+}
+
+.cmsg .cmeta {
+    white-space: nowrap;
+}
+
+.cmeta .chyph {
+    font-family: 'comment';
+    font-size: 15px;
+    margin: 0 5px 0 10px;
+}
+
+.cmeta .cposter {
+    font-size: 13px;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.cmeta .cposter:hover {
+    text-decoration: underline;
+}
+
+.cmeta .cdate {
+    font-size: 11px;
+}
+
+.cmeta .cposter, .cmeta .cdate {
+    color: #000;
+    font-family: arial, sans-serif;
+}
+
+.comment .cbar {
+    margin-top: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.cbar .submit {
+    float: left;
+    font-size: 12px;
+    margin-right: 10px;
+    padding: 2px 10px;
+}
+
+.cbar .submit i {
+    float: left;
+    height: 15px;
+    margin: 0 6px 0 -3px;
+}
+
+.cbar .green-submit i, .cbar .red-submit i {
+    width: 13px;
+    height: 15px;
+}
+
+.cbar .green-submit i {
+    background-position: -263px -13px;
+    margin-top: 1px;
+}
+
+.cbar .red-submit i {
+    background-position: -263px -29px;
+    margin-top: 3px;
+}
+
+.cbar .blue-submit i {
+    background-position: -263px 0;
+    width: 14px;
+    height: 12px;
+    margin-top: 3px;
+}
+
+.cbar .green-submit.did, .cbar .green-submit.did:hover {
+    background: #006d01;
+}
+
+.cbar .red-submit.did, .cbar .red-submit.did:hover {
+    background: #df001c;
+}
+
+
+
+/* Replies
+-------------------------------------------------- */
+.comment .reply-container {
+    margin: 10px 8% 0;
+}
+
+.replies .reply {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.replies .reply.last {
+    margin-bottom: 0;
+}
+
+.rmsg .rtext {
+    font-size: 13px;
+}
+
+.rmsg .rmeta {
+    white-space: nowrap;
+}
+
+.rmeta .rhyph {
+    margin-right: 5px;
+}
+
+.rmeta .rposter {
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.rmeta .rposter:hover {
+    text-decoration: underline;
+}
+
+.rmeta .rdate {
+    font-size: 11px;
+}
+
+.rmsg .rtext, .rmeta .rhyph, .rmeta .rposter, .rmeta .rdate {
+    color: #333;
+    font-family: arial, sans-serif;
+}

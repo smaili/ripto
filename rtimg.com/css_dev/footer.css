@@ -1,0 +1,162 @@
+/*--------------------------------------------------
+
+footer.css
+Used when viewing footer pages
+
+-------------------------------------------------- */
+
+
+
+/* Container
+-------------------------------------------------- */
+.content-container {
+    margin: 0 auto 10px;
+    position: relative;
+    width: 585px;
+}
+
+.content-container p {
+    font-size: 12px;
+}
+
+.content-container input:focus {
+    outline-color: #aaa;
+}
+
+
+
+/* Canvas
+-------------------------------------------------- */
+.canvas {
+    margin-top: 25px;
+    width: 100%;
+}
+
+
+
+/* About
+-------------------------------------------------- */
+.about-container {
+    color: #000;
+}
+
+.about-container p {
+    margin: 10px 0px 30px;
+}
+
+.about-container p.first {
+    margin-top: 0;
+}
+
+.about-container .small-gap {
+    margin-bottom: 10px;
+}
+
+.about-container .no-gap {
+    margin-bottom: 0;
+}
+
+.about-container a {
+    color: #bbb;
+}
+
+.about-container a:hover {
+    text-decoration: underline;
+}
+
+.about-container ul {
+    list-style-type: disc;
+    margin-bottom: 30px;
+    padding-left: 40px;
+}
+
+
+
+/* Support, Feedback
+-------------------------------------------------- */
+.content-container form {
+    margin: 0 auto;
+    width: 422px;
+}
+
+.content-container .text-input {
+    border: 1px solid #777;
+    border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;
+    width: 400px;
+    padding: 2px 10px;
+}
+
+.email .text-input {
+    height: 25px;
+}
+
+.content-container .message, .content-container .feedback {
+    margin-top: 20px;
+}
+
+.message .text-input, .feedback .text-input {
+    height: 200px;
+    padding-top: 7px;
+}
+
+.support-container p, .feedback-container p {
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.support-container .submit-wrapper {
+    margin-top: 10px;
+}
+
+
+
+/* Terms
+-------------------------------------------------- */
+.terms-container {
+    color: #000;
+}
+
+.terms-container p {
+    margin: 10px 0px 30px;
+}
+
+.terms-container p.first {
+    margin-top: 0;
+}
+
+.terms-container .no-gap {
+    margin-bottom: 0;
+}
+
+
+/* Privacy
+-------------------------------------------------- */
+.privacy-container {
+    color: #000;
+}
+
+.privacy-container p {
+    margin: 10px 0px 30px;
+}
+
+.privacy-container p.first {
+    margin-top: 0;
+}
+
+.privacy-container p.tab {
+    margin-left: 40px;
+}
+
+.privacy-container ul {
+    list-style-type: disc;
+    margin-bottom: 30px;
+    padding-left: 40px;
+}
+
+.privacy-container .small-gap {
+    margin-bottom: 10px;
+}
+
+.privacy-container .no-gap {
+    margin-bottom: 0;
+}

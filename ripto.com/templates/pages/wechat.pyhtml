@@ -1,0 +1,39 @@
+{% set canvas_menu = [
+    {
+        'title': title,
+        'name': '',
+        'link': ''
+    }
+] %}
+
+
+<div id="share-container" class="content-container">
+    <h1 class="page-title">{{ _("WeChat") }}</h1>
+    <div class="share canvas">
+        {{ jinjer.element( 'menu', canvas_menu=canvas_menu, section=section ) }}
+        <div class="canvas-content">
+            <div class="wechat-container">
+                <div class="detail">
+                    <p>
+                        {{ _("With WeChat, scan the QR Code to the right and you can share this memorial with your friends or WeChat circle of friends.") }}
+                    </p>
+                    <a href="{{ url }}">{{ url_title }}</a>
+                </div>
+                <div class="qr">
+                    <div class="qr-code">
+                        {# http://qrcode.ykimg.com/qr?t=http://youku.tv/pjmns&size=116 #}
+                        <img src="{{ jinjer.url_for('qr', t=url) }}"></img>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="divider"></div>
+                <div class="teach">
+                    <p>
+                        {{ _("How to use <i class=\"wechat-app sprite\"></i>WeChat QR Code: <a href=\"http://baike.baidu.com/view/7443374.htm\" target=\"_blank\">View Details</a>") }}
+                    </p>
+                    <img src="{{ jinjer.static( 'wechat-teach.png', 'img' ) }}">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

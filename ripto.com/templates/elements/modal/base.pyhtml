@@ -1,0 +1,13 @@
+<div id="{{ modal_id }}-dialog" class="modal tile hidden">
+    <div class="modal-bar">
+        <h3 class="modal-title">{{ modal_title }}</h3>
+        <button class="close-modal"><i class="icon-close sprite"></i></button>
+    </div>
+    <div class="modal-content">
+        {{ jinjer.element( 'menu', canvas_menu=canvas_menu, section=section ) }}
+        <div class="canvas-content">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+</div>

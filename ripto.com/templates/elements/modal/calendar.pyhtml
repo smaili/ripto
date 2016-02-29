@@ -1,0 +1,62 @@
+{% extends "elements/modal/base.pyhtml" %}
+
+{% set modal_id = "calendar" %}
+{% set modal_title = _("Calendar") %}
+{% set canvas_menu = [
+    {
+        'title': '',
+        'name': 'calendar',
+        'section': None,
+        'link': 'javascript:void(0)'
+    }
+] %}
+
+
+
+{% block content %}
+
+{#
+    -- DP Calendar Docs --
+http://www.dpereyra.com/scripts/dp_calendar/
+http://www.ogdenmuseum.org/js/simpleEvents/documentation/index.html
+    -- Date Translations --
+http://jquery-ui.googlecode.com/svn/tags/latest/ui/i18n/
+http://jquery-ui.googlecode.com/svn/tags/1.8.20/ui/i18n/
+    -- DP Calendar Scripts --
+http://www.snuffboxtheatre.co.uk/codecanyon-462149-simple-events-calendar-js/js/
+http://roomtab.com/roomtab/hoteles/gallery/ciudad/transporte/motos/ui/
+https://github.com/markaurelius/runconnect/blob/master/static/js/
+#}
+{% set month_names = [ _("January"), _("February"), _("March"), _("April"), _("May"), _("June"), _("July"), _("August"), _("September"), _("October"), _("November"), _("December") ] | join(', ') %}
+{% set month_names_short = [ _("Jan"), _("Feb"), _("Mar"), _("Apr"), _("May"), _("Jun"), _("Jul"), _("Aug"), _("Sep"), _("Oct"), _("Nov"), _("Dec") ] | join(', ') %}
+{% set day_names = [ _("Sunday"), _("Monday"), _("Tuesday"), _("Wednesday"), _("Thursday"), _("Friday"), _("Saturday") ] | join(', ') %}
+{% set year_range = [ 1800, 2013 ] | join(', ') %}
+
+<div class="calendar-container container">
+    <div class="calendar">
+        <div class="main-date-container">
+            <div class="main-date">
+                <a href="javascript:void(0);" class="prev-month">&#171;</a>
+                <a href="javascript:void(0);" class="month-year" data-month-names="{{ month_names }}">
+                    <select name="year-select" class="year-select" data-year-range="{{ year_range }}"></select>
+                    <span></span>
+                </a>
+                <a href="javascript:void(0);" class="next-month">&#187;</a>
+            </div>
+        </div>
+        <div class="dates-container">
+            <ul class="day-list"></ul>
+            <div class="clear"></div>
+            <div class="current-day">
+                <h1 class="day-name" data-day-names="{{ day_names }}"></h1>
+                <div class="day-month">
+                    <span class="month" data-month-names-short="{{ month_names_short }}"></span><br>
+                    <span class="day-num"></span>
+                </div>
+            </div>
+            <button type="submit" class="submit black-submit" tabindex="{{ jinjer.tabindex() }}">{{ _("Select Date") }}</button>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+{% endblock %}

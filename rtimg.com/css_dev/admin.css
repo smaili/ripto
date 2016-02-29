@@ -1,0 +1,101 @@
+/*--------------------------------------------------
+
+admin.css
+Used when viewing admin pages
+
+-------------------------------------------------- */
+
+
+
+/* Container
+-------------------------------------------------- */
+.content-container {
+    margin: 0 auto 10px;
+    position: relative;
+    width: 585px;
+}
+
+.content-container p {
+    font-size: 12px;
+}
+
+.content-container input:focus {
+    outline-color: #aaa;
+}
+
+
+
+/* Canvas
+-------------------------------------------------- */
+.canvas {
+    margin-top: 25px;
+    width: 100%;
+}
+
+
+
+/* Common
+-------------------------------------------------- */
+.clear {
+    clear: both;
+}
+
+.abar {
+    border-bottom: 1px dashed #000;
+    margin: 5px 0 20px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.abar .submit {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+
+
+/* Users
+-------------------------------------------------- */
+.users-container {
+    color: #000;
+}
+
+
+
+/* Memorials
+-------------------------------------------------- */
+.memorials-container {
+    color: #000;
+}
+
+
+/* Comments
+-------------------------------------------------- */
+.comments-container {
+    color: #000;
+}
+
+.new-comment select {
+    font-size: 12px;
+    height: 25px;
+    margin: 5px 0;
+    width: 100%;
+}
+
+.new-comment .date-input {
+    float: left;
+    width: 20%;
+}
+
+.new-comment .likes-input, .new-comment .dislikes-input {
+    float: right;
+    margin-left: 3%;
+    width: 8%;
+}
+
+.new-comment .message-input {
+    width: 98%;
+    height: 60px;
+    padding-left: 1%;
+    padding-right: 1%;
+}

@@ -1,0 +1,35 @@
+{% extends "layouts/email.pyhtml" %}
+
+
+
+{% block content %}
+<p style="margin:15px 0px">
+    {{ _("Sorry to hear you were having trouble logging in.") }}
+</p>
+
+<p style="margin:15px 0px">
+    {{ _("To reset your password, please follow the button below. You will be taken to a page that will ask you to enter your new password.") }}
+</p>
+
+<br>
+
+<table cellspacing="0" cellpadding="0">
+    <tbody>
+        <tr>
+            <td style="border-width:1px;border-style:solid;border-color:#111111;background-color:#333333">
+                <table cellspacing="0" cellpadding="0">
+                    <tbody>
+                        <tr>
+                            <td style="font-size:11px;font-family:'lucida grande',tahoma,verdana,arial,sans-serif;padding:8px 13px;border-top:1px solid #555555">
+                                <a href="{{ cta }}" style="color:#3b5998;text-decoration:none">
+                                    <span style="font-size:14px;font-family:'lucida grande',tahoma,verdana,arial,sans-serif;font-weight:bold;white-space:nowrap;color:#ffffff">{{ _("Change My Password") }}</span>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+{% endblock %}

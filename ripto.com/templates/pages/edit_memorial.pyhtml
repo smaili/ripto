@@ -1,0 +1,13 @@
+<div id="edit-memorial-container" class="content-container">
+    <h1 class="page-title">{{ _("Edit") }}</h1>
+    <form id="edit-memorial-form" action="{{ jinjer.memorial_url(memorial, 'edit') }}" method="POST">
+
+        {{ jinjer.element( 'edit_new_memorial', memorial=memorial, page=page ) }}
+
+        <div class="edit-submit-wrapper">
+            <a href="{{ jinjer.memorial_url(memorial) }}" class="submit big black-submit alpha" tabindex="{{ jinjer.tabindex() }}">{{ _("Cancel") }}</a>
+            <button type="submit" class="submit big black-submit" tabindex="{{ jinjer.tabindex() }}">{{ _("Save Changes") }}</button>
+        </div>
+
+    </form>
+</div>

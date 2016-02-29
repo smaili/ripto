@@ -1,0 +1,135 @@
+{% set canvas_menu = [
+    {
+        'title': _("Translate"),
+        'name': '',
+        'link': jinjer.url_for('translate')
+    }
+] %}
+
+{% for (lang_code, display, ldir, enabled) in config.LANGUAGES %}
+{% if section == lang_code %}
+{% set x = canvas_menu.append( { 'title': jinjer.decode( display ), 'name': section, 'link': '?lang=' + section } ) %}
+{% endif %}
+{% endfor %}
+
+<div id="lang-container" class="content-container">
+    <h1 class="page-title">{{ _("International") }}</h1>
+    <div class="lang canvas">
+        {{ jinjer.element( 'menu', canvas_menu=canvas_menu, section=section ) }}
+        <div class="canvas-content">
+            <div class="locales-wrapper">
+                {% if section %}
+                    {% if pofile %}
+
+                        {% if saved %}
+                        {{ jinjer.element( 'notice', notice_type='ok', notice_msg=_("Translations saved.") ) }}
+                        {% endif %}
+
+                        <form id="translate-form" method="POST" action="?lang={{ section }}">
+                            {% set blanks = pofile.untranslated_entries()|length %}
+                            {% set fuzzies = pofile.fuzzy_entries()|length %}
+                            {% if blanks or fuzzies %}
+                            <ul class="quick-links">
+                                {% for message in pofile %}
+                                {% if 'fuzzy' in message.flags or not message.msgstr %}
+                                <li><a class="{% if 'fuzzy' in message.flags %}fuzzy{% elif not message.msgstr %}blank{% endif %}" href="#msgstr{{ loop.index0 }}">{{ loop.index0 }}</a></li>
+                                {% endif %}
+                                {% endfor %}
+                            </ul>
+                            {% endif %}
+
+                            <div class="scroller">
+                                {% for message in pofile %}
+                                {% set msgid = jinjer.escape_html( message.msgid ) %}
+                                <div class="prompt"{% if loop.last %} style="margin-bottom:0"{% endif %}>
+                                    <div class="field-name{% if 'fuzzy' in message.flags %} fuzzy{% elif not message.msgstr %} blank{% endif %}" title="{% for (file, line) in message.occurrences %}{{ file + ' (' + line + ')' }}{% if not loop.last %}&#13;{% endif %}{% endfor %}">{{ msgid }}
+                                        {% if 'fuzzy' in message.flags %}
+                                        <label for="msgstr{{ loop.index0 }}"><input type="checkbox" id="msgstr{{ loop.index0 }}" name="fuzzy{{ loop.index0 }}" value="1" tabindex="{{ jinjer.tabindex() }}"></input>Remove Fuzzy</label>
+                                        {% endif %}
+                                    </div>
+                                    <div class="holding has-content">
+                                        {% if msgid|length < 90 %}
+                                        <input type="text" class="message-input" id="msgstr{{ loop.index0 }}" name="msgstr{{ loop.index0 }}" value="{{ message.msgstr }}" tabindex="{{ jinjer.tabindex() }}"></input>
+                                        {% else %}
+                                        <textarea class="message-textarea" id="msgstr{{ loop.index0 }}" name="msgstr{{ loop.index0 }}" tabindex="{{ jinjer.tabindex() }}">{{ message.msgstr }}</textarea>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                            <div class="submit-wrapper">
+                                <button type="submit" class="submit big black-submit" tabindex="{{ jinjer.tabindex() }}" tabindex="{{ jinjer.tabindex() }}">{{ _("Save Translations") }}</button>
+                            </div>
+                        </form>
+
+                    {% else %}
+                    {{ jinjer.element( 'notice', notice_type='error', notice_msg=_("This language is not yet available.") ) }}
+                    {% endif %}
+                {% else %}
+                <table class="locales" cellspacing="0" cellpadding="0">
+                    <tbody>
+                        <tr>
+                            {# http://stackoverflow.com/questions/6003799/ , http://stackoverflow.com/questions/13430435/ #}
+                            {% set columns = 4 %}
+                            {% set count = config.LANGUAGES|length %}
+                            {% set rows = ( count/columns if count % columns == 0 else count/columns + 1 )|int %}
+                            {% for (lang, display, ldir, enabled) in config.LANGUAGES %}
+                            {% if loop.first or loop.index0 is divisibleby(rows) %}
+                            <td class="{% if loop.first %}lc{% elif loop.last %}rc{% else %}mc{% endif %}">
+                                <ul>
+                            {% endif %}
+                                    <li>
+                                        {# http://stackoverflow.com/questions/5040532/python-ascii-codec-cant-decode-byte #}
+                                        <a href="?lang={{ lang }}" data-lang-code="{{ lang }}">{{ jinjer.decode( display ) }}</a>
+                                    </li>
+                            {% if loop.last or loop.index is divisibleby(rows) %}
+                                </ul>
+                            </td>
+                            {% endif %}
+                            {% endfor %}
+                        </tr>
+                    </tbody>
+                </table>
+                {% endif %}
+            </div>
+            {% if not section %}
+            <p class="add-lang">
+                <em>{{ _("If you would like to add a language, <a href=\"/support\">let us know</a>!") }}</em>
+            </p>
+            {% endif %}
+        </div>
+    </div>
+
+    {% if pofile %}
+    <div class="guide canvas">
+        {% set canvas_menu = [
+            {
+                'title': _("Guide"),
+                'name': section, 
+                'link': 'javascript:void(0)'
+            }
+        ] %}
+        {{ jinjer.element( 'menu', canvas_menu=canvas_menu, section=section ) }}
+        <div class="canvas-content" style="margin-top:0; padding-top:0;">
+            <div class="guide-wrapper">
+                <p>
+                    <strong>%(***)s - </strong><em>{{ _("A variable, such as a person's name. You must include this in your translation, otherwise the data will not be shown to users.") }}</em>
+                </p>
+                <p>
+                    <strong>&lt; &gt;***&lt; / &gt; - </strong><em>{{ _("HTML element, such as a link. You must include this in your translation, however make sure you translate any text between the tags.") }}</em>
+                </p>
+                <p>
+                    <strong>Blank - </strong><em>{{ _("Whenever messages are added or updated, RIPto must check each message to make sure a translation was provided for it.  If it encounters any messages that do not yet have a translation, it will be marked as \"blank\". In order to ensure consistency throughout RIPto, we require a translation be provided for every message listed. All messages with \"blank\" translations will be highlighted in <span style=\"color:#c13\">red</span>.") }}</em>
+                </p>
+                <p>
+                    <strong>Fuzzy - </strong><em>{{ _("Whenever translations are added or updated, RIPto must check each translation and compare to its previous translation to make sure it correctly saves. Sometimes, it encounters a translation that it has difficulty processing, so it marks this translation as \"fuzzy\" and waits for your approval. If you see any translations marked as \"fuzzy\", please review to make sure the translation is correct, and fix any mistakes you see. When ready, check the checkbox next to the translation and submit to RIPto so we know what the correct translation should be. All messages with \"fuzzy\" translations will be highlighted in <span style=\"color:#efc144\">yellow</span>.") }}</em>
+                </p>
+                <p class="qs">
+                    <em>{{ _("If you have any questions, please <a href=\"/support\">contact us</a>.") }}</em>
+                </p>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+</div>

@@ -1,0 +1,19 @@
+{% extends "layouts/base.pyhtml" %}
+
+
+{% if page not in [ 'results', 'user' ] %}
+{% set title = title.lower() %}
+{% endif %}
+
+
+
+{% block content %}
+<div id="page-outer" class="scroller">
+    <div id="page-container">
+        <div class="page-wrapper">
+        {% include "pages/" + page + ".pyhtml" %}
+        </div>
+    </div>
+    {{ jinjer.element( 'footer' ) }}
+</div>
+{% endblock %}

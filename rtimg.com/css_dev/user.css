@@ -1,0 +1,71 @@
+/*--------------------------------------------------
+
+user.css
+Used when viewing account/user
+
+-------------------------------------------------- */
+
+
+
+/* Container
+-------------------------------------------------- */
+.content-container {
+    font-size: 12px;
+    margin: 0 auto 10px;
+    position: relative;
+    width: 585px;
+}
+
+
+
+/* Profile
+-------------------------------------------------- */
+.profile-container .profile-stats {
+    padding: 10px 9%;
+    text-align: center;
+}
+
+.profile-stats p {
+    font-size: 14px;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+.profile-stats span {
+    float: left;
+}
+
+.profile-stats strong {
+    float: right;
+}
+
+
+
+/* Memorials
+-------------------------------------------------- */
+.memorial-list .no-memorials {
+    margin-top: 30px;
+    padding: 5px 0;
+}
+
+.memorial-list .memorial img {
+    width: 65px;
+    height: 65px;
+}
+
+
+
+/* Report
+-------------------------------------------------- */
+.report-container {
+    padding: 0 20px;
+}
+
+#flag-form p {
+    font-size: 13px;
+    margin-bottom: 30px;
+}
+
+#flag-form .submit-wrapper {
+    margin-top: 5px;
+}

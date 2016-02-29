@@ -1,0 +1,39 @@
+/*--------------------------------------------------
+
+confirm.css
+Used when confirming something
+
+-------------------------------------------------- */
+
+
+
+/* Container
+-------------------------------------------------- */
+.page-wrapper {
+    padding-top: 110px;
+}
+
+.confirm-container {
+    margin: 0 auto;
+    position: relative;
+    width: 600px;
+}
+
+/* Wrapper
+-------------------------------------------------- */
+.confirm-wrapper {
+    margin: 0 auto 30px;
+    width: 460px;
+}
+
+.confirm-wrapper h1 {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1;
+    padding: 20px 0 10px;
+    clear: both;
+}
+
+.confirm-wrapper p {
+    margin: 20px 0;
+}

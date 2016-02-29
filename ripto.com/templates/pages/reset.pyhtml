@@ -1,0 +1,22 @@
+<div id="reset-container" class="content-container canvas">
+    <h1>{{ _("Change my password") }}</h1>
+
+    {% if invalid %}
+    {{ jinjer.element( 'notice', notice_type='error', notice_msg=_("Looks like we couldn't find that username or no email was registered to it.") ) }}
+    {% endif %}
+
+    <form id="reset-form" method="POST" action="reset">
+        <input type="hidden" name="c" value="{{ code }}"></input>
+
+        <fieldset class="textbox">
+            <div class="prompt password">
+                <div class="field-name">{{ _("Enter your new password") }}</div>
+                <div class="holding has-content" data-field="password">
+                    <input type="password" class="password-input" name="password" value="{{ password }}" autocomplete="off" tabindex="{{ jinjer.tabindex() }}"></input>
+                </div>
+            </div>
+        </fieldset>
+
+        <button type="submit" class="submit black-submit" tabindex="{{ jinjer.tabindex() }}">{{ _("Submit") }}</button>
+    </form>
+</div>

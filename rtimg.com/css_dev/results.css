@@ -1,0 +1,70 @@
+/*--------------------------------------------------
+
+results.css
+Used when searching
+
+-------------------------------------------------- */
+
+
+
+/* Font
+-------------------------------------------------- */
+@font-face {
+    font-family: 'delius';
+    src: url('../font/delius.eot');
+    src: url('../font/delius.eot?#iefix') format('embedded-opentype'),
+         url('../font/delius.woff') format('woff'),
+         url('../font/delius.ttf') format('truetype'),
+         url('../font/delius.svg#delius') format('svg');
+}
+
+
+
+/* Container
+-------------------------------------------------- */
+.content-container {
+    font-size: 12px;
+    margin: 0 auto 10px;
+    position: relative;
+    width: 685px;
+}
+
+.content-container input:focus, .content-container select:focus {
+    outline-color: #aaa;
+}
+
+
+
+/* Header
+-------------------------------------------------- */
+.results .results-header {
+    color: #222;
+    font-family: 'delius';
+    font-size: 22px;
+    
+    font-weight: bold;
+    padding: 5px 0;
+    margin: 10px 0 15px;
+}
+
+.results-header span {
+    color: #333;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    text-decoration: underline;
+}
+
+.results-header select {
+    cursor: pointer;
+    font-size: 14px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; -moz-opacity: 0; -khtml-opacity: 0; filter:alpha(opacity: 0); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+}
+
+.results-header span:hover {
+    color: #000;
+}
