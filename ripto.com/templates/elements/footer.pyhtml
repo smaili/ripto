@@ -5,7 +5,7 @@
     <a class="footer-link" href="/terms">{{ _("Terms") }}</a>
     <a class="footer-link" href="/privacy">{{ _("Privacy") }}</a>
     <br>
-    <span class="copyright">RIPto &#169; 2013</span>
+    <span class="copyright">RIPto &#169; 2016</span>
     <span class="vline">|</span>
     <a class="footer-link glang" href="{{ jinjer.url_for('lang', _next=True) }}">{{ jinjer.decode( g.babler.get_name() ) }}</a>
 </div>
